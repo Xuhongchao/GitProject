@@ -1,0 +1,18 @@
+package Entrance;
+
+public class StringHandle {
+	public static void main(String[] args) {
+		String[] strs = { "", "", "", "", "", "", "", "", "", "", "", "", "",
+				"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+				"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+				"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+
+		for (int i = 0; i < strs.length; i++) {
+			strs[i] = strs[i].trim();
+			String[] nows = strs[i].split("\t");
+			String str = nows[0] + "\t" + "P109" + "\t" + nows[2] + "\t"
+					+ nows[1] + "\t" + "ALL";
+			System.out.println(str);
+		}
+	}
+}
