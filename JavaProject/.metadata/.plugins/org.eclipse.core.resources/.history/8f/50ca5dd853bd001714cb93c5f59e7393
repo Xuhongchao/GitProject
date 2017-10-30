@@ -1,0 +1,29 @@
+package Entrance;
+
+public class AppendToEnd {
+	public static void main(String[] args) {
+		String[] strs = {
+				"00PT00y,1676	http://www.eswine.com/html/201101/1676.html                                                                                                                                                                                                              ",
+				"005d00u,%C6%CF%CC%D1%BE%C6	http://tieba.baidu.com/f?kw=%C6%CF%CC%D1%BE%C6&fr=ala0&tpl=5	                                                                                                                                                                             ",
+				"005s00u,%E8%91%A1%E8%90%84%E9%85%92	http://www.baike.com/wiki/%E8%91%A1%E8%90%84%E9%85%92						                                                                                                                                                     ",
+				"10PV014,0PV03d1014	http://www.jiumei.com/								                                                                                                                                                                                                 ",
+				"10PU014,0PU03d1014	www.wine-world.com                                                                                                                                                                                                                                   ",
+				"10PU014,0PU03d2014	m.wine-world.com										                                                                                                                                                                                             ",
+				"108X014,08X03d1014	http://newapphome.jiuxian.com/home/getFunctionSwitch.htm?appKey=VoVRAvKskT8DAKbp3hKWMzsM&appVersion=7.5.0&areaId=503&channelCode=0%2                                                                                                                 ",
+				"10PZ014,0PZ03d1014	http://www.wine-talk.cn/lsnsapi.php?m=User&a=savePosxy&v=v19&pm=OPPO+A37m&sy=5.1&vc=&vn=&devicetoken=b1c69dbe977036e2&inputparam=FHK9pWR7jy7eEDNAxIFtjfYcdjjPo0DkHlNvEiobd4bbyMwMMFS5OI4u9VPqLZ0AcJnwIta_lAZB%0AS1M9p0mf9Q%3D%3D%0A			         ",
+				"10Pa014,0Pa03d1014	http://app.9kacha.com/initconfig_json.php?				                                                                                                                                                                                             ",
+				"10Pb014,0Pb03d1014	http://www.snapwine.net/ios/PaiJiuPrivacy.html				                                                                                                                                                                                         ",
+				"10Pc014,0Pc03d1014	http://news.9quan.com.cn/api/1.3/app.php?device=OPPOA37m&platform=android5.1&screen=720x1280&sign=0a46022e7d30d8f49238a187ddce827d&devicetoken=&imei=864077032896238&appver=2000045&landing=&nonce_str=nifdhmbxdywomwug&bundleId=cn.com.9quan.android",
+				"10Pd014,0Pd03d1014	http://m.putaoputao.cn/homepage/indexV4.do                                                                                                                                                                                                           ",
+				"10Pe014,0Pe03d1014	http://mobile.wangjiu.com/api/query/getHomeTemplate.json                                                                                                                                                                                             " };
+		
+		for (int i = 0; i < strs.length; i++) {
+			strs[i] = strs[i].trim();
+			String[] nows = strs[i].split("\t");
+			String str = nows[0] + "\t" + "P110" + "\t" + nows[2] + "\t"
+					+ nows[1] + "\t" + "ALL";
+			System.out.println(str);
+		}
+		
+	}
+}

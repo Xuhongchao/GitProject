@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;AppendToEnd&apos;" deleteContents="true" description="Delete resource &apos;AppendToEnd&apos;" element1="/AppendToEnd" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1509355210390"/>
+</session>
