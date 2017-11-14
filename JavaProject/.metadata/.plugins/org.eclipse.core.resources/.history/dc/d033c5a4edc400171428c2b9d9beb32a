@@ -1,0 +1,27 @@
+package com.pxene.main;
+
+import edu.uci.ics.crawler4j.crawler.Page;
+import edu.uci.ics.crawler4j.crawler.WebCrawler;
+import edu.uci.ics.crawler4j.url.WebURL;
+
+/**
+ * 自定义爬虫类
+ * 
+ * @author xuhongchao
+ *
+ */
+public class MyCrawler extends WebCrawler {
+
+	@Override
+	public boolean shouldVisit(Page referringPage, WebURL url) {
+		// TODO Auto-generated method stub
+		return super.shouldVisit(referringPage, url);
+	}
+
+	@Override
+	public void visit(Page page) {
+		// TODO Auto-generated method stub
+		super.visit(page);
+	}
+
+}

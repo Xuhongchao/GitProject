@@ -1,0 +1,39 @@
+package Entrance;
+
+public class AppendNum {
+	public static void main(String[] args) {
+		String[] strs = { 
+				"7      ",
+				"5      ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+				"2.1    ",
+                "       ",
+				"4      ",
+                "       ",
+                "       ",
+                "       ",
+				"3      ",
+                "       ",
+                "       ",
+				"6.2    ",
+				"7.4.1  "
+
+			
+				};
+
+		for (int i = 0; i < strs.length; i++) {
+			strs[i] = strs[i].trim();
+			if (strs[i] != null && !"".equals(strs[i].trim())) {
+				String string = "ËÑºüÆû³µ" + strs[i];
+				System.out.println(string);
+			}
+
+		}
+	}
+}

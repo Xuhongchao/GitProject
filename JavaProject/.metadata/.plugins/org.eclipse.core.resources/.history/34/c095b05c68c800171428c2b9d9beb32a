@@ -1,0 +1,16 @@
+package com.pxene.rdata;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 月 日 下午7:45:53
+ */
+
+public class ReadDataTest {
+	@Test
+	public void test1() throws Exception {
+		
+	}
+}
