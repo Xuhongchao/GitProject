@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ReadDataTest.test1" project="POI" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testcase name="test1" classname="com.pxene.odata.ReadDataTest" time="0.616"/>
-</testrun>

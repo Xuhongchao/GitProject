@@ -1,7 +1,0 @@
-package com.pxene.main;
-
-import edu.uci.ics.crawler4j.crawler.WebCrawler;
-
-public class MyCrawler extends WebCrawler {
-
-}

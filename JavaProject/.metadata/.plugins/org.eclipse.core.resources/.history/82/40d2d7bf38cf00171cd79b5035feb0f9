@@ -1,0 +1,17 @@
+package com.pxene.entrance;
+
+import java.util.List;
+
+import com.pxene.entity.Data;
+import com.pxene.service.LoadLine;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 11月 13日 下午7:42:00
+ */
+
+public class Entrance {
+	public static void main(String[] args) {
+		List<Data> list = new LoadLine().readFromExcelToData();
+		System.out.println(list.size());
+	}
+}

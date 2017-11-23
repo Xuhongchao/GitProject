@@ -1,0 +1,11 @@
+package com.pxene.service;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 月 日 上午11:44:37
+ * 
+ * 加载所有的url
+ */
+
+public class LoadUrlExam {
+
+}

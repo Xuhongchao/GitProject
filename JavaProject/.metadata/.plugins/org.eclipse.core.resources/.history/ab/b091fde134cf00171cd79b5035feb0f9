@@ -1,0 +1,55 @@
+package com.pxene.service;
+
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.pxene.entity.Data;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 月 日 上午11:22:17
+ */
+
+public class LoadLine {
+	private XSSFSheet shee
+	@SuppressWarnings("deprecation")
+	public static void readFromExcel() throws IOException {
+		// 得到工作表的第一行和最后一行
+		int firstLine = sheet.getFirstRowNum();
+		int endLine = sheet.getLastRowNum();
+
+		for (int i = firstLine; i <= endLine; i++) {
+			// 每行的读取都单独创建一个data对象
+			Data data = new Data();
+			Row row = sheet.getRow(i);// 得到每一行
+
+			// 得到每一个单元格cell
+			Cell num = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
+			Cell domain = row.getCell(1, Row.CREATE_NULL_AS_BLANK);
+			Cell param = row.getCell(2, Row.CREATE_NULL_AS_BLANK);
+			Cell urlReg = row.getCell(3, Row.CREATE_NULL_AS_BLANK);
+			Cell urlExam = row.getCell(4, Row.CREATE_NULL_AS_BLANK);
+
+			// 得到每一个单元格的数据并封装到data对象中
+			data.setNum(turn(num));
+			data.setDomain(turn(domain));
+			data.setParam(turn(param));
+			data.setUrlReg(turn(urlReg));
+			data.setUrlExam(turn(urlExam));
+
+			/*
+			 * // 得到每行的第一个单元格和最后一个单元格 int firstCell = row.getFirstCellNum(); int
+			 * endCell = row.getLastCellNum(); String value = null; for (int j =
+			 * firstCell; j < endCell; j++) { // 读取每个单元格的内容 Cell cell =
+			 * row.getCell(j, Row.CREATE_NULL_AS_BLANK); // 判断单元格内容 value =
+			 * turn(cell);
+			 * 
+			 * // data.setNum(num); }
+			 */
+			System.out.println(data.toString());
+		}
+	}
+}

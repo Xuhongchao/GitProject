@@ -9,5 +9,6 @@ public class RowEntity {
 	private int RowNum; // 行号
 	private String AppNameAndVersion; // app名称和版本
 	private String Behavior; // 行为
+	private String param; // 参数
 	
 }

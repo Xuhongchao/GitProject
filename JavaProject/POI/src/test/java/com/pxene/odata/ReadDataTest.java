@@ -78,8 +78,6 @@ public class ReadDataTest {
 					value = "Î´ÖªÀàĞÍ";
 					break;
 				}
-
-				System.out.println(value);
 			}
 		}
 
