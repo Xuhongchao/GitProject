@@ -1,9 +1,13 @@
 package com.pxene.util;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -16,6 +20,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.pxene.entity.Data;
+
 /**
  * Created by @author xuhongchao on @date 2017年 11月 13日 下午7:44:15
  * 
@@ -24,14 +30,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 @SuppressWarnings("deprecation")
 public class IOUtil {
-	private final static String READ_PATH = "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";
+	private final static String SOURCE_PATH = "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";
 	private final static IOUtil IO_UTIL = new IOUtil();
 	private XSSFWorkbook wb;
 	private XSSFSheet sheet;
 
 	private IOUtil() {
 		try {
-			wb = new XSSFWorkbook(READ_PATH);
+			wb = new XSSFWorkbook(SOURCE_PATH);
 		} catch (IOException e) {
 			throw new RuntimeException("加载XSSFWorkbook失败 -- IOUtil");
 		}
@@ -58,28 +64,68 @@ public class IOUtil {
 	 * @param file
 	 *            文件
 	 * @param map
-	 *            map数据
+	 *            只含有num-urlExam的数据
+	 * @param line
+	 *            num-data(除num外的其他数据)形式的数据
 	 */
-	public void writeToFile(File file, Map<String, String> map) {
+	public void writeToFile(File file, Map<String, String> map,
+			Map<String, Data> line) {
 		BufferedWriter bw = null;
 		try {
 			bw = new BufferedWriter(new OutputStreamWriter(
 					new FileOutputStream(file)));
 
 			for (Map.Entry<String, String> entry : map.entrySet()) {
-				String value = entry.getKey() + "\t" + entry.getValue()
-						+ "\r\n";
+				Data data = line.get(entry.getKey());
+				if (data == null) {
+					continue;
+				}
+				String value = entry.getKey() + "\t" + data.getDomain() + "\t"
+						+ data.getParam() + "\t" + data.getUrlReg() + "\t"
+						+ data.getUrlExam() + "\r\n";
 				bw.append(value);
 				bw.flush();
 			}
 
 		} catch (Exception e) {
-			throw new RuntimeException("写到文件中出错 -- IOUtil");
+			throw new RuntimeException("写到文件中出错 -- IOUtil  >>  "
+					+ e.getMessage());
 		} finally {
 			try {
 				bw.close();
 			} catch (IOException e) {
 				throw new RuntimeException("关闭写入流出错 -- IOUtil");
+			}
+		}
+	}
+
+	/**
+	 * 从文件中读数据
+	 * 
+	 * @param file
+	 *            要读取的文件
+	 */
+	public String readFromTxt(File file) {
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(
+					file)));
+			// 一次读取一行
+			String line = "";
+			StringBuilder sb = new StringBuilder();
+			while ((line = br.readLine()) != null) {
+				sb.append(line.split("\t")[0] + "-");
+			}
+			return sb.substring(0, sb.lastIndexOf("-")).toString();
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("读取文件找不到 -- IOUtil");
+		} catch (IOException e) {
+			throw new RuntimeException("读取文件出错 -- IOUtil");
+		} finally {
+			try {
+				br.close();
+			} catch (IOException e) {
+				throw new RuntimeException("关闭读取流出错 -- IOUtil");
 			}
 		}
 	}

@@ -1,0 +1,30 @@
+package com.pxene.entrance;
+
+import java.io.File;
+
+import com.pxene.util.IOUtil;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 月 日 下午4:04:13
+ */
+
+public class Entrance2 {
+	private static final String filePath = "C:\\Users\\xuhongchao\\Desktop\\res";
+	private static IOUtil ioUtil = IOUtil.getInstance();
+
+	public static void main(String[] args) {
+		File file = new File(filePath);
+		File[] files = null;
+		if (file.isDirectory()) {
+			files = file.listFiles();
+		}
+
+		for (int i = 0; i < files.length; i++) {
+			String numStr = ioUtil.readFromTxt(files[i]);
+			// 处理逻辑
+			String[] nums = numStr.split("-");
+			
+		}
+
+	}
+}

@@ -1,8 +1,7 @@
 package com.pxene.service;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -12,22 +11,22 @@ import com.pxene.entity.Data;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xuhongchao on @date 2017年 月 日 上午11:22:17
+ * Created by @author xuhongchao on @date 2017年 月 日 上午10:28:04
  * 
- * 读取所有数据到data对象中
+ * 按照kv的格式来加载一行数据到map中，形成字典，以便通过k来找值
  */
 
 public class LoadLine {
 	private IOUtil ioUtil = IOUtil.getInstance();
 	private XSSFSheet sheet = ioUtil.getSheet();
-	private List<Data> list = new ArrayList<Data>();
+	private Map<String, Data> map = new HashMap<String, Data>();
 
 	/**
-	 * 读取所有数据到data对象中，不包含param为NULL并且urlReg为.*的情况
+	 * 从Excel中读取一行数据，按照num-data(除num的其他部分)存放到map中
 	 * 
-	 * @throws IOException
+	 * @return map集合，其中key为num，value为data对象
 	 */
-	public List<Data> readFromExcelToData() {
+	public Map<String, Data> readAll() {
 		// 得到工作表的第一行和最后一行
 		int firstLine = sheet.getFirstRowNum();
 		int endLine = sheet.getLastRowNum();
@@ -50,14 +49,14 @@ public class LoadLine {
 			}
 
 			// 得到每一个单元格的数据并封装到data对象中
-			data.setNum(ioUtil.turn(num));
 			data.setDomain(ioUtil.turn(domain));
 			data.setParam(ioUtil.turn(paramReg));
 			data.setUrlReg(ioUtil.turn(urlReg));
 			data.setUrlExam(ioUtil.turn(urlExam));
 
-			list.add(data);
+			map.put(ioUtil.turn(num), data);
 		}
-		return list;
+		return map;
 	}
+
 }

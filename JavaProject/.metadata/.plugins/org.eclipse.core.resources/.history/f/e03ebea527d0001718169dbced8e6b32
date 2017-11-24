@@ -1,0 +1,15 @@
+package com.pxene.entrance;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 月 日 下午4:04:13
+ */
+
+public class Entrance2 {
+	public static void main(String[] args) {
+		
+		String filePath = "C:\\Users\\xuhongchao\\Desktop\\";
+		
+		
+	}
+	
+}

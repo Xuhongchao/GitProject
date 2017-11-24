@@ -1,11 +1,7 @@
 package com.pxene.odata;
 
-import static org.junit.Assert.*;
-
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,4 +68,31 @@ public class CoreTest {
 		}
 	}
 
+	@Test
+	public void test5() throws Exception {
+		StringBuilder sb = new StringBuilder();
+		sb.append("1-2-3-");
+		System.out.println(sb.substring(0, sb.lastIndexOf("-")).toString());
+		// System.out.println(sb.toString());
+
+		String string = "20Kd03m100y1";
+		System.out.println(string.substring(8, 11));
+	}
+
+	@Test
+	public void test6() throws Exception {
+		int[] temp = { 1, 2, 3, 4, 3, 4 };
+		boolean flag = true;
+		for (int i = 0; i < temp.length - 1; i++) {
+			for (int j = 1; j < temp.length; j++) {
+				if (temp[i] != temp[j]) {
+					flag = false;
+					break;
+				}
+			}
+			if (flag == false) {
+				break;
+			}
+		}
+	}
 }

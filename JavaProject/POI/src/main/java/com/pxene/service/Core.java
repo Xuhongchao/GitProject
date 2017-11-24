@@ -22,7 +22,18 @@ public class Core {
 	private static int count = 0;
 	private IOUtil ioUtil = IOUtil.getInstance();
 
-	public void filter(List<Data> list, Map<String, String> map) {
+	/**
+	 * 让所有的url过滤正则，过滤流程是所有url过滤一个正则
+	 * 
+	 * @param list
+	 *            用来取正则
+	 * @param map
+	 *            用来取url
+	 * @param START_PATH
+	 *            第一次过滤出的文件路径
+	 */
+	public void filter(List<Data> list, Map<String, String> map,
+			String START_PATH, Map<String, Data> line) {
 		Map<String, String> container = null;
 		// 初始化标识为假
 		boolean b = false;
@@ -79,13 +90,55 @@ public class Core {
 			}
 			if (container.size() > 1) {
 				// 先写出去，然后后面会做删除动作
-				ioUtil.writeToFile(new File(
-						"C:\\Users\\xuhongchao\\Desktop\\res\\" + (count++)
-								+ ".txt"), container);
+				ioUtil.writeToFile(new File(START_PATH + (count++) + ".txt"),
+						container, line);
 
 				// System.out.println("--" + container.size());
 			} else if (container.size() == 1) {
 				container.clear();
+			}
+		}
+	}
+
+	/**
+	 * 对第一次输出的目录文件再次进行过滤，找出最终的结果
+	 * 
+	 * @param START_PATH
+	 *            res1的目录
+	 * @param TEMP_PATH
+	 *            res2的目录
+	 */
+	public void secondFilter(String START_PATH, String TEMP_PATH) {
+		File file = new File(START_PATH);
+		File[] files = null;
+		if (file.isDirectory()) {
+			files = file.listFiles();
+		}
+
+		for (int i = 0; i < files.length; i++) {
+			String numStr = ioUtil.readFromTxt(files[i]);
+			// 处理逻辑
+			String[] nums = numStr.split("-");
+			String[] temp = new String[nums.length];
+			for (int j = 0; j < nums.length; j++) {
+				temp[j] = nums[j].substring(8, 11);
+			}
+			// true代表参数相同
+			boolean flag = true;
+			for (int k = 0; k < temp.length - 1; k++) {
+				for (int p = 1; p < temp.length; p++) {
+					if (!temp[k].equals(temp[p])) {
+						flag = false;
+						break;
+					}
+				}
+				if (flag == false) {
+					break;
+				}
+			}
+			System.out.println(flag);
+			if (flag) { // 将参数相同的文件移动到另一个文件夹下
+				files[i].renameTo(new File(TEMP_PATH + files[i].getName()));
 			}
 		}
 	}

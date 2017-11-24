@@ -1,2 +1,7 @@
 1511317474780	Rename type 'Url'
 1511345558439	Extract method 'TraverseAllUrl'
+1511488788718	Extract method 'secondFilter'
+1511489038123	Delete element
+1511490162440	Rename type 'LoadLine'
+1511490458645	Copy compilation unit
+1511490472925	Delete element
