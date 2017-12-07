@@ -1,0 +1,8 @@
+package com.pxene.core;
+
+/**
+ */
+
+public interface ProcessResultImpl {
+	public static final String READ_PATH;
+}

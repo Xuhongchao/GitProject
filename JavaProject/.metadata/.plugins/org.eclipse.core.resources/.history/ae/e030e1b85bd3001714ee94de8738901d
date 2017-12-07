@@ -1,0 +1,13 @@
+package com.pxene;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 11月 27日 下午6:13:21
+ */
+
+public class Test2 {
+
+}
+
+class ListNode {
+	private Object data;
+}

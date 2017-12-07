@@ -1,0 +1,33 @@
+package com.pxene.entrance;
+
+import java.io.IOException;
+
+import com.pxene.core.impl.ProcessResult;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 12月 05日 下午6:25:52
+ */
+
+public class Entrance {
+	public static void main(String[] args) {
+		try {
+			new ProcessResult().statistic();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+{
+	购物大厅(v3.1.2) =10, 
+	米折特卖（6.0.1） =1, 
+	米折特卖3.0.0=1, 
+	米折特卖3.1.1=1, 
+	米折特卖3.2.3=1, 
+	米折特卖3.3.0=1, 
+	米折特卖3.4.0=1, 
+	米折特卖4.0.1=1, 
+	米折特卖4.3.2=1, 
+	米折特卖4.7.2=1, 
+	米折特卖5.5.2=1, 
+	百度糯米                =1, 
+	美团                        =1}

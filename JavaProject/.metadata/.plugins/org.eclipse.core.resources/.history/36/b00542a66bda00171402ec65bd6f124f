@@ -1,0 +1,8 @@
+package com.pxene.core;
+
+/**
+ */
+
+public interface ProcessResultImpl {
+	
+}

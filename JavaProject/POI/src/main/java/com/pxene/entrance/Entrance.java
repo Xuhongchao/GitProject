@@ -11,8 +11,16 @@ import com.pxene.service.LoadUrlExam;
 
 /**
  * Created by @author xuhongchao on @date 2017年 11月 13日 下午7:42:00
- * 
- * 程序入口
+ * <ul>
+ * <li>本程序的入口</li>
+ * <li>注意事项：
+ * <ul>
+ * <li>1，运行程序需要先在指定位置处建立res和res2两个文件夹</li>
+ * <li>2，源文件地址为（如需修改请改IOUtil类中的SOURCE_PATH的值即可）：SOURCE_PATH =
+ * "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";</li>
+ * </ul>
+ * </li>
+ * </ul>
  */
 
 public class Entrance {

@@ -1,0 +1,48 @@
+package com.pxene.entrance;
+
+import java.io.IOException;
+
+import com.pxene.core.impl.ProcessResult;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 12月 05日 下午6:25:52
+ */
+
+public class Entrance {
+	public static void main(String[] args) {
+		try {
+			new ProcessResult().statistic();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+{
+	天猫 1.1.0=1, 
+	天猫 1.2.1=1, 
+	天猫 1.4.0=1, 
+	天猫 2.0.0=1, 
+	天猫 2.0.3=1, 
+	天猫 2.0.6=1, 
+	天猫 3.0.0=1, 
+	天猫 3.1.2=1, 
+	天猫 3.4.0=1, 
+	天猫 4.0.0=1, 
+	天猫 4.1.2=1, 
+	天猫 4.2.2=1, 
+	天猫 4.4.2=2, 
+	天猫 4.5.1=1, 
+	天猫 4.7.0=1, 
+	天猫 4.9.0=2, 
+	天猫 5.0.0=2, 
+	天猫 5.2.1=1, 
+	天猫 5.4.2=1, 
+	天猫 5.7.0=2, 
+	天猫 5.10.0=1, 
+	天猫 5.15.0=1, 
+	天猫 5.19.1=1, 
+	天猫 5.23.1=1, 
+	天猫 5.26.3=1}
+
+

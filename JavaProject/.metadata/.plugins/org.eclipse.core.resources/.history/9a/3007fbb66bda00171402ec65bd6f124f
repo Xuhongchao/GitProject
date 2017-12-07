@@ -1,0 +1,9 @@
+package com.pxene.core;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 12月 6日 下午5:53:49
+ */
+
+public interface ProcessResultImpl {
+	public static final String READ_PATH;
+}
