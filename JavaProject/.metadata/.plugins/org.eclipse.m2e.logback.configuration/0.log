@@ -10368,3 +10368,1039 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected ST
 2017-12-05 18:31:09,696 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-12-05 18:31:09,697 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
 2017-12-05 18:31:09,702 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:38:22,110 [Worker-323] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:38:22,119 [Worker-323] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:38:22,120 [Worker-323] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:38:22,127 [Worker-323] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:22,201 [Worker-354] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:22,207 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:22,208 [Worker-354] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:22,213 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:27,592 [Worker-323] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:27,597 [Worker-323] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:27,598 [Worker-323] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:27,603 [Worker-323] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:32,313 [Worker-343] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:32,319 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 09:41:32,320 [Worker-343] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 09:41:32,326 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 16:51:23,258 [Worker-449] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 16:51:23,265 [Worker-449] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 16:51:23,266 [Worker-449] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 16:51:23,272 [Worker-449] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:52:37,137 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:52:37,144 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:52:37,145 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:52:37,151 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:52:47,203 [Worker-517] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:52:47,210 [Worker-517] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:52:47,210 [Worker-517] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:52:47,216 [Worker-517] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:05,688 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:05,695 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:05,696 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:05,702 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:49,275 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:49,282 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:49,283 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:49,290 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:52,321 [Worker-528] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:52,327 [Worker-528] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:52,327 [Worker-528] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:52,333 [Worker-528] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:53,348 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:53,355 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:53,356 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:53,363 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:58,789 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:58,796 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:53:58,797 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:53:58,803 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:54:01,212 [Worker-531] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:54:01,218 [Worker-531] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:54:01,221 [Worker-531] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:54:01,227 [Worker-531] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:55:54,546 [Worker-521] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:55:54,551 [Worker-521] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:55:54,552 [Worker-521] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:55:54,557 [Worker-521] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:12,698 [Worker-521] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:12,704 [Worker-521] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:12,705 [Worker-521] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:12,712 [Worker-521] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:15,164 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:15,171 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:15,171 [Worker-527] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:15,177 [Worker-527] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:22,613 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:22,621 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:22,622 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:22,627 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:43,403 [Worker-524] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:43,409 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:43,409 [Worker-524] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:43,415 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:46,285 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:46,291 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:46,292 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:46,297 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:48,408 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:48,414 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:56:48,414 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:56:48,419 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:57:11,186 [Worker-530] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:57:11,192 [Worker-530] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:57:11,194 [Worker-530] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:57:11,199 [Worker-530] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:57:21,546 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:57:21,554 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:57:21,555 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:57:21,560 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:57:59,998 [Worker-533] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:58:00,004 [Worker-533] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 17:58:00,005 [Worker-533] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 17:58:00,011 [Worker-533] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:04:48,228 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:04:48,234 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:04:48,235 [Worker-518] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:04:48,241 [Worker-518] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:04:53,674 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:04:53,682 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:04:53,683 [Worker-512] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:04:53,691 [Worker-512] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:25,443 [Worker-530] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:25,449 [Worker-530] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:25,450 [Worker-530] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:25,455 [Worker-530] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:32,392 [Worker-533] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:32,398 [Worker-533] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:32,399 [Worker-533] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:32,404 [Worker-533] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:33,544 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:33,550 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:07:33,551 [Worker-526] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:07:33,555 [Worker-526] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:09:45,681 [Worker-515] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:09:45,687 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-06 18:09:45,688 [Worker-515] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-06 18:09:45,693 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:21:47,484 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:21:47,492 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:21:47,493 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:21:47,498 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:21:52,080 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:21:52,087 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:21:52,088 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:21:52,093 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:22:33,235 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:22:33,240 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:22:33,241 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:22:33,247 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:06,272 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:06,277 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:06,277 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:06,282 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:07,315 [Worker-783] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:07,321 [Worker-783] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:07,322 [Worker-783] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:07,326 [Worker-783] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:17,246 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:17,253 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:17,253 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:17,259 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:20,021 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:20,027 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:20,028 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:20,033 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:37,901 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:37,907 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:37,909 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:37,914 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:41,604 [Worker-795] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:41,609 [Worker-795] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:41,610 [Worker-795] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:41,615 [Worker-795] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:43,076 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:43,082 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:43,082 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:43,087 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:51,252 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:51,258 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:23:51,259 [Worker-777] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:23:51,264 [Worker-777] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:32:30,993 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:32:31,002 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:32:31,003 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:32:31,008 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:32:58,682 [Worker-791] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:32:58,688 [Worker-791] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:32:58,689 [Worker-791] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:32:58,694 [Worker-791] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:14,860 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:14,866 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:14,867 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:14,872 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:23,722 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:23,728 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:23,729 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:23,734 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:27,880 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:27,886 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:27,887 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:27,892 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:38,055 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:38,062 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:38,062 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:38,068 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:47,414 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:47,420 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:33:47,421 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:33:47,426 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:01,344 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:01,350 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:01,352 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:01,357 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:09,200 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:09,205 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:09,206 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:09,212 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:18,984 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:18,990 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:18,990 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:18,995 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:35,533 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:35,539 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:35,539 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:35,544 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:45,626 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:45,631 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:45,632 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:45,637 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:49,513 [Worker-787] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:49,519 [Worker-787] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:49,520 [Worker-787] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:49,525 [Worker-787] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:54,846 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:54,852 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:34:54,853 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:34:54,858 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:09,576 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:09,582 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:09,583 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:09,589 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:10,671 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:10,677 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:10,679 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:10,685 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:46,557 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:46,563 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:46,564 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:46,572 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:52,989 [Worker-787] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:52,995 [Worker-787] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:52,996 [Worker-787] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:53,000 [Worker-787] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:56,592 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:56,598 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:35:56,598 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:35:56,603 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:04,392 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:04,397 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:04,398 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:04,404 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:19,623 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:19,629 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:19,629 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:19,634 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:20,663 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:20,668 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:20,669 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:20,675 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:23,330 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:23,336 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:23,337 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:23,342 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:29,734 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:29,740 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:29,741 [Worker-796] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:29,749 [Worker-796] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:36,615 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:36,621 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:36,622 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:36,627 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:40,064 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:40,070 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:40,070 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:40,075 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:50,693 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:50,699 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:36:50,699 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:36:50,705 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:00,831 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:00,837 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:00,838 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:00,844 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:01,870 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:01,876 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:01,877 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:01,882 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:04,229 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:04,236 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:04,237 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:04,243 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:19,556 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:19,562 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:19,563 [Worker-778] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:19,568 [Worker-778] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:25,462 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:25,468 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:25,469 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:25,474 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:30,714 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:30,720 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:30,720 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:30,725 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:58,188 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:58,194 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:58,195 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:58,200 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:59,704 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:59,710 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:37:59,710 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:37:59,719 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:12,492 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:12,497 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:12,498 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:12,505 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:23,402 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:23,409 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:23,410 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:23,415 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:29,349 [Worker-803] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:29,355 [Worker-803] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:29,355 [Worker-803] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:29,361 [Worker-803] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:32,964 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:32,969 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:32,970 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:32,976 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:39,249 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:39,255 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:39,256 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:39,262 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:43,769 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:43,776 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:43,777 [Worker-797] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:43,783 [Worker-797] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:46,925 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:46,931 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:46,931 [Worker-798] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:46,937 [Worker-798] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:51,133 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:51,140 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:51,141 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:51,147 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:54,094 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:54,100 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:38:54,101 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:38:54,107 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:02,710 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:02,716 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:02,717 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:02,722 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:03,746 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:03,752 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:03,752 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:03,757 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:05,522 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:05,528 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:05,529 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:05,535 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:24,508 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:24,514 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:24,515 [Worker-800] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:24,521 [Worker-800] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:36,957 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:36,962 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:36,963 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:36,968 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:49,932 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:49,938 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:39:49,938 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:39:49,944 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:00,622 [Worker-791] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:00,631 [Worker-791] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:00,632 [Worker-791] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:00,641 [Worker-791] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:11,278 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:11,284 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:11,285 [Worker-801] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:11,290 [Worker-801] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:31,430 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:31,436 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:31,437 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:31,442 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:40,499 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:40,505 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:40,506 [Worker-789] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:40,511 [Worker-789] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:49,188 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:49,194 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:40:49,194 [Worker-763] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:40:49,202 [Worker-763] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:41:11,760 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:41:11,766 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:41:11,766 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:41:11,771 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:42:24,433 [Worker-808] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:42:24,440 [Worker-808] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:42:24,440 [Worker-808] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:42:24,446 [Worker-808] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:47:06,943 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:47:06,950 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:47:06,953 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:47:06,959 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:47:44,937 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:47:44,944 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:47:44,945 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:47:44,952 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:48:57,148 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:48:57,155 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:48:57,156 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:48:57,162 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:52:23,854 [Worker-803] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:23,860 [Worker-803] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:52:23,861 [Worker-803] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:23,866 [Worker-803] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:52:24,911 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:24,917 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:52:24,918 [Worker-799] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:24,923 [Worker-799] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 09:52:30,387 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:30,393 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 09:52:30,394 [Worker-793] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 09:52:30,400 [Worker-793] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:31:57,605 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:31:57,612 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:31:57,613 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:31:57,619 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:32:01,788 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:01,794 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:32:01,794 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:01,799 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:32:02,847 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:02,853 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:32:02,854 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:02,859 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:32:05,885 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:05,891 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:32:05,892 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:05,898 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:32:07,982 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:07,988 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:32:07,989 [Worker-772] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:07,994 [Worker-772] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:32:27,381 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:27,388 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:32:27,388 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:32:27,394 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:20,947 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:20,954 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:20,954 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:20,960 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:21,986 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:21,992 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:21,994 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:22,000 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:23,458 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:23,464 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:23,465 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:23,471 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:24,497 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:24,503 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:24,503 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:24,508 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:49,154 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:49,161 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:49,162 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:49,168 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:33:53,525 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:53,532 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:33:53,533 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:33:53,539 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:35:18,285 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:35:18,291 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:35:18,293 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:35:18,299 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:35:40,644 [Worker-816] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:35:40,650 [Worker-816] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:35:40,651 [Worker-816] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:35:40,657 [Worker-816] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:37:00,068 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:00,074 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:37:00,075 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:00,081 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:37:33,326 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:33,332 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:37:33,333 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:33,339 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:37:35,059 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:35,065 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:37:35,066 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:35,073 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:37:37,641 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:37,650 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:37:37,651 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:37:37,657 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:38:23,445 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:23,452 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:38:23,454 [Worker-817] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:23,460 [Worker-817] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:38:30,631 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:30,638 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:38:30,639 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:30,645 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:38:42,711 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:42,716 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:38:42,717 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:42,723 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:38:47,666 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:47,672 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:38:47,673 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:47,678 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:38:52,604 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:52,611 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:38:52,612 [Worker-814] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:38:52,618 [Worker-814] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:39:57,676 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:39:57,683 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:39:57,683 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:39:57,689 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:40:21,516 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:40:21,522 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:40:21,523 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:40:21,529 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:45:13,869 [Worker-813] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:13,876 [Worker-813] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:45:13,876 [Worker-813] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:13,882 [Worker-813] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:45:15,315 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:15,321 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:45:15,322 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:15,328 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:45:17,732 [Worker-821] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:17,738 [Worker-821] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:45:17,739 [Worker-821] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:45:17,745 [Worker-821] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:10,226 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:10,232 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:10,233 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:10,239 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:20,803 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:20,809 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:20,810 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:20,815 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:22,602 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:22,608 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:22,609 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:22,614 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:23,676 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:23,682 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:23,683 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:23,689 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:26,835 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:26,840 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:26,841 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:26,846 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:31,943 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:31,949 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:31,950 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:31,955 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:46:39,769 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:39,776 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:46:39,776 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:46:39,782 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:47:05,384 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:47:05,390 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:47:05,391 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:47:05,396 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:47:23,083 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:47:23,090 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:47:23,091 [Worker-806] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:47:23,097 [Worker-806] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:04,292 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:04,298 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:04,298 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:04,304 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:27,902 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:27,909 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:27,910 [Worker-805] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:27,915 [Worker-805] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:30,593 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:30,599 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:30,600 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:30,605 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:33,240 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:33,245 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:33,246 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:33,251 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:39,366 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:39,373 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:39,374 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:39,381 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:46,235 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:46,241 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:46,242 [Worker-823] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:46,250 [Worker-823] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:48:58,083 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:58,089 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:48:58,090 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:48:58,095 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:50:28,321 [Worker-827] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:28,328 [Worker-827] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:50:28,329 [Worker-827] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:28,335 [Worker-827] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:50:47,948 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:47,954 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:50:47,955 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:47,962 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:50:52,172 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:52,179 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:50:52,179 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:52,185 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:50:55,648 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:55,654 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:50:55,655 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:50:55,660 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:51:38,002 [Worker-829] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:38,009 [Worker-829] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:51:38,009 [Worker-829] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:38,016 [Worker-829] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:51:48,877 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:48,883 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:51:48,884 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:48,890 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:51:54,152 [Worker-828] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:54,159 [Worker-828] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:51:54,160 [Worker-828] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:51:54,166 [Worker-828] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:54:00,097 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:00,103 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:54:00,104 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:00,110 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:54:03,640 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:03,648 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:54:03,650 [Worker-818] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:03,656 [Worker-818] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:54:08,908 [Worker-830] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:08,914 [Worker-830] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:54:08,915 [Worker-830] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:08,920 [Worker-830] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:54:13,332 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:13,338 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:54:13,339 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:13,344 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:54:16,905 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:16,911 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:54:16,911 [Worker-812] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:54:16,917 [Worker-812] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:02,450 [Worker-830] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:02,457 [Worker-830] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:02,457 [Worker-830] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:02,463 [Worker-830] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:05,748 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:05,754 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:05,754 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:05,760 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:14,346 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:14,352 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:14,352 [Worker-826] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:14,357 [Worker-826] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:22,548 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:22,555 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:22,556 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:22,563 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:41,599 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:41,605 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:41,605 [Worker-802] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:41,611 [Worker-802] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 10:59:48,862 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:48,868 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 10:59:48,868 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 10:59:48,873 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:00:11,517 [Worker-821] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:11,525 [Worker-821] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 11:00:11,528 [Worker-821] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:11,534 [Worker-821] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:00:12,540 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:12,546 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:00:12,546 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:12,551 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:00:15,498 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:15,504 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 11:00:15,505 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:00:15,512 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:06:39,592 [Worker-832] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:06:39,597 [Worker-832] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 11:06:39,598 [Worker-832] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:06:39,603 [Worker-832] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:07:45,739 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:07:45,746 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 11:07:45,746 [Worker-794] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:07:45,751 [Worker-794] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 11:18:10,289 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:18:10,295 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 11:18:10,296 [Worker-820] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 11:18:10,302 [Worker-820] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:04,817 [Worker-859] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:04,823 [Worker-859] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:04,824 [Worker-859] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:04,829 [Worker-859] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:13,057 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:13,062 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:13,062 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:13,068 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:14,544 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:14,550 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:14,551 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:14,557 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:20,239 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:20,246 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:20,247 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:20,252 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:22,275 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:22,281 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:22,282 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:22,287 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:26,586 [Worker-860] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:26,592 [Worker-860] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:26,593 [Worker-860] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:26,597 [Worker-860] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:36,557 [Worker-857] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:36,563 [Worker-857] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:36,564 [Worker-857] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:36,569 [Worker-857] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:46:45,042 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:45,048 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:46:45,050 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:46:45,056 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:47:01,510 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:47:01,517 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:47:01,517 [Worker-849] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:47:01,525 [Worker-849] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 13:47:03,674 [Worker-837] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:47:03,680 [Worker-837] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 13:47:03,681 [Worker-837] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 13:47:03,685 [Worker-837] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:36:24,741 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:36:24,748 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:36:24,749 [Worker-824] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:36:24,755 [Worker-824] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:43:56,438 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:43:56,444 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:43:56,445 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:43:56,451 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:03,352 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:03,357 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:03,358 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:03,363 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:07,915 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:07,921 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:07,923 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:07,929 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:24,368 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:24,375 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:24,376 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:24,383 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:25,827 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:25,834 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:25,834 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:25,840 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:26,910 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:26,916 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:26,917 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:26,921 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:28,967 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:28,974 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:28,975 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:28,982 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:44:30,100 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:30,107 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:44:30,109 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:44:30,115 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:45:07,685 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:45:07,693 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:45:07,693 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:45:07,699 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:45:19,804 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:45:19,811 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:45:19,811 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:45:19,817 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:47:23,030 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:23,036 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:47:23,037 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:23,043 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:47:25,878 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:25,884 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:47:25,885 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:25,893 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:47:42,113 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:42,119 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:47:42,119 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:42,125 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:47:46,429 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:46,435 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:47:46,436 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:47:46,441 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:02,388 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:02,394 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:02,395 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:02,400 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:32,124 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:32,129 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:32,130 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:32,136 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:34,233 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:34,239 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:34,239 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:34,245 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:44,774 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:44,780 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:44,781 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:44,786 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:48,797 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:48,804 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:48,805 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:48,811 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:49:58,935 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:58,940 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:49:58,942 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:49:58,948 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:12,776 [Worker-875] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:12,783 [Worker-875] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:12,784 [Worker-875] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:12,789 [Worker-875] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:16,595 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:16,601 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:16,602 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:16,607 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:29,869 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:29,876 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:29,877 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:29,884 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:40,159 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:40,165 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:40,166 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:40,171 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:52,180 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:52,186 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:52,186 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:52,191 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:50:53,219 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:53,225 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:50:53,226 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:50:53,231 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:51:02,175 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:02,181 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:51:02,182 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:02,188 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:51:30,851 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:30,858 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:51:30,859 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:30,867 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:51:34,674 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:34,683 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:51:34,684 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:34,690 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:51:37,663 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:37,669 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:51:37,670 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:37,676 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:51:40,147 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:40,153 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:51:40,154 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:51:40,160 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:53:58,343 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:53:58,350 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:53:58,350 [Worker-844] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:53:58,356 [Worker-844] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:54:09,436 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:09,442 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:54:09,443 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:09,449 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:54:12,673 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:12,679 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:54:12,680 [Worker-864] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:12,686 [Worker-864] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:54:22,264 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:22,271 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:54:22,272 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:22,278 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:54:26,909 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:26,917 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:54:26,918 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:26,925 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:54:29,915 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:29,922 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:54:29,923 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:54:29,930 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:55:50,028 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:55:50,034 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:55:50,035 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:55:50,041 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:14,299 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:14,305 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:14,306 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:14,312 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:17,431 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:17,437 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:17,438 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:17,443 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:18,460 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:18,465 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:18,466 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:18,471 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:19,485 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:19,491 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:19,492 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:19,498 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:34,236 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:34,243 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:34,245 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:34,250 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:41,290 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:41,295 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:41,296 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:41,301 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:42,319 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:42,325 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:42,326 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:42,331 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:50,195 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:50,201 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:50,202 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:50,208 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:56:56,343 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:56,351 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:56:56,352 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:56:56,358 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:00,946 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:00,953 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:00,954 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:00,961 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:19,788 [Worker-879] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:19,795 [Worker-879] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:19,795 [Worker-879] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:19,801 [Worker-879] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:22,496 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:22,503 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:22,504 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:22,509 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:36,101 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:36,107 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:36,108 [Worker-873] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:36,114 [Worker-873] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:42,420 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:42,429 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:42,430 [Worker-855] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:42,437 [Worker-855] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:57:56,066 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:56,072 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:57:56,073 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:57:56,079 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:01,134 [Worker-878] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:01,140 [Worker-878] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:01,142 [Worker-878] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:01,149 [Worker-878] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:03,973 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:03,979 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:03,979 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:03,986 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:05,017 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:05,023 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:05,024 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:05,029 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:35,080 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:35,087 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:35,088 [Worker-869] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:35,095 [Worker-869] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:41,224 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:41,230 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:41,231 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:41,239 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:52,519 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:52,525 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:52,525 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:52,530 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:53,954 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:53,961 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:53,962 [Worker-856] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:53,969 [Worker-856] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:55,795 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:55,801 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:55,802 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:55,810 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:58:57,674 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:57,680 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:58:57,681 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:58:57,686 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:16,102 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:16,108 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:16,109 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:16,114 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:17,500 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:17,507 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:17,508 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:17,512 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:33,272 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:33,278 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:33,279 [Worker-876] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:33,284 [Worker-876] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:43,733 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:43,740 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:43,741 [Worker-863] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:43,747 [Worker-863] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:50,245 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:50,251 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:50,251 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:50,256 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:52,626 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:52,632 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:52,633 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:52,640 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 14:59:59,681 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:59,687 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 14:59:59,688 [Worker-874] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 14:59:59,694 [Worker-874] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:05,148 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:05,154 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:05,155 [Worker-880] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:05,163 [Worker-880] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:14,110 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:14,118 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:14,119 [Worker-870] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:14,125 [Worker-870] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:31,338 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:31,345 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:31,345 [Worker-866] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:31,351 [Worker-866] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:34,942 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:34,948 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:34,948 [Worker-848] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:34,954 [Worker-848] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:40,117 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:40,124 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:40,125 [Worker-868] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:40,130 [Worker-868] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:43,265 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:43,272 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:43,273 [Worker-877] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:43,281 [Worker-877] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:00:53,287 [Worker-878] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:53,293 [Worker-878] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:00:53,293 [Worker-878] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:00:53,299 [Worker-878] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-07 15:01:10,631 [Worker-879] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:01:10,637 [Worker-879] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-07 15:01:10,638 [Worker-879] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-12-07 15:01:10,644 [Worker-879] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

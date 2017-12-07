@@ -7,5 +7,5 @@ import java.util.Map;
  */
 
 public interface ProcessResultImpl {
-	public abstract Map<String, Integer> getStatisticResult();
+	public abstract Map<String, Integer> getStatisticResult(int sheetNum);
 }

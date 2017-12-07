@@ -8,8 +8,6 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
-
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
@@ -28,7 +26,6 @@ public class ProcessResult implements ProcessResultImpl {
 	private final static String READ_PATH = "C:\\Users\\xuhongchao\\Desktop\\1.xlsx";
 	private static final XSSFWorkbook WB;
 	private XSSFSheet SHEET;
-	private String[] SheetNames = new String[3]; // 用来放配置文件中读出的文件名数据
 	private List<String> list = new ArrayList<String>(); // 临时存放key
 	private Map<String, Integer> map = new LinkedHashMap<String, Integer>(); // 最终结果
 
@@ -42,15 +39,10 @@ public class ProcessResult implements ProcessResultImpl {
 
 	public ProcessResult() {
 		super();
-		this.getPropertiesValue();
 	}
 
-	public Map<String, Integer> getStatisticResult() {
-		/*
-		 * 读取多个sheet，完成全部统计任务
-		 */
-
-		SHEET = WB.getSheetAt(0); // 工作表
+	public Map<String, Integer> getStatisticResult(int sheetNum) {
+		SHEET = WB.getSheetAt(sheetNum); // 工作表
 		// 得到工作表的最后一行
 		int end = SHEET.getLastRowNum();
 		int count = 0;
@@ -59,7 +51,6 @@ public class ProcessResult implements ProcessResultImpl {
 		for (int i = 1; i <= end; i++) {
 			// 得到每一行
 			Row row = SHEET.getRow(i);
-
 			// 读取每个单元格的内容
 			Cell cell = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
 			result1 = turn(cell);
@@ -130,24 +121,4 @@ public class ProcessResult implements ProcessResultImpl {
 		return value;
 	}
 
-	/**
-	 * 读取配置文件，拿到里面的文件名信息
-	 */
-	private void getPropertiesValue() {
-		Properties pro = new Properties();
-		try {
-			pro.load(ProcessResult.class
-					.getResourceAsStream("SheetName.properties"));
-		} catch (IOException e) {
-			throw new RuntimeException("读取配置文件出错");
-		}
-
-		String wq = pro.getProperty("wq");
-		String ysa = pro.getProperty("ysa");
-		String xiy = pro.getProperty("xiy");
-
-		SheetNames[0] = wq;
-		SheetNames[1] = ysa;
-		SheetNames[2] = xiy;
-	}
 }
