@@ -46,19 +46,25 @@ public class LoadReg {
 
 			/*
 			 * 注释原因：在这里过滤掉了url正则为'.*'并且参数正则为NULL情况的url
+			 * 
+			 * 
+			 * if ("NULL".equals(paramReg) && ".*".equals(urlReg)) {
+			 * System.out.println("检验结果：" + ioUtil.turn(paramReg) + "-" +
+			 * ioUtil.turn(urlReg)); }
 			 */
-
-			if ("NULL".equals(paramReg) && ".*".equals(urlReg)) {
-				System.out.println("检验结果：" + ioUtil.turn(paramReg) + "-"
-						+ ioUtil.turn(urlReg));
-			}
 
 			// 得到每一个单元格的数据并封装到data对象中
 			data.setNum(ioUtil.turn(num));
 			data.setDomain(ioUtil.turn(domain));
-			data.setParam(ioUtil.turn(paramReg));
+			if ("NULL".equals(ioUtil.turn(paramReg))) {
+				data.setParam(".");
+			} else {
+				data.setParam(ioUtil.turn(paramReg));
+			}
 			data.setUrlReg(ioUtil.turn(urlReg));
 			data.setUrlExam(ioUtil.turn(urlExam));
+
+			// System.out.println(data.toString());
 
 			list.add(data);
 		}
