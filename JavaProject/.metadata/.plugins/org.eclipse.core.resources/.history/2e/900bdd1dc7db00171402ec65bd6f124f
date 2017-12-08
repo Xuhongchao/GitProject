@@ -1,0 +1,36 @@
+package com.pxene.entrance;
+
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.pxene.core.ProcessResult;
+import com.pxene.core.impl.ProcessResultImpl;
+import com.pxene.util.PropertiesUtil;
+
+/**
+ * Created by @author xuhongchao on @date 2017年 12月 05日 下午6:25:52
+ * 
+ * <ul>
+ * 注意：
+ * <li>1，excel文件的命名：在ProcessResultImpl类中的 String READ_PATH
+ * ="C:\\Users\\xuhongchao\\Desktop\\1.xlsx";</li>
+ * <li>2，excel中sheet的命名规范：分为三个sheet,王琪、杨松奥、胥辛雨</li>
+ * </ul>
+ * 
+ */
+
+public class Entrance {
+	public static void main(String[] args) {
+		ProcessResult rpi = new ProcessResultImpl();
+		String[] strs = new PropertiesUtil().getPropertiesValue();
+		for (int i = 0; i < strs.length; i++) {
+			Map<String, Integer> map = rpi.getStatisticResult(i);
+			System.out.println(map.toString());
+			for (Map.Entry<String, Integer> entry : map.entrySet()) {
+				String appName = entry.getKey();
+				String urlNum = entry.getValue();
+			}
+			map.clear();
+		}
+	}
+}

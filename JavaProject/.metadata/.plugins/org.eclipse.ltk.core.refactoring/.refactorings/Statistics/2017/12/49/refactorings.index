@@ -10,3 +10,6 @@
 1512553985555	Delete element
 1512611264813	Rename resource 'fileName.txt'
 1512615611381	Rename resource 'fileName.properties'
+1512698950376	Rename type 'ProcessResult'
+1512698962070	Rename type 'ProcessResultImpl'
+1512698969715	Rename type 'ProcessResultImpl2'
