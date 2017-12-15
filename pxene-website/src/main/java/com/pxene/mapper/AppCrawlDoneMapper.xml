@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppCrawlDoneMapper">
+
+	<select id="queryAppCrawlerDoneExist" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_done where crawl_app_name="${crawl_app_name}";
+	</select>
+
+	<select id="queryAppIdByCrawlId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select b.app_id,b.app_os from app_crawl_done a LEFT JOIN app_wait_done b ON BINARY a.crawl_app_num=b.crawl_app_num where crawl_id=${crawl_id};
+	</select>
+
+	<select id="queryIsExport" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_domain a LEFT JOIN app_crawl_done b ON BINARY SUBSTR(a.domain_code,2,3)=b.crawl_app_num where crawl_id=${crawl_id};
+	</select>
+	
+	<select id="queryCrawlAppExportStatus" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select crawl_app_isexport from app_crawl_done where BINARY crawl_app_num="${crawl_app_num}";
+	</select>
+
+	<update id="updateDomainExport" parameterType="java.util.Map">
+		update app_crawl_domain a set a.domain_isexport=${crawl_app_isexport} where a.domain_id IN (select * from (select b.domain_id from app_crawl_domain b LEFT JOIN app_crawl_done c ON BINARY SUBSTR(b.domain_code,2,3)=c.crawl_app_num where c.crawl_id=${crawl_id}) d );
+
+	</update>
+
+	<update id="modifyDomain" parameterType="java.util.Map">
+		update app_crawl_domain set domain_code="${domain_code}",domain_domain="${domain_domain}",domain_attach_param="${domain_attach_param}" where domain_id=${domain_id};
+	</update>
+
+	<select id="queryDomainExist" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(domain_id) from app_crawl_domain where domain_domain="${domain_domain}" and domain_attach_param="${domain_attach_param}" 
+		<if test="domain_id!=null">
+		and domain_id!=${domain_id}
+		</if>
+		;
+	</select>
+	
+	<select id="queryDomainTypeNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select SUBSTR(domain_code,1,1) type_num  from app_crawl_domain where BINARY SUBSTR(domain_code,2,3)="${crawl_app_num}" 
+		<if test="domain_id !=null">
+		and domain_id !=${domain_id}
+		</if>
+		;
+	</select>
+
+	<select id="queryDomainTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_domain where BINARY SUBSTR(domain_code,2,3)="${crawl_app_num}";
+	</select>
+
+	<select id="queryDomainByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select domain_id,domain_code,domain_domain,domain_attach_param,domain_isexport,domain_create_time from app_crawl_domain where BINARY SUBSTR(domain_code,2,3)="${crawl_app_num}" limit ${page},${num};
+	</select>
+
+	<delete id="delDomain" parameterType="java.util.Map">
+		delete from app_crawl_domain where domain_id=${domain_id};
+	</delete>
+
+	<insert id="addDomain" parameterType="java.util.Map">
+		insert INTO app_crawl_domain(domain_code,domain_domain,domain_attach_param,domain_isexport,domain_create_time) VALUES("${domain_code}","${domain_domain}","${domain_attach_param}",${domain_isexport},NOW());
+	</insert>
+
+	<select id="queryTransferType" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select b.type_num,b.type_name from app_wait_done a LEFT JOIN app_type b ON a.app_os =b.type_num where BINARY a.crawl_app_num="${crawl_app_num}"; 
+	</select>
+
+	<select id="queryRelatedApp" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select b.app_name_crawl,b.app_category_name,b.app_version,b.app_type from app_wait_done a LEFT JOIN
+		app_crawl_wait b ON a.app_id=b.app_id  where BINARY crawl_app_num="${crawl_app_num}";
+	</select>
+
+	<select id="queryCrawlAppOS" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select app_os from app_wait_done where BINARY 
+		crawl_app_num="${crawl_app_num}";
+	</select>
+
+	<select id="queryCrawlAppDoneByAppId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select crawl_app_num,crawl_app_version,crawl_app_source,crawl_app_logo_url from app_crawl_done where 
+		crawl_app_id=${app_id};
+	</select>
+
+	<select id="queryExportApilistDetail" resultType="java.util.Map">
+		select
+		crawl_detail_num,crawl_detail_domain,crawl_detail_urlreg,crawl_detail_paramreg
+		from app_crawl_detail where SUBSTR(crawl_detail_num,2,4) not in
+		("0055","0057") and crawl_detail_status=1;
+	</select>
+
+	<select id="queryExportRuleDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select
+		crawl_detail_num,crawl_detail_domain,crawl_detail_urlreg,crawl_detail_paramreg
+		from app_crawl_detail where SUBSTR(crawl_detail_num,2,4)="${num}" and
+		crawl_detail_status=1;
+	</select>
+
+	<select id="queryExportAppDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select 
+		 crawl_app_num,crawl_app_domain,crawl_app_attach_param from
+		app_crawl_done where crawl_app_isexport=1;
+	</select>
+	<select id="queryAppSource" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select source_id,source_name crawl_app_source from
+		app_source;
+	</select>
+	<select id="queryAppSourceByPage" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select source_id,source_name crawl_app_source from
+		app_source limit
+		${page},${num};
+	</select>
+
+	<select id="queryAppSourceTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_source;
+	</select>
+
+	<select id="queryDeadine" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select max(create_time) create_time from
+		app_statistics_users_four;
+	</select>
+
+	<select id="queryTotalVisits" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select SUM(users_count) from app_statistics_users_four
+		where SUBSTR(users_crawl_detail_num,2,3)="${app_num}" and
+		create_time="${create_time}";
+	</select>
+
+	<update id="updateCrawlBehaviorCount" parameterType="java.util.Map">
+		update
+		app_crawl_done set crawl_behavior_num=${crawl_behavior_num} where
+		crawl_id=${crawl_id};
+	</update>
+
+	<select id="queryCrawlInfoNum" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select max(app_crawl_num) from app_crawl_info where
+		app_crawl_num between
+		'${startNum}' and '${endNum}';
+	</select>
+
+	<update id="updateExport" parameterType="java.util.Map">
+		update app_crawl_done
+		set crawl_app_isexport=${crawl_app_isexport} where
+		crawl_id=${crawl_id};
+	</update>
+
+	<select id="queryCrawlerDetailDataExist4Five" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_statistics_users_five where
+		users_crawl_detail_num=(select
+		crawl_detail_num from app_crawl_detail
+		where
+		crawl_detail_id=${crawl_detail_id});
+	</select>
+
+	<select id="queryCrawlerDetailDataExist4Four" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_statistics_users_four where
+		users_crawl_detail_num=(select
+		crawl_detail_num from app_crawl_detail
+		where
+		crawl_detail_id=${crawl_detail_id});
+	</select>
+	<delete id="deleteAppCrawlerDetail" parameterType="java.util.Map">
+		delete from
+		app_crawl_detail where crawl_detail_id=${crawl_detail_id};
+	</delete>
+
+	<update id="updateWaitAppStatus" parameterType="java.util.Map">
+		update
+		app_crawl_wait set app_status=1 where app_id IN
+		(select app_id from
+		app_wait_done where BINARY crawl_app_num=(select  
+		crawl_app_num from
+		app_crawl_done where crawl_id=${crawl_id}));
+	</update>
+	<delete id="deleteAppWaitDone" parameterType="java.util.Map">
+		delete from
+		app_wait_done where BINARY crawl_app_num=(select crawl_app_num from
+		app_crawl_done where crawl_id=${crawl_id});
+	</delete>
+	<delete id="deleteAppCrawlerDone" parameterType="java.util.Map">
+		delete from
+		app_crawl_done where crawl_id=${crawl_id};
+	</delete>
+	
+	<select id="queryAppCrawlDomainCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_domain a LEFT JOIN app_crawl_done b ON BINARY SUBSTR(a.domain_code,2,3)=b.crawl_app_num where b.crawl_id=${crawl_id};
+	</select>
+	
+	<select id="queryAppCrawlDetailCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_detail where
+		crawl_detail_crawl_id=${crawl_id};
+	</select>
+
+	<update id="modifyAppCrawlerDone" parameterType="java.util.Map">
+		update
+		app_crawl_done set
+		crawl_app_version="${crawl_app_version}",crawl_app_category_id="${crawl_app_category_id}"
+		where
+		crawl_id=${crawl_id};
+	</update>
+	<select id="queryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_done a LEFT JOIN app_child_category b ON a.crawl_app_category_id=b.category_id LEFT JOIN app_parent_category c ON b.category_pid=c.category_id where 1=1
+		<if test="parent_category_id != null">
+			and c.category_id =
+			${parent_category_id}
+		</if>
+		<if test="crawl_app_category_id != null">
+			and b.category_id =
+			${crawl_app_category_id}
+		</if>
+		<if test="crawl_app_name != null">
+			and a.crawl_app_name LIKE "%${crawl_app_name}%"
+		</if>
+		<if test="crawl_app_num != null">
+			and BINARY a.crawl_app_num = "${crawl_app_num}"
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(a.crawl_app_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>
+		;
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select a.crawl_id,a.crawl_app_num,a.crawl_app_logo_url,a.crawl_app_name,a.crawl_app_id,b.category_name child_category,b.category_id child_category_id,c.category_name parent_category,a.crawl_app_version,a.crawl_app_source,a.crawl_app_os,a.crawl_app_create_time,a.crawl_behavior_num,a.crawl_app_isexport from app_crawl_done a LEFT JOIN app_child_category b ON a.crawl_app_category_id=b.category_id LEFT JOIN app_parent_category c ON b.category_pid=c.category_id where 1=1
+		<if test="parent_category_id != null">
+			and c.category_id =
+			${parent_category_id}
+		</if>
+		<if test="crawl_app_category_id != null">
+			and b.category_id =
+			${crawl_app_category_id}
+		</if>
+		<if test="crawl_app_name != null">
+			and a.crawl_app_name LIKE "%${crawl_app_name}%"
+		</if>
+		<if test="crawl_app_num != null">
+			and BINARY a.crawl_app_num = "${crawl_app_num}"
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(a.crawl_app_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>
+		<if test="orderName != null">
+			order by a.${orderName} ${orderRule}
+		</if>
+		LIMIT ${page},${num};
+	</select>
+	<update id="updateAppCrawlDetail" parameterType="java.util.Map">
+		update
+		app_crawl_detail set crawl_detail_num="${crawl_detail_num}" where
+		crawl_detail_id=${crawl_detail_id};
+	</update>
+
+	<select id="queryCrawlDetailId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select crawl_detail_id,crawl_detail_num from
+		app_crawl_detail where
+		crawl_detail_crawl_id=${crawl_detail_crawl_id};
+	</select>
+
+	<select id="queryAppNumAndCrawlId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select crawl_id,crawl_app_num from app_crawl_done where
+		crawl_app_id=${crawl_app_id};
+	</select>
+
+	<update id="updateAppCrawlDone" parameterType="java.util.Map">
+		update 
+		app_crawl_done set crawl_app_source="${app_source}" 
+		<if test="crawl_app_logo_url !=null">
+			,crawl_app_logo_url="${crawl_app_logo_url}" 
+		</if>
+		 where crawl_app_id=${app_id};
+	</update>
+
+	<select id="queryMaxAppInfoNum" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select max(crawl_app_num_decimal) from app_crawl_done;
+	</select>
+	<insert id="addAppCrawlDone" parameterType="java.util.Map">
+		INSERT INTO app_crawl_done
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			crawl_app_num,
+			crawl_app_num_decimal,
+			<if test="crawl_logo_url!=null">crawl_app_logo_url,</if>
+			<if test="crawl_app_name!=null">crawl_app_name,</if>
+			<if test="crawl_app_id!=null">crawl_app_id,</if>
+			<if test="crawl_app_category_id!=null">crawl_app_category_id,</if>
+			<if test="crawl_app_version!=null">crawl_app_version,</if>
+			<if test="crawl_app_source!=null">crawl_app_source,</if>
+			<if test="crawl_app_domain!=null">crawl_app_domain,</if>
+			<if test="crawl_app_attach_param!=null">crawl_app_attach_param,</if>
+			<if test="crawl_app_os!=null">crawl_app_os,</if>
+			crawl_app_create_time,crawl_app_isexport
+		</trim>
+		<trim prefix="VALUES(" suffix=")" suffixOverrides=",">
+			"${crawl_app_num}",
+			"${crawl_app_num_decimal}",
+			<if test="crawl_logo_url">"${crawl_logo_url}",</if>
+			<if test="crawl_app_name!=null">"${crawl_app_name}",</if>
+			<if test="crawl_app_id!=null">${crawl_app_id},</if>
+			<if test="crawl_app_category_id!=null">"${crawl_app_category_id}",</if>
+			<if test="crawl_app_version!=null">"${crawl_app_version}",</if>
+			<if test="crawl_app_source!=null">"${crawl_app_source}",</if>
+			<if test="crawl_app_domain!=null">"${crawl_app_domain}",</if>
+			<if test="crawl_app_attach_param!=null">"${crawl_app_attach_param}",</if>
+			<if test="crawl_app_os!=null">${crawl_app_os},</if>
+			NOW(),0
+		</trim>
+	</insert>
+
+	<insert id="addAppWaitDone" parameterType="java.util.Map">
+		insert into
+		app_wait_done(crawl_app_num,app_is_major,app_id,app_os,create_time)
+		VALUES("${crawl_app_num}",${app_is_major},${app_id},${app_os},now());
+	</insert>
+
+</mapper>

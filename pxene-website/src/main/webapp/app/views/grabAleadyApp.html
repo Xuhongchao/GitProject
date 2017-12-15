@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="grabAleadyAppCtrl">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline aleadyApp ">
+                    <div class="form-group calender pos-relative form-normal">
+                        <label class="form-label pr10">时间选择</label>
+                        <input type="text" class="form-control" id="appGrab_date" ng-model="initAccount" />
+                        <span><i class="icon-newData"></i></span>
+                    </div>
+                    <div class="form-group form-search form-normal">
+                        <label class="form-label pr10">APP名称</label>
+                        <input type="text" class="form-control" ng-model="appName" ng-keyup="enterSearch($event)"  ng-model-options="{debounce:500}" searchwatch placeholder="APP名称"/>
+                        <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                    </div>
+                    <div class="form-group form-search form-normal">
+                        <label class="form-label pr10">APP编号</label>
+                        <input type="text" class="form-control" ng-model="appNumber" ng-keyup="enterSearch($event)"  ng-model-options="{debounce:500}" searchwatch placeholder="APP编号"/>
+                        <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                    </div>
+                    <br />
+                    <div class="form-group form-inline form-content form-normal mt20">
+                        <label class="form-label pr10">APP一级分类</label>
+                        <select definedropdown="definedropdown" dropdown-search class="form-control" name="firstClassify" validations="required" ng-model="transferFirstType" ng-change="queryfirstClassify(transferFirstType)"
+                                ng-options="transferFirstType.category_name for transferFirstType in transferFirstTypelist"></select>
+                    </div>
+                    <div class="form-group form-inline form-content form-normal mt20">
+                        <label class="form-label pr10">APP二级分类</label>
+                        <select definedropdown="definedropdown" dropdown-search class="form-control" name="secondClassify" validations="required" ng-model="transferSecondType" ng-change="search()"
+                                ng-options="transferSecondType.category_name for transferSecondType in transferSecondTypelist"></select>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 btnlist">
+                <button type="button" class="btn btn-default" ng-click="exportApp()">导出正则</button>
+                <button type="button" class="btn btn-default" ng-click="exportRegular()">导出参数</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 specilh69">
+                <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection  ui-grid-pinning class=" myGrid"></div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

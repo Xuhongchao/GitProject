@@ -1,0 +1,20 @@
+<%@ page pageEncoding="UTF-8" %>
+<div ui-tree >   
+    <ol ui-tree-nodes="" ng-model="menuList" nodrop-enabled="true"  class="list-unstyled">
+        <li class="menuframe" ng-repeat="item in menuList" ui-tree-node>
+            <a ui-tree-handle class="tree-node tree-node-content" ng-class="{active:item.selected}" ng-click="item[nodes].length>0 && item[nodes][0].title?toggled(this,item):loadPage(item)"
+                 ng-init="item.selected=initItem(item)" >
+                 <i class="{{item.icon}}"></i>
+                 <span class="menutitle"  ng-bind="item.title"></span>
+                 <i class="icon-xiangyou" ng-class="{'icon-rotate':item.selected}" ng-show="item.dropFlag" ng-init="item.dropFlag=showDropFlag(item)"></i>
+            </a>
+            <ol ui-tree-nodes ng-model="item[nodes]" ng-class="{hidden:!item.selected,'haschild':item[nodes][0].title}" nodrop-enabled="true" class="pdl50 list-unstyled">
+                <li class="default-cursor" ng-repeat="subItem in item[nodes]" ui-tree-node ng-class="{hidden:!subItem.title}">
+                    <div ui-tree-handle class="tree-node tree-node-content" ng-class="{active:subItem.selected}">
+                         <a class="child-menutitle" ng-href="#{{subItem.url}}" ng-click="subloadPage(item,subItem)" ng-init="subItem.selected=initSubItem(item,subItem)" ng-bind="subItem.title"></a>
+                    </div>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>

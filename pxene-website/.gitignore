@@ -1,0 +1,15 @@
+node_modules/
+/dist
+/.tmp
+/.sass-cache
+*.iml
+target
+*.iws
+*.ipr
+.idea
+out
+
+/.classpath
+/.project
+/.settings
+/target/

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppCategoryMapper">
+	<delete id="delParentCategory" parameterType="java.util.Map">
+		delete from app_parent_category where category_id=${parent_category_id};
+	</delete>
+
+	<select id="queryCategoryByChildCategoryId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select a.category_id child_category_id,b.category_id parent_category_id from app_child_category a LEFT JOIN app_parent_category b ON a.category_pid=b.category_id where b.category_id=(select c.category_pid from app_child_category c where c.category_id=${child_category_id});
+	</select>
+
+	<delete id="delChildCategory" parameterType="java.util.Map">
+		delete from app_child_category where category_id=${child_category_id};
+	</delete>
+
+	<select id="queryChildCategoryIsUsed" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_done where crawl_app_category_id=${child_category_id};
+	</select>
+
+	<update id="modifyChildCategory" parameterType="java.util.Map">
+		update app_child_category set category_name="${child_category}" where category_id=${child_category_id};
+	</update>
+
+	<select id="queryFuzzyParentCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_name from app_parent_category where
+		category_name like "%${parent_category}%";
+	</select>
+
+	<insert id="addChildCategory" parameterType="java.util.Map">
+		insert INTO
+		app_child_category(category_pid,category_name,category_create_time)
+		VALUES(${category_pid},"${child_category}",NOW());
+	</insert>
+
+	<insert id="addParentCategory" parameterType="java.util.Map">
+		insert into
+		app_parent_category(category_name,category_create_time)
+		VALUES("${parent_category}",NOW());
+	</insert>
+	
+	<select id="queryParentCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select * from app_parent_category where
+		category_name="${parent_category}";
+	</select>
+
+	<select id="queryChildCategoryExist" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_child_category where
+		category_name="${child_category}" 
+		<if test="child_category_id !=null">
+		and category_id !=${child_category_id}
+		</if>;
+	</select>
+
+	<select id="queryAppCategoryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_category;
+	</select>
+
+	<select id="queryAppCategoryByPage" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_category
+		<if test="page != null">
+			limit ${page},${num}
+		</if>
+		;
+	</select>
+
+	<select id="queryKeywordList" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select keyword_name from app_category_keyword where
+		keyword_category_id=${category_id};
+	</select>
+
+	<select id="queryAppCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_done where
+		crawl_app_category_id_str like "%,${category_id},%";
+	</select>
+
+	<select id="queryCategoryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_child_category a LEFT JOIN
+		app_parent_category b ON a.category_pid=b.category_id where 1=1
+		<if test="category_name !=null">
+			and a.category_name like "%${category_name}%" OR b.category_name like
+			"%${category_name}%"
+		</if>
+		;
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select a.category_id AS child_category_id,a.category_name AS child_category,b.category_name
+		AS parent_category from app_child_category a LEFT JOIN
+		app_parent_category b ON a.category_pid=b.category_id where 1=1
+		<if test="category_name != null">
+			and a.category_name like "%${category_name}%" OR b.category_name like
+			"%${category_name}%" 
+		</if>  
+		ORDER BY b.category_id,a.category_create_time 
+		limit ${page},${num};
+	</select>
+</mapper>

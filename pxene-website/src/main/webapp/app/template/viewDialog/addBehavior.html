@@ -1,0 +1,30 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">添加行为</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal pl20">
+
+        <div class="form-group">
+            <label class="control-label">抓取行为</label>
+            <input type="text" class="form-control" name="grabBehavior" validations="maxlength:100;required" ng-model="grabBehavior"/>
+            <span class="mustWrite">*</span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">APP分类名称</label>
+            <div class="appclassify">
+                <label class="dis-block clearfix" ng-click="$ctrl.clickAppClassify(appclassify)"
+                       ng-repeat="appclassify in $ctrl.appclassifys track by $index">
+                    <input type="checkbox" class="pull-left" ng-model="appclassify.isSelected"/>
+                    <span title="{{appclassify.category_name}}">{{appclassify.category_name}}</span>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()" ng-disabled="aleadysure">确定</button>
+</div>

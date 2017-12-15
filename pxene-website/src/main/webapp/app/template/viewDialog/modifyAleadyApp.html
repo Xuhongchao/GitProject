@@ -1,0 +1,32 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">编辑APP</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-inline form-horizontal pl20">
+        <div class="form-group">
+            <label class="control-label">版本号</label>
+            <input type="text" class="form-control" name="version" validations="maxlength:100" ng-model="version"/>
+            <!--<span class="mustWrite">*</span>-->
+        </div>
+        <div class="form-group form-inline form-content form-normal">
+            <label class="form-label pr10">APP一级分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="firstClassify" validations="required" ng-model="transferFirstType" ng-change="queryfirstClassify(transferFirstType)"
+                    ng-options="transferFirstType.category_name for transferFirstType in transferFirstTypelist"></select>
+            <span class="mustWrite">*</span>
+        </div>
+        <div class="form-group form-inline form-content form-normal">
+            <label class="form-label pr10">APP二级分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="secondClassify" validations="required" ng-model="transferSecondType"
+                    ng-options="transferSecondType.category_name for transferSecondType in transferSecondTypelist"></select>
+            <span class="mustWrite">*</span>
+        </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>

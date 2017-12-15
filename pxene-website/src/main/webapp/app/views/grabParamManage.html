@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="grabParamManageCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline pt10 pull-left">
+                <div class="form-group form-search pl20">
+                    <label class="form-label pr10">参数分类编号</label>
+                    <input type="text" class="form-control" ng-model="typeNumber" ng-keyup="enterSearch($event)" ng-model-options="{debounce:500}" searchwatch placeholder="编号" />
+                    <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                </div>
+
+                <div class="form-group form-search pl40">
+                    <label class="form-label pr10">参数分类名称</label>
+                    <input type="text" class="form-control" ng-model="typeName" ng-keyup="enterSearch($event)" ng-model-options="{debounce:500}" searchwatch placeholder="参数分类名称" />
+                    <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                </div>
+            </form>
+            <button type="button" class="btn btn-default pull-right mr40" ng-click="add()">添加分类</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

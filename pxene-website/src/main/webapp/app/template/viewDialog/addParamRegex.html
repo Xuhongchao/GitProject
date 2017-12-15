@@ -1,0 +1,25 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">添加正则</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal pl20">
+
+        <div class="form-group">
+            <label class="control-label">URL样例</label>
+            <input type="text" class="form-control" name="urlExample" validations="required" ng-model="urlExample"/>
+            <span class="mustWrite">*</span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">参数正则</label>
+            <input type="text" class="form-control" name="paramRegex" validations="required" ng-model="paramRegex"/>
+            <span class="mustWrite">*</span>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()" ng-disabled="aleadysure">确定</button>
+</div>

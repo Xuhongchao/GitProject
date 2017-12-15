@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="detailcountInfoGrabBehaviorCtrl">
+
+    <span class="usertitle big-headname">{{name}}</span>
+
+    <!--//url详情tab显示-->
+    <form class="form-inline pt10 mb20">
+        <div class="form-group form-inline form-content form-normal pl20">
+            <label class="form-label pr10 width-auto">二级分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" ng-model="transferSecondType" ng-change="search()"
+                    ng-options="transferSecondType.category_name for transferSecondType in transferSecondTypelist"></select>
+        </div>
+
+        <div class="form-group form-inline form-content form-normal pl20">
+            <label class="form-label pr10 width-auto">参数分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" ng-model="paramtype"
+                    ng-options="paramtype.industry_name for paramtype in paramtypes" ng-change="search()"></select>
+        </div>
+
+        <div class="form-group form-search pl20">
+            <label class="form-label pr10">APP名称</label>
+            <input type="text" class="form-control" ng-model="appName" ng-model-options="{debounce:500}" searchwatch placeholder="APP名称"/>
+            <div ng-click="search()"><i class="icon-sousuo"></i></div>
+        </div>
+
+        <div class="form-group calender pos-relative pl20 mt20">
+            <label class="form-label pr10">时间选择</label>
+            <input type="text" class="form-control" id="appGrab_date" ng-model="initAccount" />
+            <span><i class="icon-newData"></i></span>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-md-12 specilh69">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-pinning class="myGrid applist"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

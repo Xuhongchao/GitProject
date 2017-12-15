@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppStatisticsUsersMapper">
+	<select id="queryWechatStatisticsTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from
+		wechat_statistics where create_time
+		BETWEEN
+		"${create_time}" AND
+		"${create_time}";
+	</select>
+
+	<select id="queryWechatStatistics" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select (select province_name from app_province where
+		province_code=wechat_province)
+		province_name,users_type,wechat_public_count,wechat_article_count from
+		wechat_statistics where create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" ORDER BY province_name LIMIT ${page},${num};
+	</select>
+
+
+	<select id="queryUsersSixInfo" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select (select province_name from app_province where
+		province_code=users_province)province_name ,users_count from
+		app_statistics_users_six where
+		users_industry_num="${users_industry_num}" and
+		users_type=${users_type};
+	</select>
+
+	<select id="queryUsersSixTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from ( select DISTINCT users_industry_num ,users_type
+		from
+		app_statistics_users_six where 1=1
+		<if test="industry_id != null">
+			and users_industry_num=(select industry_num
+			from
+			app_industry where industry_id=${industry_id})
+		</if>
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" ) c;
+	</select>
+
+	<select id="queryUsersSix" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT users_industry_num ,(select industry_name from
+		app_industry where industry_num=users_industry_num)
+		industry_name,users_type from
+		app_statistics_users_six where 1=1
+		<if test="industry_id != null">
+			and users_industry_num=(select industry_num
+			from
+			app_industry where industry_id=${industry_id})
+		</if>
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" limit
+		${page},${num};
+	</select>
+
+	<select id="queryUsersFiveInfo" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select (select province_name from app_province where
+		province_code=users_province)province_name,users_count
+		from
+		app_statistics_users_five where
+		users_crawl_detail_num="${users_crawl_detail_num}" and
+		users_type=${users_type};
+	</select>
+
+	<select id="queryUsersFiveTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from ( select DISTINCT
+		users_crawl_detail_num,users_type from
+		app_statistics_users_five where
+		users_crawl_detail_num  
+		IN
+		(select
+		crawl_detail_num from
+		app_crawl_done a LEFT JOIN
+		app_crawl_detail
+		b
+		ON
+		a.crawl_id
+		=b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}"
+		) c;
+	</select>
+
+	<select id="queryUsersFive" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT users_crawl_detail_num,users_type from
+		app_statistics_users_five where
+		users_crawl_detail_num  
+		IN
+		(select
+		crawl_detail_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail
+		b
+		ON
+		a.crawl_id =b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" limit
+		${page},${num};
+	</select>
+
+	<select id="queryUsersFourTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(users_crawl_detail_num) from
+		app_statistics_users_four
+		where 
+		users_crawl_detail_num  
+		IN
+		(select
+		crawl_detail_num from
+		app_crawl_done a LEFT JOIN
+		app_crawl_detail
+		b
+		ON
+		a.crawl_id
+		=b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}";
+	</select>
+
+	<select id="queryUsersFour" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select users_crawl_detail_num,users_count from
+		app_statistics_users_four where
+		users_crawl_detail_num  
+		IN
+		(select
+		crawl_detail_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail
+		b
+		ON
+		a.crawl_id =b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" limit
+		${page},${num};
+	</select>
+
+	<select id="queryUsersThreeInfo" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select (select province_name from app_province where
+		province_code=users_province) province_name,users_count from
+		app_statistics_users_three where BINARY users_app_num="${users_app_num}" and
+		users_type=${users_type};
+	</select>
+
+	<select id="queryUsersThreeTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from( select DISTINCT users_app_num ,(select
+		crawl_app_name from app_crawl_done where BINARY crawl_app_num= users_app_num)
+		app_name ,users_type from app_statistics_users_three
+		where BINARY 
+		users_app_num
+		IN (select  crawl_app_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail b ON a.crawl_id =b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}"
+		) c;
+	</select>
+
+	<select id="queryUsersThree" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT users_app_num ,(select crawl_app_name from
+		app_crawl_done where BINARY crawl_app_num= users_app_num) app_name
+		,users_type from app_statistics_users_three
+		where BINARY users_app_num
+		IN
+		(select crawl_app_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail
+		b ON a.crawl_id =b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" limit
+		${page},${num};
+	</select>
+
+	<select id="queryUsersTwoTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_statistics_users_two
+		where app_num
+		IN (select  
+		crawl_app_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail b ON
+		a.crawl_id =b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}";
+	</select>
+	<select id="queryUsersTwo" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select  app_num,(select crawl_app_name from app_crawl_done where BINARY 
+		crawl_app_num=app_num) app_name,users_count from
+		app_statistics_users_two
+		where app_num
+		IN (select crawl_app_num from
+		app_crawl_done a LEFT JOIN
+		app_crawl_detail b ON a.crawl_id
+		=b.crawl_detail_crawl_id where 1=1
+
+		<if test="category_id != null">
+			and crawl_app_category_id_str LIKE "%,${category_id},%"
+		</if>
+		<if test="industry_id != null">
+			and crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="app_name != null">
+			and crawl_app_name LIKE "%${app_name}%"
+		</if>
+		<if test="app_source != null">
+			and crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		)
+		and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}" limit
+		${page},${num};
+	</select>
+
+	<select id="queryUsersOneTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(DISTINCT users_province) from
+		app_statistics_users_one where
+		DATE_FORMAT(create_time,'%Y-%m-%d')
+		BETWEEN
+		'${create_time}' AND
+		'${create_time}';
+	</select>
+
+	<select id="queryUsersOneInfo" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select users_type,users_count from app_statistics_users_one
+		where users_province="${users_province}" and create_time BETWEEN
+		"${create_time}" AND
+		"${create_time}";
+	</select>
+
+	<select id="queryUsersOneProvince" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT users_province, (select province_name from
+		app_province where province_code=users_province) province_name from
+		app_statistics_users_one where
+		DATE_FORMAT(create_time,'%Y-%m-%d')
+		BETWEEN
+		'${create_time}' AND
+		'${create_time}' limit ${page},${num};
+	</select>
+
+	<select id="queryProvinceName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select DISTINCT users_province from
+		app_statistics_users_one where
+		DATE_FORMAT(create_time,'%Y-%m-%d')
+		BETWEEN
+		'${create_time}' AND
+		'${create_time}' limit ${page},${num};
+	</select>
+</mapper>

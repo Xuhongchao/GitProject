@@ -1,0 +1,31 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">编辑分类</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal pl20">
+
+        <div class="form-group pos-relative">
+            <label class="control-label">一级分类</label>
+            <input type="text" class="form-control" name="firstClassify" validations="maxlength:10;required" ng-model="firstClassify" disabled="disabled"
+                   ng-model-options="{debounce:500}" placeholder="请输入一级分类"/>
+            <ul class="first-label-searchlist" ng-show="firstClassifyList.length>0 && firstClassifyList.showflag">
+                <li ng-repeat="firstClassify in firstClassifyList" title="{{firstClassify.name}}" ng-click="choiceobj(firstClassify)">{{firstClassify.name}}</li>
+            </ul>
+            <span class="mustWrite">*</span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label pos-relative">二级分类
+                <!--<div class="first-label-info" ng-show="secondLabel">请按顺序先输入一级分类，再输入二级分类</div>-->
+            </label>
+            <input type="text" class="form-control" name="secondClassify" validations="maxlength:10;required" ng-model="secondClassify" ng-disabled="!firstClassify" placeholder="请输入二级分类"/>
+            <span class="mustWrite">*</span>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()" ng-disabled="aleadysure">确定</button>
+</div>

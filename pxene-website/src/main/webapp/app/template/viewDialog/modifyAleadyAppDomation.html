@@ -1,0 +1,34 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">修改主域名</h3>
+    <b></b>
+</div>
+<div class="modal-body modifyaleadyapp" id="modal-body">
+    <form class="form-inline form-horizontal pl20">
+        <div class="form-group">
+            <label class="control-label">主域名</label>
+            <input type="text" class="form-control" name="maindomain" validations="required" ng-model="maindomain"/>
+            <span class="mustWrite">*</span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">附加参数</label>
+            <input type="text" class="form-control" name="additionParameters" validations="required" ng-model="additionParameters" placeholder="如果没有参数，填写NULL"/>
+            <span class="mustWrite">*</span>
+        </div>
+        <div class="form-group dialog-select">
+            <label class="control-label">使用端</label>
+            <select definedropdown="definedropdown" class="form-control" name="userpoint" validations="required" ng-model="userpoint"
+                    ng-options="userpoint.type_name for userpoint in userpointlists" ng-change="paramtype(paramClassify)"></select>
+            <span class="mustWrite">*</span>
+        </div>
+       <!-- <div class="form-group">
+            <label class="control-label">使用端</label>
+            <input type="text" class="form-control" name="urlregexp" validations="required" ng-model="urlregexp"/>
+            <span class="mustWrite">*</span>
+        </div>-->
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>

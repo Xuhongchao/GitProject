@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="countInfoWechatCtrl" class="-mt35">
+    <div class="contentNav">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation" ng-repeat="inform in informs" ng-class="{active:5==$index}"><a href="" ng-click="checkSys(inform)">{{inform.name}}</a></li>
+        </ul>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<form class="form-inline pull-left applist">-->
+                <!--<div class="form-group pl20">-->
+                    <!--<label class="form-label pr10">APP分类</label>-->
+                    <!--<select definedropdown="definedropdown" class="form-control" ng-model="appClassify"-->
+                            <!--ng-options="appClassify.category_name for appClassify in appClassifys" ng-change="getPage()"></select>-->
+                <!--</div>-->
+
+                <!--<div class="form-group pl40">-->
+                    <!--<label class="form-label">APP来源:</label>-->
+                    <!--<select definedropdown="definedropdown" class="form-control" ng-model="source"-->
+                            <!--ng-options="source.app_source for source in sources" ng-change="getPage()"></select>-->
+                <!--</div>-->
+
+                <!--<div class="form-group pl40">-->
+                    <!--<label class="form-label">抓取行为:</label>-->
+                    <!--<select definedropdown="definedropdown" class="form-control" ng-model="statu"-->
+                            <!--ng-options="statu.ways for statu in status" ng-change="getPage()"></select>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-md-12 mt20">
+            <form class="form-inline userNumber-input">
+                <div class="form-group pl20 calender pos-relative">
+                    <label class="form-label pr10">时间选择</label>
+                    <input type="text" class="form-control" id="appGrab_date" ng-model="initAccount" />
+                    <span><i class="icon-newData"></i></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 param-type-choice viewchange">
+            <button ng-model="selectType" ng-click="changeClassify(selectType,$index)" ng-class="{active:pageInfo == $index}"
+                    ng-repeat="selectType in selectTypes track by $index">{{selectType.name}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid" ng-show="showflag"></div>
+            <div class="chartheader" ng-hide="showflag">微信统计</div>
+            <div id="mainchart" ng-hide="showflag"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

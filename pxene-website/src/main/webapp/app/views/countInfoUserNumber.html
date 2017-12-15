@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="countInfoUserNumberCtrl" class="-mt35">
+    <div class="contentNav">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation" ng-repeat="inform in informs" ng-class="{active:4==$index}"><a href="" ng-click="checkSys(inform)">{{inform.name}}</a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 userNumber">
+                <div class="form-group pl20">
+                    <label class="usernumber-radio" ng-repeat="classify in classifys">
+                        <input type="radio" name="user" ng-checked="{{classify.isSelected}}" value="{{classify.isSelected}}" ng-model="classify.isSelected"
+                        ng-click="clickradio($index)"/><span title="{{classify.name}}">{{classify.name}}</span>
+                    </label>
+                </div>
+        </div>
+    </div>
+
+    <div class="row userNumber-input">
+        <div class="col-md-12">
+            <form class="form-inline clearfix userNumber-content pt20">
+                <div class="form-group pb20 form-middle" ng-hide="one">
+                    <label class="form-label pr10">APP分类</label>
+                    <select definedropdown="definedropdown"  dropdown-search class="form-control" ng-model="appClassify"
+                            ng-options="appClassify.category_name for appClassify in appClassifys" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group pb20 form-middle" ng-hide="one">
+                    <label class="form-label pr10">APP来源</label>
+                    <select definedropdown="definedropdown"  dropdown-search class="form-control" ng-model="source"
+                            ng-options="source.crawl_app_source for source in sources" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group form-middle" ng-class="{'pb20':one==false}" ng-hide="one && last">
+                    <label class="form-label pr10">参数分类</label>
+                    <select definedropdown="definedropdown"  dropdown-search class="form-control" ng-model="paramtype"
+                            ng-options="paramtype.industry_name for paramtype in paramtypes" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group calender pos-relative">
+                    <label class="form-label pr10">时间选择</label>
+                    <input type="text" class="form-control" id="appGrab_date" ng-model="initAccount" />
+                    <span><i class="icon-newData"></i></span>
+                </div>
+
+                <div class="form-group form-search countinfo" ng-hide="one">
+                    <label class="form-label pr10">APP名称</label>
+                    <input type="text" class="form-control" ng-model="appname" ng-keyup="enterSearch($event)" ng-model-options="{debounce:500}" searchwatch placeholder="APP名称" />
+                    <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                </div>
+
+                <div class="form-group form-middle" ng-hide="one">
+                    <label class="form-label pr10">抓取行为</label>
+                    <select definedropdown="definedropdown"  dropdown-search class="form-control" ng-model="grabBehavior"
+                            ng-options="grabBehavior.behavior_name for grabBehavior in grabBehaviors" ng-change="search()"></select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 param-type-choice viewchange">
+            <button ng-model="selectType" ng-click="changeClassify(selectType,$index)" ng-class="{active:pageInfo == $index}"
+                    ng-repeat="selectType in selectTypes track by $index">{{selectType.name}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid" ng-show="showflag"></div>
+            <div class="chartheader" ng-hide="showflag">用户数统计</div>
+            <div id="mainchart" ng-hide="showflag"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

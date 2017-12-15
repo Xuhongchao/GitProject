@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	  <!--<Properties>-->
+	    <!--<Property name="filename">target/test.log</Property>-->
+	  <!--</Properties>-->
+
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+
+			<PatternLayout
+					pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n}{FATAL=yellow, ERROR=red, WARN=blue, INFO=Cyan, DEBUG=green, TRACE=blue}"/>
+		</Console>
+		<!--<File name="TanxProducerFile" fileName="target/producer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="TanxConsumerFile" fileName="target/consumer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="AmaxProducerFile" fileName="target/amaxProducer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="AmaxConsumerFile" fileName="target/amaxConsumer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<File name="File" fileName="./target/log" append="false">
+     		<PatternLayout
+					pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>
+    	</File> 
+	</Appenders>
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>

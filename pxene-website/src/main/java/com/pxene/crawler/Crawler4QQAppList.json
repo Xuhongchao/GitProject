@@ -1,0 +1,18 @@
+{
+	seeds : [
+		"http://sj.qq.com/myapp/search.htm?kw=%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80"
+	],
+	loginConf : {
+		enable : false,
+		url : "",
+		usrkey : "u",
+		username : "",
+		pwdkey : "p",
+		password : ""
+	},
+	proxyConf : {
+		enable : false,
+		ips : [],
+		userAgents : []
+	}
+}

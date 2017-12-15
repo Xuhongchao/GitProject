@@ -1,0 +1,45 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">转移</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-inline pl20 transfer">
+        <!--<div class="form-group form-search">
+            <label class="control-label">搜索转移的应用</label>
+            <input type="text" class="form-control" name="transfer" validations="required" ng-model="transfer" ng-keyup="enterSearch($event)" placeholder="输入转移的应用名称"/>
+            <div ng-click="search()"><i class="icon-sousuo"></i></div>
+
+            <ul class="transfer-ul" ng-show="dropwodnflag">
+                <li class="clearfix" title="{{app.app_name}}" ng-repeat="app in apps" ng-click="choice(app)">
+                    <img ng-show="app.app_id !== -1" ng-src="{{app.app_logo_url | logolurlchange}}">
+                    <span>{{app.app_status | appStatus}}</span>
+                    <span>{{app.app_name}}</span>
+                </li>
+            </ul>
+        </div>-->
+        <div class="form-group form-inline form-content form-normal">
+            <label class="form-label pr10">搜索转移的应用</label>
+            <select definedropdown="definedropdown" dropdown-extend dropdown-search class="form-control" name="transferApp" validations="required" ng-model="transferApp"
+                    ng-options="transferApp.crawl_app_name for transferApp in transferApplist" ng-change="queryappclassify(transferApp)"></select>
+            <span class="mustWrite">*</span>
+        </div>
+        <div class="form-group form-inline form-content transfer form-normal">
+            <label class="form-label pr10">一级分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="firstClassify" validations="required" ng-model="transferFirstType" ng-change="queryfirstClassify(transferFirstType)"
+                    ng-options="transferFirstType.category_name for transferFirstType in transferFirstTypelist" ng-disabled="transferApp.app_id != -1"></select>
+            <span class="mustWrite">*</span>
+        </div>
+        <div class="form-group form-inline form-content transfer form-normal">
+            <label class="form-label pr10">二级分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="secondClassify" validations="required" ng-model="transferSecondType"
+                    ng-options="transferSecondType.category_name for transferSecondType in transferSecondTypelist" ng-disabled="transferApp.app_id != -1"></select>
+            <span class="mustWrite">*</span>
+        </div>
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()" ng-disabled="firstsearch">确定</button>
+</div>

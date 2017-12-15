@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="detailAleadyAppCtrl">
+    <div class="contentNav -mt35">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation" class="active"><a href="" ng-click="checkSys('urldetail')">url详情</a></li>
+            <li role="presentation"><a href="" ng-click="checkSys('domation')">主域名</a></li>
+        </ul>
+    </div>
+
+    <!--//详情展示名字和logo-->
+    <div class="form-group">
+        <div class="appGrabuser clearfix">
+            <div class="user-imgframe">
+                <div class="user-img">
+                    <img ng-src="{{logourl | logolurlchange}}">
+                </div>
+            </div>
+            <div class="user-title">
+                <span class="title" title="{{appname}}">{{appname}}</span>
+                <span class="descr" title="{{apptype}}">{{apptype}}</span>
+            </div>
+        </div>
+    </div>
+
+    <!--//url详情tab显示-->
+    <form class="form-inline">
+        <div class="form-group calender pos-relative pl20">
+            <label class="form-label pr10">时间选择</label>
+            <input type="text" class="form-control" id="appGrab_date" ng-model="initAccount" />
+            <span><i class="icon-newData"></i></span>
+        </div>
+
+        <div class="form-group form-inline form-content form-normal pl20">
+            <label class="form-label pr10 width-auto">抓取行为</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="firstClassify" ng-model="grabBehavior" ng-change="search()"
+                    ng-options="grabBehavior.behavior_name for grabBehavior in grabBehaviorlist"></select>
+        </div>
+
+        <div class="form-group form-search pl20">
+            <label class="form-label pr10">参数分类名称</label>
+            <input type="text" class="form-control" ng-model="appName" ng-keyup="enterSearch($event)"  ng-model-options="{debounce:500}" searchwatch placeholder="参数分类名称"/>
+            <div ng-click="search()"><i class="icon-sousuo"></i></div>
+        </div>
+    </form>
+
+    <div class="row clearfix">
+        <div class="col-md-12 mt10">
+            <button type="button" class="btn btn-default pull-right mr90" ng-click="regexJudge()">正则校验</button>
+            <button type="button" class="btn btn-default pull-right mr10" ng-click="add()">添加抓取信息</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 specilh69 pt20">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid applist"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

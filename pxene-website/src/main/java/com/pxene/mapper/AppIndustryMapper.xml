@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppIndustryMapper">
+	<resultMap id="BaseResultMap" type="com.pxene.model.AppIndustry">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="app_industry_num" property="app_industry_num"
+			jdbcType="VARCHAR" />
+		<result column="app_industry_name" property="app_industry_name"
+			jdbcType="VARCHAR" />
+		<result column="app_fetch_content" property="app_fetch_content"
+			jdbcType="VARCHAR" />
+		<result column="app_paramreg_num" property="app_paramreg_num"
+			jdbcType="INTEGER" />
+		<result column="create_time" property="create_time" jdbcType="DATE" />
+	</resultMap>
+	<select id="queryIndustryCountById" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry_content where content_industry_id=${industry_id};
+	</select>
+	
+	<select id="queryIndustryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry where 1=1 
+		<if test="industry_id !=null">
+			and industry_id=${industry_id} 
+		</if>
+		;
+	</select>
+	<select id="queryIndustryByPage" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select industry_id,industry_name from app_industry where 1=1 
+		<if test="industry_id !=null">
+			and industry_id=${industry_id} 
+		</if>
+		limit
+		${page},${num};
+	</select>
+	<select id="queryIndustryNumById" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select industry_num from app_industry where
+		industry_id=${industry_id};
+	</select>
+	<select id="queryIndustryContentDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select content_detail_id,param_reg from app_industry_content_detail where
+		content_detail_content_id=${content_id} and check_state=1;
+	</select>
+	<select id="queryIndustryContent" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select content_id,content_name,content_order from
+		app_industry_content where content_industry_id=${industry_id};
+	</select>
+	
+	<select id="queryAllIndustryWithAdID" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select industry_id,industry_name from app_industry where ${adIdExist}>=1 and industry_name 
+		<if test="adIdExist !=1">
+			not
+		</if>
+		 IN (${industry_name});
+	</select>
+	
+	<select id="queryAllIndustry" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select industry_id,industry_name from app_industry;
+	</select>
+
+	<delete id="deleteRegular" parameterType="java.util.Map">
+		delete from
+		app_industry_content_detail where
+		content_detail_id=${content_detail_id};
+	</delete>
+
+	<select id="queryRegularIsUsed" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_detail where
+		crawl_content_detail_id LIKE "%,${content_detail_id},%";
+	</select>
+
+	<update id="checkReg" parameterType="java.util.Map">
+		update
+		app_industry_content_detail set check_state=${check_state} where
+		content_detail_id=${content_detail_id};
+	</update>
+
+	<update id="modifyRegular" parameterType="java.util.Map">
+		update
+		app_industry_content_detail set
+		url_example="${url_example}",param_reg="${param_reg}",check_state=0
+		where
+		content_detail_id=${content_detail_id};
+	</update>
+
+	<select id="queryParamReg" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry_content_detail where
+		content_detail_content_id=${content_id} and param_reg="${param_reg}"
+		<if test="content_detail_id != null">
+			 and content_detail_id!=${content_detail_id}
+		</if>;
+	</select>
+
+	<insert id="addRegular" parameterType="java.util.Map">
+		insert into
+		app_industry_content_detail(content_detail_content_id,url_example,param_reg,check_state,content_detail_create_time)VALUES(${content_id},"${url_example}","${param_reg}",0,NOW());
+	</insert>
+
+	<select id="queryContentDetailTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*)
+		from app_industry_content_detail where
+		content_detail_content_id=${content_id};
+	</select>
+
+	<select id="queryContentDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select content_detail_id,content_detail_content_id
+		content_id,url_example,param_reg,check_state
+		from
+		app_industry_content_detail where
+		content_detail_content_id=${content_id}
+		limit ${page},${num};
+	</select>
+
+	<delete id="deleteIndustry" parameterType="java.util.Map">
+		delete from
+		app_industry where BINARY industry_num="${industry_num}";
+	</delete>
+
+	<select id="queryContentCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry_content where
+		content_industry_id=(select industry_id from app_industry where BINARY 
+		industry_num="${industry_num}");
+	</select>
+
+	<delete id="deleteIndustryContent" parameterType="java.util.Map">
+		delete from
+		app_industry_content where content_id=${content_id};
+	</delete>
+
+	<select id="queryContentDetailCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry_content_detail where
+		content_detail_content_id=${content_id};
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select
+		a.content_id,b.industry_num,b.industry_name,a.content_name,a.content_order
+		,(select count(*) from app_industry_content_detail c where
+		c.content_detail_content_id=a.content_id) regCount from
+		app_industry_content a LEFT JOIN
+		app_industry b ON
+		a.content_industry_id=b.industry_id where 1=1 
+		<if test="industry_num != null">
+			AND BINARY b.industry_num="${industry_num}"
+		</if>
+		<if test="industry_name != null">
+			AND b.industry_name LIKE "%${industry_name}%"
+		</if>
+		 order by b.industry_num_decimal  
+		<if test="orderRule != null">
+			${orderRule} ,a.content_order asc 
+		</if> 
+		limit ${page},${num};
+	</select>
+
+	<select id="queryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from
+		app_industry_content a LEFT JOIN app_industry b ON
+		a.content_industry_id=b.industry_id where 1=1
+		<if test="industry_num != null">
+			AND BINARY b.industry_num="${industry_num}"
+		</if>
+		<if test="industry_name != null">
+			AND b.industry_name LIKE "%${industry_name}%"
+		</if>
+		;
+	</select>
+
+	<insert id="addIndustry" parameterType="java.util.Map">
+		insert into
+		app_industry(industry_num,industry_num_decimal,industry_name,industry_create_time)
+		values("${industry_num}","${industry_num_decimal}","${industry_name}",NOW());
+	</insert>
+
+	<select id="queryMaxIndustryNumDecimal" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select max(industry_num_decimal) from app_industry;
+	</select>
+
+	<insert id="addIndustryContent" parameterType="java.util.Map">
+		insert into
+		app_industry_content(content_industry_id,content_name,content_order,content_create_time)VALUES(${content_industry_id},"${content_name}",${content_order},NOW());
+	</insert>
+
+	<select id="queryIndustryName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select industry_name from app_industry where
+		industry_id=${industry_id};
+	</select>
+
+	<select id="queryIndustryID" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select industry_id from app_industry where
+		industry_name="${industry_name}";
+	</select>
+	<select id="queryIndustryAndContentExist" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry a LEFT JOIN
+		app_industry_content b ON
+		a.industry_id=b.content_industry_id where
+		a.industry_name="${industry_name}" AND
+		b.content_name="${content_name}";
+	</select>
+
+	<select id="queryIndusrtyAndOrder" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_industry a LEFT JOIN
+		app_industry_content b ON
+		a.industry_id=b.content_industry_id where
+		a.industry_name="${industry_name}" AND
+		b.content_order="${content_order}";
+	</select>
+</mapper>

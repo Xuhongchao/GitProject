@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.ClassifyForAppMapper">
+
+	<select id="queryCategoryId" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select category_id from app_category where category_name="${category_name}";
+	</select>
+
+	<select id="queryAppTypeName" parameterType="java.util.Map"
+		resultType="String">
+		select category_name from app_category where category_id=${category_id};
+	</select>
+	
+	<insert id="addUnknownMap" parameterType="java.util.Map">
+		insert INTO
+		app_category_adjust(adjust_category_id,adjust_app_type,adjust_create_time)
+		VALUES(${adjust_category_id},"${adjust_app_type}",NOW());
+	</insert>
+
+	<select id="adjustAppType" parameterType="java.util.Map"
+		resultType="String">
+		select adjust_category_id from app_category_adjust where
+		adjust_app_type="${adjust_app_type}";
+	</select>
+
+	<select id="queryKeywordType" parameterType="java.util.Map"
+		resultType="String">
+		select keyword_category_id from app_category_keyword where
+		keyword_name="${keyword_name}"
+	</select>
+
+	<insert id="addKeyword" parameterType="java.util.Map">
+		insert into
+		app_category_keyword(keyword_name,keyword_category_id,keyword_create_time)
+		values("${keyword_name}",${keyword_category_id},NOW());
+	</insert>
+</mapper>

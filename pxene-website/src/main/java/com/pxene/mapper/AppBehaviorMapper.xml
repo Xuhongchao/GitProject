@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppBehaviorMapper">
+	<select id="queryMaxBehaviorNum" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select MAX(crawl_detail_behavior_num_decimal) from app_crawl_detail where crawl_detail_type=${crawl_detail_type} and BINARY SUBSTR(crawl_detail_num,2,3)="${app_num}" and BINARY SUBSTR(crawl_detail_num,5,3)="${behavior_code}" ;
+	</select>
+
+	<select id="queryBehaviorCodeById" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select behavior_code from app_behavior where behavior_id=${behavior_id};
+	</select>
+	
+	<select id="queryMaxBehaviorCodeDecimal" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select MAX(behavior_code_decimal) from app_behavior;
+	</select>
+
+	<select id="queryAllBehavior" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select behavior_id,behavior_name from app_behavior;
+	</select>
+	
+	<select id="queryAppBehaviorByPage" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select behavior_id,behavior_name from app_behavior where 1=1 
+		<if test="behavior_id !=null">
+		 and behavior_id=${behavior_id} 
+		</if>
+		limit ${page},${num};
+	</select>
+	<select id="queryAppBehaviorTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_behavior where 1=1 
+		<if test="behavior_id !=null">
+		 and behavior_id=${behavior_id} 
+		</if>
+		;
+	</select>
+	
+	<select id="queryAppBehaviorByCategoryId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select behavior_id,behavior_name from app_behavior where
+		behavior_id IN(select behavior_id from app_behavior_category where
+		category_id=${category_id}) and behavior_name like "%${behavior_name}%";
+	</select>
+
+	<select id="queryAppBehaviorName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select behavior_name from app_behavior where
+		behavior_id=${behavior_id};
+	</select>
+
+	<delete id="deleteBehavior" parameterType="java.util.Map">
+		delete from
+		app_behavior where behavior_id=${behavior_id};
+	</delete>
+
+	<delete id="deleteBehaviorCategory" parameterType="java.util.Map">
+		delete from
+		app_behavior_category where behavior_id=${behavior_id};
+	</delete>
+
+	<select id="queryBehaviorIsUsed" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(crawl_detail_behavior_id) count from
+		app_crawl_detail where crawl_detail_behavior_id=${behavior_id};
+	</select>
+
+	<insert id="addAppBehaviorCategory" parameterType="java.util.Map">
+		insert INTO
+		app_behavior_category(behavior_id,category_id,create_time) VALUES
+		(${behavior_id},${category_id},NOW());
+	</insert>
+	<select id="queryAppBehaviorId" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select behavior_id from app_behavior where
+		behavior_name="${behavior_name}";
+	</select>
+
+	<insert id="addAppBehavior" parameterType="java.util.Map">
+		insert into
+		app_behavior(behavior_name,behavior_code,behavior_code_decimal,behavior_create_time) VALUES
+		("${behavior_name}","${behavior_code}","${behavior_code_decimal}",NOW());
+	</insert>
+
+	<select id="queryAppCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_child_category;
+	</select>
+	<select id="queryBehaviorCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_child_category where
+		category_id IN(select
+		category_id from app_behavior_category where
+		behavior_id=(select
+		behavior_id from app_behavior where
+		behavior_name="${behavior_name}"));
+	</select>
+
+	<select id="queryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(DISTINCT(b.behavior_name)) from app_behavior_category a
+		LEFT JOIN
+		app_behavior b ON a.behavior_id=b.behavior_id where 1=1
+		<if test="category_name != null">
+			AND a.category_id
+			IN(select c.category_id from app_child_category c 
+			where c.category_name LIKE
+			"%${category_name}%")
+		</if>
+		<if test="behavior_name != null">
+			AND b.behavior_name LIKE "%${behavior_name}%"
+		</if>
+		;
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT(b.behavior_name),b.behavior_code from app_behavior_category a LEFT JOIN
+		app_behavior b ON a.behavior_id=b.behavior_id where 1=1
+		<if test="category_name != null">
+			AND a.category_id
+			IN(select c.category_id from app_child_category c 
+			where c.category_name LIKE
+			"%${category_name}%")
+		</if>
+		<if test="behavior_name != null">
+			AND b.behavior_name LIKE "%${behavior_name}%"
+		</if>
+		 order by  b.behavior_create_time desc 
+		limit ${page},${num};
+	</select>
+</mapper>

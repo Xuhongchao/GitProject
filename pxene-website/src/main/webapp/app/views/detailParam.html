@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="detailParamCtrl">
+
+    <span class="usertitle">{{name}}</span>
+
+    <button type="submit" class="btn btn-default pull-right mr90 ml10" ng-click="paramJudge()">正则校验</button>
+    <button type="submit" class="btn btn-default pull-right" ng-click="addParamRegex()">添加正则</button>
+
+    <div class="row mt15">
+        <div class="col-md-12">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">修改优先级</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal pl20">
+<!--
+        <div class="form-group">
+            <label class="control-label">优先级</label>
+            <input type="text" class="form-control" name="priority" validations="required;number" ng-model="priority" placeholder="只能有1,2,3三个优先级"/>
+            <span class="mustWrite">*</span>
+        </div>-->
+        <div class="form-group form-inline form-content form-normal">
+            <label class="form-label pr10">优先级</label>
+            <select definedropdown="definedropdown" class="form-control" name="priority" validations="required" ng-model="priority"
+                    ng-options="priority.name for priority in prioritylist"></select>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>

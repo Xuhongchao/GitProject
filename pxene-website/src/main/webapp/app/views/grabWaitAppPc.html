@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="grabWaitAppPcCtrl" class="-mt35">
+    <div class="contentNav">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation"><a href="" ng-click="checkSys('Android',source)">Android APP</a></li>
+            <li role="presentation"><a href="" ng-click="checkSys('IOS',source)">IOS APP</a></li>
+            <li role="presentation" class="active"><a href="" ng-click="checkSys('pc',source)">PC网站</a></li>
+            <li role="presentation"><a href="" ng-click="checkSys('mobile',source)">移动网站</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline pull-left applist">
+
+                <div class="form-group pl20 from-small">
+                    <label class="form-label pr10">来源</label>
+                    <select definedropdown="definedropdown" dropdown-search class="form-control" ng-model="source"
+                            ng-options="source.app_source for source in sources" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group pl20">
+                    <label class="form-label pr10">状态</label>
+                    <select definedropdown="definedropdown" class="form-control" ng-model="statu"
+                            ng-options="statu.ways for statu in status" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group pl20 from-small" ng-show="sys=='Android' || sys == 'IOS'">
+                    <label class="form-label pr10">APP应用市场分类</label>
+                    <select definedropdown="definedropdown" dropdown-search class="form-control" ng-model="appCategoryName"
+                            ng-options="appCategoryName.app_category_name for appCategoryName in appCategoryNamelist" ng-change="search()"></select>
+                </div>
+
+                <div class="form-group form-search pl20" ng-show="sys=='Android' || sys == 'IOS'">
+                    <label class="form-label pr10">APP名称</label>
+                    <input type="text" class="form-control" ng-model="appName" ng-keyup="enterSearch($event)" searchwatch placeholder="APP名称"/>
+                    <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                </div>
+
+                <div class="form-group form-search pl20" ng-hide="sys=='Android' || sys == 'IOS'">
+                    <label class="form-label pr10">网站名称</label>
+                    <input type="text" class="form-control" ng-model="appName" ng-keyup="enterSearch($event)" searchwatch placeholder="网站名称"/>
+                    <div ng-click="search()"><i class="icon-sousuo"></i></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 btnlist" ng-if="sys=='Android' || sys == 'IOS'">
+            <button type="button" class="btn btn-default" ng-click="modifyPriority()">修改优先级</button>
+            <button type="button" class="btn btn-default exportbtn">
+                <input id="export_input" type="file" accept=".xls,.xlsx" ng-file-select="onFileSelect1($files)" />
+                导入APP
+            </button>
+            <button type="button" class="btn btn-default" ng-click="addApp()">新增APP</button>
+        </div>
+
+        <div class="col-md-12 btnlist" ng-if="sys=='pc' || sys == 'mobile'">
+            <button type="button" class="btn btn-default" ng-click="modifyPriority()">修改优先级</button>
+            <button type="button" class="btn btn-default exportbtn">
+                <input id="export_input" type="file" accept=".xls,.xlsx" ng-file-select="onFileSelect1($files)" />
+                导入网站
+            </button>
+            <button type="button" class="btn btn-default" ng-click="addApp()">新增网站</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 specilh69">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid nopinn-pc"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

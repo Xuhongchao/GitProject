@@ -1,0 +1,18 @@
+{
+	seeds : [
+		"http://shouji.baidu.com/software/"
+	],
+	loginConf : {
+		enable : false,
+		url : "",
+		usrkey : "u",
+		username : "",
+		pwdkey : "p",
+		password : ""
+	},
+	proxyConf : {
+		enable : false,
+		ips : [],
+		userAgents : []
+	}
+}

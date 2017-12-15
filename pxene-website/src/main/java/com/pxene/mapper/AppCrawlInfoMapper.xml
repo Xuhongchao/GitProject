@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppCrawlInfoMapper">
+    <resultMap id="BaseResultMap" type="com.pxene.model.AppCrawlInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <id column="app_id" property="app_id" jdbcType="INTEGER"/>
+        <id column="app_crawl_num" property="app_crawl_num" jdbcType="VARCHAR"/>
+        <id column="app_industry_id" property="app_industry_id" jdbcType="INTEGER"/>
+        <id column="app_crawl_behavior" property="app_crawl_behavior" jdbcType="VARCHAR"/>
+        <id column="app_crawl_domain" property="app_crawl_domain" jdbcType="VARCHAR"/>
+        <id column="app_crawl_paramreg" property="app_crawl_paramreg" jdbcType="VARCHAR"/>
+        <id column="app_crawl_urlreg" property="app_crawl_urlreg" jdbcType="VARCHAR"/>
+        <id column="app_crawl_urlexample" property="app_crawl_urlexample" jdbcType="VARCHAR"/>
+        <id column="app_crawl_comments" property="app_crawl_comments" jdbcType="VARCHAR"/>
+        <id column="app_crawl_createtime" property="app_crawl_createtime" jdbcType="DATE"/>
+        <id column="app_status" property="app_status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="queryAllByAppId" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from app_crawl_info where app_id=${appInfoId} and app_crawl_createtime BETWEEN  '${startDate}' and '${endDate}'
+        <if test="industryId != -1">
+            and app_crawl_info.app_industry_id=${industryId}
+        </if>
+    </select>
+
+    <select id="queryAllByIndustryId" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(a.id)
+        from app_crawl_info a,app_info c,app_category d
+        where a.app_id=c.id and c.app_category_id=d.id and a.app_industry_id=${industryId} and a.app_crawl_createtime
+        BETWEEN '${startDate}' and '${endDate}'
+        <if test="categoryId != -1">
+            and d.id=${categoryId}
+        </if>
+        <if test="search != null">
+            and c.app_name LIKE '%${search}%'
+        </if>
+    </select>
+
+    <select id="queryDomainAndUrlRegByAppId" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from app_crawl_info where app_crawl_domain='${appCrawlDomain}' and app_crawl_urlreg='${appCrawlUrlreg}' and app_id=${appId};
+    </select>
+
+    <select id="queryCrawlInfoNum" parameterType="java.util.Map" resultType="java.lang.String">
+        select max(app_crawl_num) from app_crawl_info where app_crawl_num between '${startNum}' and '${endNum}';
+    </select>
+
+    <insert id="addAppCrawlInfo" parameterType="java.util.Map">
+        INSERT INTO app_crawl_info(app_id,app_crawl_num,app_industry_id,app_crawl_behavior,app_crawl_domain,app_crawl_paramreg,app_crawl_urlreg,app_crawl_urlexample,app_crawl_comments,app_crawl_createtime,app_status)
+        VALUES (${appId},'${appCrawlNum}',${appIndustryId},'${appCrawlBehavior}','${appCrawlDomain}','${appCrawlParamreg}','${appCrawlUrlreg}','${appCrawlUrlexample}','${appCrawlComments}','${appCrawlCreatetime}',${appStatus});
+    </insert>
+
+    <select id="queryById" parameterType="com.pxene.model.AppCrawlInfo" resultType="com.pxene.model.AppCrawlInfo">
+        select * from app_crawl_info where id=#{id,jdbcType=INTEGER};
+    </select>
+    
+    <update id="updateAppCrawlInfo" parameterType="com.pxene.model.AppCrawlInfo">
+        update app_crawl_info set app_crawl_behavior=#{app_crawl_behavior,jdbcType=VARCHAR},app_crawl_domain=#{app_crawl_domain,jdbcType=VARCHAR},
+         app_crawl_paramreg=#{app_crawl_paramreg,jdbcType=VARCHAR},app_crawl_urlreg=#{app_crawl_urlreg,jdbcType=VARCHAR},app_crawl_urlexample=#{app_crawl_urlexample,jdbcType=VARCHAR},
+         app_crawl_comments=#{app_crawl_comments,jdbcType=VARCHAR}
+        <if test="app_status != -1">
+            ,app_status=#{app_status,jdbcType=INTEGER}
+        </if>
+        where id=#{id,jdbcType=INTEGER};
+    </update>
+
+    <delete id="delAppCrawlInfo" parameterType="java.util.Map">
+        delete from app_crawl_info where id=${id};
+    </delete>
+
+    <delete id="delByAppId" parameterType="java.util.Map">
+        delete app_crawl_info,app_url_count from app_crawl_info LEFT JOIN app_url_count on app_crawl_info.app_crawl_num=app_url_count.url_code where app_crawl_info.app_id=${id};
+    </delete>
+
+    <select id="queryByIndustryId" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.*,b.url_count,b.statistics_time,c.app_name,d.app_category_name,c.app_logo_url,e.app_industry_name
+        from app_crawl_info a LEFT JOIN app_url_count b on a.app_crawl_num=b.url_code,app_info c,app_category d,app_industry e
+        where a.app_id=c.id and c.app_category_id=d.id and a.app_industry_id=e.id and a.app_industry_id=${industryId} and a.app_crawl_createtime
+        BETWEEN '${startDate}' and '${endDate}'
+        <if test="categoryId != -1">
+            and d.id=${categoryId}
+        </if>
+        <if test="search != null">
+            and c.app_name LIKE '%${search}%'
+        </if>
+        order by a.id desc limit ${page},${num};
+    </select>
+
+    <select id="queryByAppInfoId" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.*,b.url_count,b.statistics_time,c.app_name,d.app_industry_name,d.app_industry_num
+        from app_crawl_info a LEFT JOIN app_url_count b	on a.app_crawl_num=b.url_code,app_info c,app_industry d
+        where a.app_id=c.id and a.app_industry_id=d.id and app_crawl_createtime BETWEEN '${startDate}' and '${endDate}' and a.app_id=${appInfoId}
+        <if test="industryId != -1">
+            and a.app_industry_id=${industryId}
+        </if>
+        order by a.id desc limit ${page},${num};
+    </select>
+
+    <update id="testAppCrawlInfo" parameterType="com.pxene.model.AppCrawlInfo">
+        update app_crawl_info set app_status=#{app_status,jdbcType=INTEGER} where id=#{id,jdbcType=INTEGER};
+    </update>
+
+    <select id="exportAdid" parameterType="java.util.Map" resultType="com.pxene.model.AppCrawlInfo">
+        select * from app_crawl_info where (app_crawl_num BETWEEN '000550000000' and '000559999999') or (app_crawl_num BETWEEN '100550000000' and '100559999999')
+        or (app_crawl_num BETWEEN '200550000000' and '200559999999') or (app_crawl_num BETWEEN '300550000000' and '300559999999')
+    </select>
+
+    <select id="exportSearch" parameterType="java.util.Map" resultType="com.pxene.model.AppCrawlInfo">
+        select * from app_crawl_info where (app_crawl_num BETWEEN '000570000000' and '000579999999') or (app_crawl_num BETWEEN '100570000000' and '100579999999')
+        or (app_crawl_num BETWEEN '200570000000' and '200579999999') or (app_crawl_num BETWEEN '300570000000' and '300579999999')
+    </select>
+
+    <select id="exportApiList" parameterType="java.util.Map" resultType="com.pxene.model.AppCrawlInfo">
+        select * from app_crawl_info where id NOT in
+        (select id from app_crawl_info where (app_crawl_num BETWEEN '000570000000' and '000579999999') or (app_crawl_num BETWEEN '100570000000' and '100579999999')
+        or (app_crawl_num BETWEEN '200570000000' and '200579999999') or (app_crawl_num BETWEEN '300570000000' and '300579999999')
+        or(app_crawl_num BETWEEN '000550000000' and '000559999999') or (app_crawl_num BETWEEN '100550000000' and '100559999999')
+        or (app_crawl_num BETWEEN '200550000000' and '200559999999') or (app_crawl_num BETWEEN '300550000000' and '300559999999'))
+    </select>
+</mapper>

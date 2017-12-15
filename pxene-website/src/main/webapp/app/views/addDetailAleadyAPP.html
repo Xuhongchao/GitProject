@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="addDetailAleadyAPPCtrl" class="addDetailAleadyAPP">
+
+    <div class="form-group mb40">
+        <div class="appGrabuser clearfix">
+            <div class="user-imgframe">
+                <div class="user-img">
+                    <img ng-src="{{logourl | logolurlchange}}">
+                </div>
+            </div>
+            <div class="user-title adddetailapp">
+                <span class="title" title="{{appname}}">{{appname}}</span>
+                <span class="descr" title="{{type}}">{{apptype}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-inline">
+        <label class="form-label pr10">URL样例</label>
+        <input type="text" class="form-control" name="urlExample" validations="maxlength:3000;required" ng-model="urlExample" ng-blur="matchregular(urlExample)"/>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group form-inline form-content form-large">
+        <label class="form-label pr10">抓取行为</label>
+        <select definedropdown="definedropdown" dropdown-search class="form-control" name="grabBehavior" validations="required" ng-model="grabBehavior"
+                ng-options="grabBehavior.behavior_name for grabBehavior in appClassifys"></select>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group form-inline">
+        <label class="form-label pr10">URL正则</label>
+        <input type="text" class="form-control" name="urlregexp" validations="maxlength:100;required" ng-model="urlregexp" ng-attr-placeholder="{{placeholdertext}}"/>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group form-inline">
+        <label class="form-label pr10">域名</label>
+        <input type="text" class="form-control" name="domain" validations="maxlength:100;required" ng-model="domain" ng-disabled="!urlExample"/>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group form-inline form-content">
+        <label class="form-label pr10">使用端</label>
+        <select definedropdown="definedropdown" class="form-control" name="userpoint" validations="required" ng-model="userpoint"
+                ng-options="userpoint.type_name for userpoint in userpointlist"></select>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group form-inline param-type" ng-show="types.length>0">
+        <label class="form-label pr10">参数分类</label>
+        <div class="type">
+            <label ng-repeat="type in types" class="clearfix">
+                <input type="checkbox" ng-disabled="type.clickFlag" ng-model="type.isSelected" ng-click="selectClassify(type)"/><span title="{{type.industry_name}}">{{type.industry_name}}</span>
+            </label>
+        </div>
+        <span class="mustWrite">*</span>
+    </div>
+
+    <div class="form-group mt30">
+        <div class="param-type-choice ml20">
+            <button type="checkbox" ng-model="selectType" ng-click="changeClassify(selectType,$index)" ng-class="{active:selectTypesIndex == $index}"
+            ng-repeat="selectType in selectTypes track by $index">{{selectType.industry_name}}</button>
+        </div>
+    </div>
+    <form class="clearfix" ng-show="selectTypes.length>0 && selectTypesIndex == $index" ng-repeat="select in selectTypes">
+        <div class="form-group form-inline">
+            <label class="form-label pr10">参数</label>
+            <span title="{{paramobj.content_name}}" ng-repeat="paramobj in select.industryContentList" class="ml10">{{paramobj.content_name}}</span>
+        </div>
+        <div class="form-group param-regex clearfix">
+            <label class="form-label pr10 pull-left">参数正则</label>
+            <div class="pull-left ml5">
+                <div ng-repeat="paramobj in select.industryContentList" class="regex-form clearfix mb15">
+                    <input type="text" class="form-control" name="paramkey" ng-model="paramobj.param_key" ng-disabled=paramobj.emptyreg />
+                    <select definedropdown="definedropdown" class="form-control" name="paramRegex" ng-model="paramobj.param_reg"
+                            ng-options="paramobj.param_reg for paramobj in paramobj.contentDetailList" ng-change="changeparamreg(paramobj,$index)"></select>
+                    <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_content" ng-disabled=paramobj.emptyreg />
+                    <div class="param-specil" ng-show="matchSpecil(paramobj.content_name)">
+                        <input type="text" class="form-control" ng-model="paramobj.param_num_order" ng-init="paramobj.param_num_order=matchSpecil(paramobj.content_name)" />
+                        <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_num" placeholder="输入字母"/>
+                    </div>
+                    <span class="mustWrite">*</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label class="form-label pr10">备注</label>
+            <input type="text" class="form-control" name="remarks" validations="maxlength:100"  ng-model="select.remarks"  />
+        </div>
+    </form>
+
+    <div class="form-group form-inline">
+        <label class="form-label pr10 pull-left"></label>
+        <div class="pull-left ml5">
+            <button class="btn btn-primary" type="button" ng-click="cancel()">取消</button>
+            <button class="btn btn-default ml20" type="button" ng-click="ok()" ng-disabled="aleadysure">确定</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

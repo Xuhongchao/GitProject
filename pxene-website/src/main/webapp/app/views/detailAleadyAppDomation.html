@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="detailAleadyAppDomationCtrl">
+    <div class="contentNav -mt35">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation"><a href="" ng-click="checkSys('urldetail')">url详情</a></li>
+            <li role="presentation" class="active"><a href="" ng-click="checkSys('domation')">主域名</a></li>
+        </ul>
+    </div>
+
+    <!--//主域名详情tab显示-->
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="appGrabuser clearfix">
+                <div class="user-imgframe">
+                    <div class="user-img">
+                        <img ng-src="{{logourl | logolurlchange}}">
+                    </div>
+                </div>
+                <div class="user-title">
+                    <span class="title" title="{{appname}}">{{appname}}</span>
+                    <span class="descr" title="{{apptype}}">{{apptype}}</span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-default pull-right mr40" ng-click="add()">添加主域名</button>
+    </form>
+
+    <div class="row">
+        <div class="col-md-12 pt10">
+            <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="myGrid applist"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

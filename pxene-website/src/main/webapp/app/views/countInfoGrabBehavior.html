@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<%@ page pageEncoding="UTF-8" %>
+<div ng-controller="countInfoGrabBehaviorCtrl" class="-mt35">
+    <div class="contentNav">
+        <ul class="nav nav-pills mb38">
+            <li role="presentation" ng-repeat="inform in informs" ng-class="{active:3==$index}"><a href="" ng-click="checkSys(inform)">{{inform.name}}</a></li>
+        </ul>
+    </div>
+    <div countinfo="behavior"></div>
+</div>
+</body>
+</html>

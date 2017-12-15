@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.UrlDetailMapper">
+    <resultMap id="BaseResultMap" type="com.pxene.model.UrlDetail">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="urlCode" property="urlcode" jdbcType="VARCHAR"/>
+        <result column="appCode" property="appcode" jdbcType="VARCHAR"/>
+        <result column="industryCode" property="industrycode" jdbcType="VARCHAR"/>
+        <result column="behavior" property="behavior" jdbcType="VARCHAR"/>
+        <result column="path" property="path" jdbcType="VARCHAR"/>
+        <result column="pathType" property="pathtype" jdbcType="VARCHAR"/>
+        <result column="operatorType" property="operatortype" jdbcType="VARCHAR"/>
+        <result column="param" property="param" jdbcType="VARCHAR"/>
+        <result column="regexurl" property="regexurl" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="tip" property="tip" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="dateTime" property="datetime" jdbcType="DATE"/>
+        <association property="app" javaType="com.pxene.model.App">
+            <id column="appID" property="id"/>
+            <result column="appCode" property="code"/>
+            <result column="appName" property="name"/>
+            <result column="appType" property="type"/>
+        </association>
+        <association property="industry" javaType="com.pxene.model.Industry">
+            <id column="industryID" property="id"/>
+            <result column="industryName" property="name"/>
+            <result column="industryCode" property="code"/>
+            <result column="industryType" property="type"/>
+        </association>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    id, urlCode, appCode, industryCode, behavior, path, pathType, operatorType, param, 
+    regexurl, url, tip, state, dateTime
+  </sql>
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.pxene.model.UrlDetailExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from t_url
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_url
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_url
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <delete id="deleteByExample" parameterType="com.pxene.model.UrlDetailExample">
+        delete from t_url
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.pxene.model.UrlDetail">
+    insert into t_url (id, urlCode, appCode, 
+      industryCode, behavior, path, 
+      pathType, operatorType, param, 
+      regexurl, url, tip, 
+      state, dateTime)
+    values (#{id,jdbcType=INTEGER}, #{urlcode,jdbcType=VARCHAR}, #{appcode,jdbcType=VARCHAR}, 
+      #{industrycode,jdbcType=VARCHAR}, #{behavior,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, 
+      #{pathtype,jdbcType=VARCHAR}, #{operatortype,jdbcType=VARCHAR}, #{param,jdbcType=VARCHAR}, 
+      #{regexurl,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{tip,jdbcType=VARCHAR}, 
+      #{state,jdbcType=VARCHAR}, #{datetime,jdbcType=DATE})
+  </insert>
+    <insert id="insertSelective" parameterType="com.pxene.model.UrlDetail">
+        insert into t_url
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="urlcode != null">
+                urlCode,
+            </if>
+            <if test="appcode != null">
+                appCode,
+            </if>
+            <if test="industrycode != null">
+                industryCode,
+            </if>
+            <if test="behavior != null">
+                behavior,
+            </if>
+            <if test="path != null">
+                path,
+            </if>
+            <if test="pathtype != null">
+                pathType,
+            </if>
+            <if test="operatortype != null">
+                operatorType,
+            </if>
+            <if test="param != null">
+                param,
+            </if>
+            <if test="regexurl != null">
+                regexurl,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="tip != null">
+                tip,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+            <if test="datetime != null">
+                dateTime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="urlcode != null">
+                #{urlcode,jdbcType=VARCHAR},
+            </if>
+            <if test="appcode != null">
+                #{appcode,jdbcType=VARCHAR},
+            </if>
+            <if test="industrycode != null">
+                #{industrycode,jdbcType=VARCHAR},
+            </if>
+            <if test="behavior != null">
+                #{behavior,jdbcType=VARCHAR},
+            </if>
+            <if test="path != null">
+                #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="pathtype != null">
+                #{pathtype,jdbcType=VARCHAR},
+            </if>
+            <if test="operatortype != null">
+                #{operatortype,jdbcType=VARCHAR},
+            </if>
+            <if test="param != null">
+                #{param,jdbcType=VARCHAR},
+            </if>
+            <if test="regexurl != null">
+                #{regexurl,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="tip != null">
+                #{tip,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=VARCHAR},
+            </if>
+            <if test="datetime != null">
+                #{datetime,jdbcType=DATE},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.pxene.model.UrlDetailExample" resultType="java.lang.Integer">
+        select count(*) from t_url
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update t_url
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=INTEGER},
+            </if>
+            <if test="record.urlcode != null">
+                urlCode = #{record.urlcode,jdbcType=VARCHAR},
+            </if>
+            <if test="record.appcode != null">
+                appCode = #{record.appcode,jdbcType=VARCHAR},
+            </if>
+            <if test="record.industrycode != null">
+                industryCode = #{record.industrycode,jdbcType=VARCHAR},
+            </if>
+            <if test="record.behavior != null">
+                behavior = #{record.behavior,jdbcType=VARCHAR},
+            </if>
+            <if test="record.path != null">
+                path = #{record.path,jdbcType=VARCHAR},
+            </if>
+            <if test="record.pathtype != null">
+                pathType = #{record.pathtype,jdbcType=VARCHAR},
+            </if>
+            <if test="record.operatortype != null">
+                operatorType = #{record.operatortype,jdbcType=VARCHAR},
+            </if>
+            <if test="record.param != null">
+                param = #{record.param,jdbcType=VARCHAR},
+            </if>
+            <if test="record.regexurl != null">
+                regexurl = #{record.regexurl,jdbcType=VARCHAR},
+            </if>
+            <if test="record.url != null">
+                url = #{record.url,jdbcType=VARCHAR},
+            </if>
+            <if test="record.tip != null">
+                tip = #{record.tip,jdbcType=VARCHAR},
+            </if>
+            <if test="record.state != null">
+                state = #{record.state,jdbcType=VARCHAR},
+            </if>
+            <if test="record.datetime != null">
+                dateTime = #{record.datetime,jdbcType=DATE},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update t_url
+        set id = #{record.id,jdbcType=INTEGER},
+        urlCode = #{record.urlcode,jdbcType=VARCHAR},
+        appCode = #{record.appcode,jdbcType=VARCHAR},
+        industryCode = #{record.industrycode,jdbcType=VARCHAR},
+        behavior = #{record.behavior,jdbcType=VARCHAR},
+        path = #{record.path,jdbcType=VARCHAR},
+        pathType = #{record.pathtype,jdbcType=VARCHAR},
+        operatorType = #{record.operatortype,jdbcType=VARCHAR},
+        param = #{record.param,jdbcType=VARCHAR},
+        regexurl = #{record.regexurl,jdbcType=VARCHAR},
+        url = #{record.url,jdbcType=VARCHAR},
+        tip = #{record.tip,jdbcType=VARCHAR},
+        state = #{record.state,jdbcType=VARCHAR},
+        dateTime = #{record.datetime,jdbcType=DATE}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.pxene.model.UrlDetail">
+        update t_url
+        <set>
+            <if test="urlcode != null">
+                urlCode = #{urlcode,jdbcType=VARCHAR},
+            </if>
+            <if test="appcode != null">
+                appCode = #{appcode,jdbcType=VARCHAR},
+            </if>
+            <if test="industrycode != null">
+                industryCode = #{industrycode,jdbcType=VARCHAR},
+            </if>
+            <if test="behavior != null">
+                behavior = #{behavior,jdbcType=VARCHAR},
+            </if>
+            <if test="path != null">
+                path = #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="pathtype != null">
+                pathType = #{pathtype,jdbcType=VARCHAR},
+            </if>
+            <if test="operatortype != null">
+                operatorType = #{operatortype,jdbcType=VARCHAR},
+            </if>
+            <if test="param != null">
+                param = #{param,jdbcType=VARCHAR},
+            </if>
+            <if test="regexurl != null">
+                regexurl = #{regexurl,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="tip != null">
+                tip = #{tip,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                state = #{state,jdbcType=VARCHAR},
+            </if>
+            <if test="datetime != null">
+                dateTime = #{datetime,jdbcType=DATE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.pxene.model.UrlDetail">
+    update t_url
+    set urlCode = #{urlcode,jdbcType=VARCHAR},
+      appCode = #{appcode,jdbcType=VARCHAR},
+      industryCode = #{industrycode,jdbcType=VARCHAR},
+      behavior = #{behavior,jdbcType=VARCHAR},
+      path = #{path,jdbcType=VARCHAR},
+      pathType = #{pathtype,jdbcType=VARCHAR},
+      operatorType = #{operatortype,jdbcType=VARCHAR},
+      param = #{param,jdbcType=VARCHAR},
+      regexurl = #{regexurl,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      tip = #{tip,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      dateTime = #{datetime,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <select id="queryByExample" resultMap="BaseResultMap" parameterType="com.pxene.form.AppDetailForm">
+        SELECT
+        t1.id,
+        t1.urlCode,
+        t1.appCode,
+        t1.industryCode,
+        t1.behavior,
+        t1.path,
+        t1.pathtype,
+        t1.operatorType,
+        t1.param,
+        t1.regexurl,
+        t1.url,
+        t1.tip,
+        t1.state,
+        t1.dateTime,
+        t2.code AS appCode,
+        t2.name AS appName,
+        t2.id AS appId,
+        t2.type AS appType,
+        t3.id AS industryID,
+        t3.name AS industryName,
+        t3.code AS industryCode
+        FROM
+        t_url t1 join
+        t_app t2 on t1.appCode = t2.code
+        join t_industry t3 on t1.industryCode = t3.code
+        <!--WHERE t1.dateTime &gt;= ${startTime} AND t1.dateTime &lt;= ${endTime}-->
+        WHERE t1.dateTime BETWEEN '${startTime}' AND '${endTime}'
+
+        <if test="state != null">
+            AND t1.state = ${state}
+        </if>
+        <if test="industryCode != null">
+            AND t1.industryCode = ${industryCode}
+        </if>
+        <if test="appCode != null">
+            AND t1.appCode = ${appCode}
+        </if>
+        AND t1.pathType = ${pathType} ORDER BY t1.dateTime DESC;
+    </select>
+
+</mapper>

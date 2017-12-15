@@ -1,0 +1,20 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">编辑APP名称</h3>
+    <b></b>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-inline form-horizontal pl20">
+
+        <div class="form-group">
+            <label class="control-label">APP名称</label>
+            <input type="text" class="form-control" name="appName" validations="maxlength:100;required" ng-model="appName"/>
+            <span class="mustWrite">*</span>
+        </div>
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>

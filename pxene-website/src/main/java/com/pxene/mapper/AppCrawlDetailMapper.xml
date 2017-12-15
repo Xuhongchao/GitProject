@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppCrawlDetailMapper">
+	<resultMap id="BaseResultMap" type="com.pxene.model.AppCrawlDetail">
+		<id column="crawl_detail_id" property="crawlDetailId" jdbcType="INTEGER" />
+		<result column="crawl_detail_crawl_id" property="crawlDetailCrawlId"
+			jdbcType="INTEGER" />
+		<result column="crawl_detail_num" property="crawlDetailNum"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_type" property="crawlDetailType"
+			jdbcType="TINYINT" />
+		<result column="crawl_detail_industry_id" property="crawlDetailIndustryId"
+			jdbcType="INTEGER" />
+		<result column="crawl_detail_behavior_id" property="crawlDetailBehaviorId"
+			jdbcType="INTEGER" />
+		<result column="crawl_detail_behavior_num_decimal" property="crawlDetailBehaviorNumDecimal"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_domain" property="crawlDetailDomain"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_paramreg" property="crawlDetailParamreg"
+			jdbcType="VARCHAR" />
+		<result column="crawl_content_detail_id" property="crawlContentDetailId"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_urlreg" property="crawlDetailUrlreg"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_urlexample" property="crawlDetailUrlexample"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_comments" property="crawlDetailComments"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_create_time" property="crawlDetailCreateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="crawl_detail_status" property="crawlDetailStatus"
+			jdbcType="TINYINT" />
+		<result column="crawl_detail_reg" property="crawlDetailReg"
+			jdbcType="VARCHAR" />
+		<result column="crawl_detail_export_type" property="crawlDetailExportType"
+			jdbcType="TINYINT" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		crawl_detail_id, crawl_detail_crawl_id, crawl_detail_num, crawl_detail_type,
+		crawl_detail_industry_id,
+		crawl_detail_behavior_id, crawl_detail_behavior_num_decimal, crawl_detail_domain,
+		crawl_detail_paramreg, crawl_content_detail_id, crawl_detail_urlreg,
+		crawl_detail_urlexample,
+		crawl_detail_comments, crawl_detail_create_time, crawl_detail_status, crawl_detail_reg,
+		crawl_detail_export_type
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from app_crawl_detail
+		where crawl_detail_id =
+		#{crawlDetailId,jdbcType=INTEGER}
+	</select>
+
+	<select id="queryStatisticsIndustryDetailTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select 
+		count(*) 
+		FROM app_crawl_detail a LEFT JOIN app_crawl_done b ON
+		a.crawl_detail_crawl_id=b.crawl_id LEFT JOIN app_child_category c ON
+		b.crawl_app_category_id=c.category_id LEFT JOIN app_industry d ON
+		a.crawl_detail_industry_id=d.industry_id LEFT JOIN app_behavior e ON
+		a.crawl_detail_behavior_id=e.behavior_id where 1=1 
+		<if test="industry_id !=null">
+		  and a.crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="behavior_id !=null">
+		  and a.crawl_detail_behavior_id=${behavior_id}
+		</if>
+		<if test="crawl_app_name != null">
+			and b.crawl_app_name like "%${crawl_app_name}%" 
+		</if>
+		<if test="crawl_app_category_id != null">
+			and b.crawl_app_category_id=${crawl_app_category_id}
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(a.crawl_detail_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>;
+	</select>
+
+	<select id="queryStatisticsIndustryDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select 
+		 a.crawl_detail_num,b.crawl_app_logo_url,b.crawl_app_name,c.category_name,d.industry_name,e.behavior_name,a.crawl_detail_domain,a.crawl_detail_paramreg,a.crawl_detail_urlreg,a.crawl_detail_urlexample,a.crawl_detail_comments,a.crawl_detail_create_time,b.crawl_app_num
+		FROM app_crawl_detail a LEFT JOIN app_crawl_done b ON
+		a.crawl_detail_crawl_id=b.crawl_id LEFT JOIN app_child_category c ON
+		b.crawl_app_category_id=c.category_id LEFT JOIN app_industry d ON
+		a.crawl_detail_industry_id=d.industry_id LEFT JOIN app_behavior e ON
+		a.crawl_detail_behavior_id=e.behavior_id where 1=1 
+		<if test="industry_id !=null">
+		  and a.crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="behavior_id !=null">
+		  and a.crawl_detail_behavior_id=${behavior_id}
+		</if>
+		<if test="crawl_app_name != null">
+			and b.crawl_app_name like "%${crawl_app_name}%" 
+		</if>
+		<if test="crawl_app_category_id != null">
+			and b.crawl_app_category_id=${crawl_app_category_id}
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(a.crawl_detail_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>
+		limit ${page},${num};
+	</select>
+
+	<select id="queryCrawlDetailBehavior" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT b.behavior_id,b.behavior_name from
+		app_crawl_detail a LEFT JOIN app_behavior b ON
+		a.crawl_detail_behavior_id=b.behavior_id;
+	</select>
+
+	<select id="queryExportDomainDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select domain_code,domain_domain,domain_attach_param from
+		app_crawl_domain where domain_isexport=1;
+	</select>
+
+	<select id="queryExportRegDetailNum" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select DISTINCT  SUBSTR(crawl_detail_num,1,8) from
+		app_crawl_detail WHERE crawl_detail_status=1;
+	</select>
+
+	<select id="queryExportRegDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select  
+		 crawl_detail_num,crawl_detail_domain,crawl_detail_urlreg,crawl_detail_export_type,crawl_detail_paramreg
+		from app_crawl_detail where crawl_detail_status=1 and 
+		BINARY SUBSTR(crawl_detail_num,1,8)="${detailNum}";
+	</select>
+
+	<select id="queryExportParamDetail" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT SUBSTR(crawl_detail_num,9,4) industry_num
+		from app_crawl_detail where crawl_detail_status=1 and 
+		BINARY SUBSTR(crawl_detail_num,1,8)="${detailNum}";
+	</select>
+
+	<select id="queryCrawlId" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select crawl_detail_crawl_id from app_crawl_detail where
+		crawl_detail_id=${crawl_detail_id};
+	</select>
+
+	<select id="queryCrawlDetailParamReg" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select crawl_detail_paramreg from app_crawl_detail where
+		crawl_detail_id=${crawl_detail_id};
+	</select>
+
+	<select id="queryIndustryName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select c.industry_name from app_industry_content_detail a
+		LEFT JOIN app_industry_content b ON
+		a.content_detail_content_id=b.content_id LEFT JOIN app_industry c ON
+		b.content_industry_id=c.industry_id where
+		a.content_detail_id=${content_detail_id};
+	</select>
+	<select id="queryAdIDExist" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select crawl_content_detail_id from app_crawl_detail where
+		crawl_detail_id=${crawl_detail_id};
+	</select>
+	<select id="queryCrawlDetailReg" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select crawl_detail_reg from app_crawl_detail where
+		crawl_detail_id=${crawl_detail_id};
+	</select>
+	<select id="queryCrawlBehaviorCountStatisticsDetail"
+		parameterType="java.util.Map" resultType="java.lang.Integer">
+		select SUM(c.num) crawl_behavior_num from (select count(DISTINCT
+		b.crawl_detail_behavior_id)num from app_crawl_done a LEFT JOIN
+		app_crawl_detail b ON a.crawl_id=b.crawl_detail_crawl_id where 1=1
+		<if test="industry_id != null">
+			and b.crawl_detail_industry_id=${industry_id}
+		</if>
+		<if test="category_id != null">
+			and a.crawl_app_category_id =
+			${category_id} 
+		</if>
+		<if test="app_source != null">
+			and a.crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and b.crawl_detail_behavior_id=${behavior_id}
+		</if>
+		and DATE_FORMAT(b.crawl_detail_create_time,'%Y-%m-%d') BETWEEN
+		'${startDate}' AND
+		'${endDate}' GROUP BY a.crawl_id) c;
+	</select>
+
+	<select id="queryCrawlBehaviorCountStatistics" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select sum(c.crawl_behavior_num) from app_crawl_done c where BINARY c.crawl_app_num 
+		IN (select DISTINCT a.crawl_app_num from app_crawl_done a LEFT JOIN
+		app_crawl_detail b ON a.crawl_id=b.crawl_detail_crawl_id where 1=1
+		<if test="industry_id != null">
+			and b.crawl_detail_industry_id=${industry_id} 
+		</if>
+		<if test="category_id != null">
+			and a.crawl_app_category_id =
+			${category_id} 
+		</if>
+		<if test="app_source != null">
+			and a.crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and b.crawl_detail_behavior_id=${behavior_id}
+		</if>
+		and DATE_FORMAT(a.crawl_app_create_time,'%Y-%m-%d') BETWEEN
+		'${startDate}' AND
+		'${endDate}');
+	</select>
+
+	<select id="queryAppCountStatistics" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(DISTINCT  a.crawl_app_num) from app_crawl_done a
+		LEFT JOIN
+		app_crawl_detail b ON a.crawl_id=b.crawl_detail_crawl_id
+		where 1=1 
+		<if test="industry_id != null">
+			and b.crawl_detail_industry_id=${industry_id} 
+		</if>
+		<if test="category_id != null">
+			and a.crawl_app_category_id =
+			${category_id} 
+		</if>
+		<if test="app_source != null">
+			and a.crawl_app_source like "%,${app_source},%"
+		</if>
+		<if test="behavior_id != null">
+			and b.crawl_detail_behavior_id=${behavior_id}
+		</if>
+		and DATE_FORMAT(b.crawl_detail_create_time,'%Y-%m-%d') BETWEEN
+		'${startDate}' AND
+		'${endDate}'
+		;
+	</select>
+
+	<update id="checkReg" parameterType="java.util.Map">
+		update app_crawl_detail set
+		crawl_detail_status=${crawl_detail_status} where
+		crawl_detail_id=${crawl_detail_id};
+	</update>
+	<update id="modifyAppCrawlDetailComments" parameterType="java.util.Map">
+		update
+		app_crawl_detail set
+		crawl_detail_comments="${crawl_detail_comments}"
+		where
+		crawl_detail_id=${crawl_detail_id};
+	</update>
+
+	<update id="modifyAppCrawlDetail" parameterType="java.util.Map">
+		update app_crawl_detail
+		<set>
+			<if test="crawl_detail_num!=null">crawl_detail_num="${crawl_detail_num}",
+			</if>
+			<if test="crawl_detail_urlexample!=null">crawl_detail_urlexample="${crawl_detail_urlexample}",
+			</if>
+			<if test="crawl_detail_industry_id!=null">crawl_detail_industry_id=${crawl_detail_industry_id},
+			</if>
+			<if test="crawl_detail_behavior_id!=null">crawl_detail_behavior_id=${crawl_detail_behavior_id},
+			</if>
+			<if test="crawl_detail_urlreg!=null">crawl_detail_urlreg="${crawl_detail_urlreg}",</if>
+			<if test="crawl_detail_domain!=null">crawl_detail_domain="${crawl_detail_domain}",</if>
+			<if test="crawl_detail_paramreg!=null">crawl_detail_paramreg="${crawl_detail_paramreg}",</if>
+			<if test="crawl_content_detail_id!=null">crawl_content_detail_id="${crawl_content_detail_id}",
+			</if>
+			<if test="crawl_detail_comments!=null">crawl_detail_comments="${crawl_detail_comments}",</if>
+			<if test="crawl_detail_reg!=null">crawl_detail_reg="${crawl_detail_reg}",</if>
+			crawl_detail_status=0
+		</set>
+		where crawl_detail_id=${crawl_detail_id};
+	</update>
+
+	<select id="queryCrawlBehaviorCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(DISTINCT crawl_detail_behavior_id) from
+		app_crawl_detail where crawl_detail_crawl_id=${crawl_id};
+	</select>
+
+	<select id="queryCrawlDetailNum" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select Max(crawl_detail_num) from app_crawl_detail where
+		crawl_detail_num
+		between '${startNum}' and '${endNum}';
+	</select>
+	<select id="queryAppCrawlDetailExist" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(crawl_detail_id) from app_crawl_detail where
+		crawl_detail_domain="${crawl_detail_domain}" and
+		crawl_detail_paramreg="${crawl_detail_paramreg}" and
+		crawl_detail_urlreg="${crawl_detail_urlreg}"
+		<if test="crawl_detail_id != null">
+			and crawl_detail_id!=${crawl_detail_id}
+		</if>
+		;
+	</select>
+	<insert id="addAppCrawlDetail" parameterType="java.util.Map">
+		insert into
+		app_crawl_detail(crawl_detail_crawl_id,crawl_detail_num,crawl_detail_type,crawl_detail_industry_id,crawl_detail_behavior_id,crawl_detail_behavior_num_decimal,crawl_detail_domain,crawl_detail_paramreg,crawl_content_detail_id,crawl_detail_urlreg,crawl_detail_urlexample,crawl_detail_comments,crawl_detail_create_time,crawl_detail_status,crawl_detail_reg,crawl_detail_export_type)
+		VALUES(${crawl_detail_crawl_id},"${crawl_detail_num}",${crawl_detail_type},${crawl_detail_industry_id},${crawl_detail_behavior_id},"${crawl_detail_behavior_num_decimal}","${crawl_detail_domain}","${crawl_detail_paramreg}","${crawl_content_detail_id}","${crawl_detail_urlreg}","${crawl_detail_urlexample}","${crawl_detail_comments}",NOW(),0,"${crawl_detail_reg}",${crawl_detail_export_type});
+	</insert>
+
+	<select id="queryTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_detail where
+		crawl_detail_crawl_id=${crawl_id}
+		<if test="industry_name != null">
+			and crawl_detail_industry_id IN (select industry_id from
+			app_industry where industry_name like "%${industry_name}%")
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(crawl_detail_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>
+		;
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select * from app_crawl_detail where crawl_detail_crawl_id=${crawl_id}
+		<if test="industry_name != null">
+			and crawl_detail_industry_id IN (select industry_id from
+			app_industry where industry_name like "%${industry_name}%")
+		</if>
+		<if test="behavior_id != null">
+			and crawl_detail_behavior_id=${behavior_id}
+		</if>
+		<if test="startDate != null">
+			and DATE_FORMAT(crawl_detail_create_time,'%Y-%m-%d')
+			BETWEEN
+			'${startDate}' AND
+			'${endDate}'
+		</if>
+		<if test="orderName != null">
+			order by ${orderName} ${orderRule}
+		</if>
+		limit ${page},${num};
+	</select>
+</mapper>

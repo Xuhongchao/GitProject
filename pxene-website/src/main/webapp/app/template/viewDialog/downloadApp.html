@@ -1,0 +1,25 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">下载APP</h3>
+    <b></b>
+</div>
+<div class="modal-body qrmin-height" id="modal-body">
+    <form class="form-horizontal qrcode clearfix">
+                <div class="frame-head">
+                    <div class="box1">
+                        <img ng-src="{{$ctrl.headpath | logolurlchange}}">
+                    </div>
+                    <label class="box1-name" title="{{$ctrl.appname}}">{{$ctrl.appname}}</label>
+                </div>
+
+                <div class="frame-foot">
+                    <div id="code"></div>
+                    <label>扫描二维码安装</label>
+                </div>
+
+    </form>
+</div>
+<div class="modal-footer download">
+    <!--<button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>-->
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppInfoMapper">
+    <resultMap id="BaseResultMap" type="com.pxene.model.AppInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="app_num" property="app_num" jdbcType="VARCHAR"/>
+        <result column="app_name" property="app_name" jdbcType="VARCHAR"/>
+        <result column="app_category_id" property="app_category_id" jdbcType="INTEGER"/>
+        <result column="app_source" property="app_source" jdbcType="VARCHAR"/>
+        <result column="app_domain" property="app_domain" jdbcType="VARCHAR"/>
+        <result column="app_attach_param" property="app_attach_param" jdbcType="VARCHAR"/>
+        <result column="app_os" property="app_os" jdbcType="INTEGER"/>
+        <result column="app_create_time" property="app_create_time" jdbcType="DATE"/>
+        <result column="app_isexport" property="app_isexport" jdbcType="INTEGER"/>
+        <result column="app_logo_url" property="app_logo_url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="queryAll" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from app_info where app_create_time BETWEEN '${startDate}' and '${endDate}'
+        <if test="categoryId != -1">
+            and app_info.app_category_id=${categoryId}
+        </if>
+        <if test="search != null">
+            and app_name LIKE '%${search}%'
+        </if>
+    </select>
+
+    <select id="queryMaxAppInfoNum" parameterType="java.util.Map" resultType="java.lang.String">
+        select max(app_num) from app_info;
+    </select>
+
+    <select id="queryNum" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from app_info where app_name='${app_name}'
+    </select>
+
+    <insert id="addAppInfo" parameterType="java.util.Map">
+        INSERT INTO app_info(app_num,app_name,app_category_id,app_domain,app_attach_param,app_os,app_create_time,app_logo_url,app_source,app_isexport)
+        values ('${app_num}','${app_name}','${app_category_id}','${app_domain}','${app_attach_param}','${app_os}','${app_create_time}','${app_logo_url}','${app_source}','${app_isexport}');
+    </insert>
+
+    <update id="updateAppInfo" parameterType="com.pxene.model.AppInfo">
+        update app_info set app_domain=#{app_domain,jdbcType=VARCHAR},app_attach_param=#{app_attach_param,jdbcType=VARCHAR},app_os=#{app_os,jdbcType=INTEGER} where id=#{id,jdbcType=INTEGER};
+    </update>
+
+    <delete id="delAppInfo" parameterType="java.util.Map">
+        delete from app_info where id=${id};
+    </delete>
+
+    <select id="queryByPageAndNum" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.id,a.app_num,a.app_logo_url,a.app_name,b.app_category_name,a.app_source,a.app_domain,a.app_attach_param,a.app_os,a.app_create_time,a.app_isexport,
+        (select COUNT(*) from app_crawl_info where app_crawl_info.app_id=a.id) as countNum,
+        (select SUM(app_url_count.url_count) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and a.id=app_crawl_info.app_id)as sumUrlCount,
+        (select max(app_url_count.statistics_time) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and a.id=app_crawl_info.app_id)as maxEndTime
+        from app_info a,app_category b WHERE a.app_category_id=b.id AND a.app_create_time BETWEEN '${startDate}' and '${endDate}'
+        <if test="categoryId != -1">
+            and a.app_category_id=${categoryId}
+        </if>
+        <if test="search != null">
+            and a.app_name LIKE '%${search}%'
+        </if>
+        order by id desc limit ${page},${num};
+    </select>
+
+    <select id="queryByCategory" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.id,a.app_num,a.app_logo_url,a.app_name,b.app_category_name,a.app_source,a.app_domain,a.app_attach_param,a.app_os,a.app_create_time,a.app_isexport,
+        (select COUNT(*) from app_crawl_info where app_crawl_info.app_id=app_info.id) as countNum,
+        (select SUM(app_url_count.url_count) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as sumUrlCount,
+        (select max(app_url_count.statistics_time) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as maxEndTime
+        from app_info a,app_category b WHERE a.app_category_id=b.id AND a.app_create_time BETWEEN '${startDate}' and '${endDate}' and a.app_category_id=${categoryId} order by id desc limit ${page},${num};
+    </select>
+
+    <select id="queryBySearch" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.id,a.app_num,a.app_logo_url,a.app_name,b.app_category_name,a.app_source,a.app_domain,a.app_attach_param,a.app_os,a.app_create_time,a.app_isexport,
+        (select COUNT(*) from app_crawl_info where app_crawl_info.app_id=app_info.id) as countNum,
+        (select SUM(app_url_count.url_count) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as sumUrlCount,
+        (select max(app_url_count.statistics_time) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as maxEndTime
+        from app_info a,app_category b WHERE a.app_category_id=b.id AND a.app_create_time BETWEEN '${startDate}' and '${endDate}' and a.app_name LIKE '%${search}%' order by id desc limit ${page},${num};
+    </select>
+
+    <select id="queryByCategoryAndSearch" parameterType="java.util.Map" resultType="java.util.Map">
+        select a.id,a.app_num,a.app_logo_url,a.app_name,b.app_category_name,a.app_source,a.app_domain,a.app_attach_param,a.app_os,a.app_create_time,a.app_isexport,
+        (select COUNT(*) from app_crawl_info where app_crawl_info.app_id=app_info.id) as countNum,
+        (select SUM(app_url_count.url_count) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as sumUrlCount,
+        (select max(app_url_count.statistics_time) from app_url_count,app_crawl_info where app_url_count.url_code=app_crawl_info.app_crawl_num and app_info.id=app_crawl_info.app_id)as maxEndTime
+        from app_info a,app_category b WHERE a.app_category_id=b.id AND a.app_create_time BETWEEN '${startDate}' and '${endDate}' and a.app_category_id=${categoryId} and a.app_name LIKE '%${search}%' order by id desc limit ${page},${num};
+    </select>
+
+    <update id="updateExport" parameterType="com.pxene.model.AppInfo">
+        update app_info set app_isexport=#{app_isexport,jdbcType=INTEGER} where id=#{id,jdbcType=INTEGER};
+    </update>
+    
+    <select id="queryByName" parameterType="java.util.Map" resultType="java.lang.Integer">
+    	select count(*) from app_info where app_name = '${appName}'
+    </select>
+
+    <select id="exportApp" parameterType="java.util.Map" resultType="com.pxene.model.AppInfo">
+        select * from app_info where app_isexport=0
+    </select>
+
+    <select id="queryMesByName" parameterType="java.util.Map" resultType="com.pxene.model.AppInfo">
+        select * from app_info where app_name='${app_name}'
+    </select>
+
+    <update id="updateOsType" parameterType="java.util.Map">
+        update app_crawl_info right join app_info on app_info.id=app_crawl_info.app_id left join app_url_count on app_url_count.url_code=app_crawl_info.app_crawl_num set app_info.app_os=0
+        <if test="osType == 2">
+            ,app_url_count.url_code=RIGHT('1000000000000'+(app_url_count.url_code-'200000000000'),12),app_crawl_info.app_crawl_num=RIGHT('1000000000000'+(app_crawl_info.app_crawl_num-'200000000000'),12)
+        </if>
+        <if test="osType == 3">
+            ,app_url_count.url_code=RIGHT('1000000000000'+(app_url_count.url_code-'300000000000'),12),app_crawl_info.app_crawl_num=RIGHT('1000000000000'+(app_crawl_info.app_crawl_num-'300000000000'),12)
+        </if>
+        where app_info.app_name='${app_name}'
+    </update>
+    <select id="queryByAppName" parameterType="java.util.Map" resultType="java.util.Map">
+    	select * from app_info where app_name = '${appName}'
+    </select>
+    <update id="updateAppOs" parameterType="java.util.Map">
+        update app_info set app_os='${app_os}' where id='${id}';
+    </update>
+    
+    <select id="queryByNum" parameterType="java.util.Map" resultType="java.lang.Integer">
+       select count(*) from app_info a join app_crawl_info b on a.id = b.app_id where app_num ='${app_num}'
+    </select>
+    <update id="updateName" parameterType="java.util.Map">
+        update app_info set app_name='${app_name}' where app_num='${app_num}';
+    </update>
+    <update id="updateOsAndName" parameterType="java.util.Map">
+        update app_info set app_name='${app_name}',app_os='${app_os}' where app_num='${app_num}';
+    </update>
+    
+</mapper>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pxene.dao.AppCrawlWaitMapper">
+	<update id="modifyVersionUpdate" parameterType="java.util.Map">
+		update app_crawl_wait set app_version_update="${app_version_update}" where app_id=${app_id};
+	</update>
+
+	<select id="queryCrawlAppByCrawlId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select b.app_id,b.app_version,b.app_version_update from app_wait_done a LEFT JOIN app_crawl_wait b ON a.app_id=b.app_id LEFT JOIN app_crawl_done c on BINARY a.crawl_app_num=c.crawl_app_num where a.app_os IN (2,3) and c.crawl_id=${crawl_id};
+	</select>
+
+	<select id="queryAppCategoryByAppId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select b.category_name child_category_name,c.category_name parent_category_name from app_crawl_done a left JOIN app_child_category b ON a.crawl_app_category_id=b.category_id left JOIN app_parent_category c ON b.category_pid=c.category_id where a.crawl_app_id=${app_id};
+	</select>
+
+	<select id="queryCrawlWaitAppForUpdate" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_name_crawl,app_appId from app_crawl_wait where app_source like "%,${app_source},%" and app_is_blacklist=0;
+	</select>
+
+	<select id="queryTransferAppByName" resultType="java.util.Map">
+		select crawl_app_id app_id,crawl_app_name,crawl_app_logo_url from  app_crawl_done b;
+	</select>
+
+	<delete id="delCrawlWaitApp" parameterType="java.util.Map">
+		delete from app_crawl_wait where app_id=${app_id};
+	</delete>
+
+	<select id="queryAppChildCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_child_category where 1=1 
+		<if test="category_pid !=null">
+		 and category_pid=${category_pid};
+		</if>
+	</select>
+
+	<select id="queryAppParentCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_parent_category;
+	</select>
+
+	<select id="queryCrawlAppCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select DISTINCT app_category_name from app_crawl_wait where app_category_name !="" and app_type=${app_type}  
+		<if test="app_source !=null">
+		and app_source like "%,${app_source},%"
+		</if>;
+	</select>
+
+	<update id="modifyWaitCrawlAppName" parameterType="java.util.Map">
+		update app_crawl_wait set app_name="${app_name}" where app_id=${app_id};
+	</update>
+
+	<select id="queryWebByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select
+		app_id,app_priority,app_name,app_source,app_create_time,app_status,app_is_blacklist
+		from app_crawl_wait where app_type=${app_type}
+		<if test="app_source !=null">
+			AND app_source like "%,${app_source},%"
+		</if>
+		<if test="app_status != -1">
+			AND app_status=${app_status}
+		</if>
+		<if test="app_name != null">
+			AND app_name LIKE "%${app_name}%"
+		</if>
+		order by app_priority asc,app_create_time desc,app_id desc 
+		limit ${page},${num};
+	</select>
+
+	<select id="queryCrawlerWaitWebTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_wait where app_type=${app_type}
+		<if test="app_source !=null">
+			AND app_source like "%,${app_source},%"
+		</if>
+		<if test="app_status != -1">
+			AND app_status=${app_status}
+		</if>
+		<if test="app_name != null">
+			AND app_name LIKE "%${app_name}%"
+		</if>
+		;
+	</select>
+
+	<select id="queryUpdateApp" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_id,app_name,app_type,app_status from
+		app_crawl_wait where app_source not IN
+		(",1,",",2,",",3,",",4,",",5,");
+	</select>
+	<select id="queryCrawlerWaitApp" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_id,app_name,app_type,app_status from
+		app_crawl_wait where app_status=0;
+	</select>
+
+	<update id="updateAppStatus" parameterType="java.util.Map">
+		update app_crawl_wait 
+		set app_status=2,app_priority=4 where
+		app_id=${app_id};
+	</update>
+
+	<select id="queryByAppId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select * from app_crawl_wait where app_id=${app_id};
+	</select>
+
+	<select id="queryByNameAndOs" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_id,app_logo_url,app_name,app_status,app_type
+		from app_crawl_wait where
+		app_name LIKE
+		"%${app_name}%"
+		and
+		app_type=${app_type} and
+		app_is_blacklist=0 and
+		app_id not in(select
+		a.app_id from app_wait_done
+		a,app_crawl_done b
+		where 
+		BINARY a.crawl_app_num=b.crawl_app_num and
+		b.crawl_app_os=0);
+	</select>
+
+	<select id="querySourceName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select source_name from app_source where
+		source_id="${source_id}";
+	</select>
+	<select id="queryAppNameEmptyExist" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_id,app_source,app_status from
+		app_crawl_wait where
+		app_name = "" and app_name_crawl like "%${app_name}%" and app_type in (${app_type_list}) and app_is_blacklist=0;
+	</select>
+	<select id="queryAppNameExist" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_id,app_source,app_type,app_status,app_appId from 
+		app_crawl_wait where 
+		app_name = "${app_name}" and app_type in (${app_type_list});
+	</select>
+
+	<select id="queryAppStatus" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_wait where
+		app_name =
+		"${app_name}" and app_status =2 and app_type in (${app_type_list});
+	</select>
+	<select id="queryAppExist" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select app_type from app_crawl_wait where
+		app_name =
+		"${app_name}" and app_source like "%,${app_source},%" and app_type in (${app_type_list});
+	</select>
+	<insert id="addSource" parameterType="java.util.Map">
+		insert into
+		app_source(source_name,create_time) values("${source_name}",NOW());
+	</insert>
+
+
+	<select id="querySource" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select source_id from app_source where
+		source_name="${source_name}";
+	</select>
+
+	<update id="updateBlacklist" parameterType="java.util.Map">
+		update app_crawl_wait
+		set app_is_blacklist=${app_is_blacklist} where app_id=${app_id};
+	</update>
+	<update id="updateApp" parameterType="java.util.Map">
+		update app_crawl_wait
+		set app_name="${app_name}",
+		app_source="${app_source_str}",app_priority=2 where app_id=${app_id};
+	</update>
+
+	<insert id="addWeb" parameterType="java.util.Map">
+		insert into
+		app_crawl_wait(app_name,app_name_crawl,app_source,app_status,app_is_blacklist,app_type,app_create_time,app_priority)
+		VALUES
+		("${app_name}","${app_name}","${app_source_str}",1,0,${app_type},now(),2);
+	</insert>
+
+	<update id="modifyPriority" parameterType="java.util.Map">
+		update app_crawl_wait
+		set app_priority=${app_priority} where app_id=${app_id};
+	</update>
+
+	<select id="queryAppCategoryName" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select category_name from app_category where
+		category_id=${category_id};
+	</select>
+
+	<select id="queryCrawlerWaitTotalCount" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_wait where app_type=${app_type}
+		<if test="category_name != null">
+			AND app_category_name =
+			"${category_name}"
+		</if>
+		<if test="app_source !=null">
+			AND app_source like "%,${app_source},%"
+		</if>
+		<if test="app_status != -1">
+			AND app_status=${app_status}
+		</if>
+		<if test="app_name != null">
+			AND (app_name LIKE "%${app_name}%" OR app_name_crawl LIKE "%${app_name}%" ) 
+		</if>
+		;
+	</select>
+
+	<select id="queryByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select
+		app_id,app_priority,app_ranking1,app_ranking2,app_logo_url,app_name,app_name_crawl,app_category_name,app_version,app_update_time,app_source,app_create_time,app_status,app_is_blacklist,app_type,app_download_url,app_version_update 
+		from app_crawl_wait where app_type=${app_type}
+		<if test="category_name != null">
+			AND app_category_name =
+			"${category_name}"
+		</if>
+		<if test="app_source !=null">
+			AND app_source like "%,${app_source},%"
+		</if>
+		<if test="app_status != -1">
+			AND app_status=${app_status}
+		</if>
+		<if test="app_name != null">
+			AND (app_name LIKE "%${app_name}%" OR app_name_crawl LIKE "%${app_name}%" ) 
+		</if>
+		order by app_priority asc,app_ranking1 is null,app_ranking1
+		desc,app_create_time desc
+		limit ${page},${num};
+	</select>
+	<select id="queryAppSource" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select source_id,source_name app_source from app_source where source_id not in(${source_id});
+	</select>
+	<select id="queryAppCategory" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select category_id,category_name from app_category;
+	</select>
+
+	<select id="queryAllNum" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_list where app_source in
+		('0','1','2','3')
+		<if test="categoryId != -1">
+			and app_category_id=${categoryId}
+		</if>
+		<if test="status != -1">
+			and app_status=${status}
+		</if>
+		<if test="search != null">
+			and app_name LIKE '%${search}%'
+		</if>
+		;
+	</select>
+
+	<select id="queryIosAllNum" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		select count(*) from app_crawl_list where app_source in ('4')
+		<if test="categoryId != -1">
+			and app_category_id=${categoryId}
+		</if>
+		<if test="status != -1">
+			and app_status=${status}
+		</if>
+		<if test="search != null">
+			and app_name LIKE '%${search}%'
+		</if>
+		;
+	</select>
+
+	<select id="queryIosByPageAndNum" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select
+		a.id,a.app_name,a.app_apkName,a.app_category_id,a.app_version,a.app_update_time,a.app_source,a.app_logo_url,a.app_create_time,a.app_status,
+		a.app_type,a.app_ranking1,a.app_ranking2,a.app_download_url,a.app_is_blacklist,b.app_category_name
+		from app_crawl_list a join app_category b on a.app_category_id = b.id
+		where app_source in ('4') and app_type = 3
+		<if test="categoryId != -1">
+			and a.app_category_id=${categoryId}
+		</if>
+		<if test="status != -1">
+			and a.app_status=${status}
+		</if>
+		<if test="search != null">
+			and a.app_name LIKE '%${search}%'
+		</if>
+		order by a.app_category_id,a.app_ranking1 limit ${page},${num};
+	</select>
+
+
+
+	<select id="queryByName" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		select * from app_crawl_list where app_name = '${appName}';
+	</select>
+
+	<update id="updateStatusById" parameterType="java.util.Map">
+		update
+		app_crawl_list set app_status=0 where id in (select app_crawl_id from
+		app_info_detail where app_info_num='${appNum}')
+	</update>
+
+	<select id="queryNameById" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select app_name from app_crawl_list where id=${id}
+	</select>
+	<update id="updateExport" parameterType="com.pxene.crawler.model.AppCrawlList">
+		update app_crawl_list
+		set
+		app_is_blacklist=#{app_is_blacklist,jdbcType=INTEGER} where
+		id=#{id,jdbcType=INTEGER};
+	</update>
+	
+	<select id="querySourceByAppId" parameterType="java.util.Map"
+		resultType="java.lang.String">
+		select app_source from app_crawl_wait where app_id=${app_id};
+	</select>
+</mapper>

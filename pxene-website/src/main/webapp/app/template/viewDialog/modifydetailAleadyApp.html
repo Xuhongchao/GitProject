@@ -1,0 +1,102 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">修改URL详情</h3>
+    <b></b>
+</div>
+<div class="modal-body modifyaleadyapp" id="modal-body">
+    <form class="form-inline form-horizontal pl10">
+        <div class="form-group">
+            <label class="control-label">APP名称</label>
+            <span title="{{$ctrl.name}}">{{$ctrl.name}}</span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">APP分类</label>
+            <span title="{{$ctrl.type}}">{{$ctrl.type | weightfilter}}</span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">URL样例</label>
+            <span title="{{urlExample}}">{{urlExample}}</span>
+            <!--<input type="text" class="form-control" name="urlExample" validations="required" ng-model="urlExample"/>-->
+        </div>
+
+        <div class="form-group dialog-select">
+            <label class="control-label">抓取行为</label>
+            <span title="{{grabBehavior.behavior_name}}">{{grabBehavior.behavior_name}}</span>
+            <!--<select definedropdown="definedropdown" class="form-control" name="grabBehavior" validations="required" ng-model="grabBehavior"-->
+                    <!--ng-options="grabBehavior.behavior_name for grabBehavior in grabBehaviors"></select>-->
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">URL正则</label>
+            <!--<span title="{{urlregexp}}">{{urlregexp}}</span>-->
+            <input type="text" class="form-control" name="urlregexp" validations="required" ng-model="urlregexp"/>
+            <span class="mustWrite">*</span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">域名</label>
+            <span title="{{domain}}">{{domain}}</span>
+            <!--<input type="text" class="form-control" name="domain" validations="required" ng-model="domain"/>-->
+        </div>
+
+        <div class="form-group form-normal">
+            <label class="control-label">参数分类</label>
+            <select definedropdown="definedropdown" dropdown-search class="form-control" name="paramClassify" validations="required" ng-model="paramClassify"
+                    ng-options="paramClassify.industry_name for paramClassify in paramClassifys" ng-change="paramtype(paramClassify)"></select>
+            <span class="mustWrite">*</span>
+        </div>
+
+        <div class="form-group adddetailapp" ng-show="ordername">
+            <label class="control-label">参数</label>
+            <div><span title="{{paramobj.content_name}}" ng-repeat="paramobj in select.industryContentList" class="ml10" ng-show="paramobj.content_name == AdIdContent">
+                {{paramobj.content_name}}</span></div>
+        </div>
+        <div class="form-group adddetailapp" ng-hide="ordername">
+            <label class="control-label">参数</label>
+            <div><span title="{{paramobj.content_name}}" ng-repeat="paramobj in select.industryContentList" class="ml10">
+                {{paramobj.content_name}}</span></div>
+        </div>
+
+
+        <div class="form-group param-regex">
+            <label class="control-label">参数正则</label>
+            <div class="pull-left ml5" ng-show="ordername">
+                <div ng-repeat="paramobj in select.industryContentList" ng-hide="indexorder-1 !== $index" class="regex-form clearfix mb15">
+                    <input type="text" class="form-control" name="paramkey"  ng-model="paramobj.param_key" ng-disabled=paramobj.emptyreg />
+                    <select definedropdown="definedropdown" class="form-control" name="paramRegex" ng-model="paramobj.param_reg"
+                        ng-options="paramobj.param_reg for paramobj in paramobj.contentDetailList" ng-change="changeparamreg(paramobj)"></select>
+                    <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_content" ng-disabled=paramobj.emptyreg />
+                    <div class="param-specil" ng-show="matchSpecil(paramobj.content_name)">
+                        <input type="text" class="form-control" ng-model="paramobj.param_num_order" ng-init="paramobj.param_num_order=matchSpecil(paramobj.content_name)" />
+                        <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_num" placeholder=""/>
+                    </div>
+                    <span class="mustWrite">*</span>
+                </div>
+            </div>
+            <div class="pull-left ml5" ng-hide="ordername">
+                <div ng-repeat="paramobj in select.industryContentList" ng-show="paramobj.content_order && indexorder !== $index" class="regex-form clearfix mb15">
+                    <input type="text" class="form-control" name="paramkey"  ng-model="paramobj.param_key" ng-disabled=paramobj.emptyreg />
+                    <select definedropdown="definedropdown" class="form-control" name="paramRegex" ng-model="paramobj.param_reg"
+                            ng-options="paramobj.param_reg for paramobj in paramobj.contentDetailList" ng-change="changeparamreg(paramobj)"></select>
+                    <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_content" ng-disabled=paramobj.emptyreg />
+                    <div class="param-specil" ng-show="matchSpecil(paramobj.content_name)">
+                        <input type="text" class="form-control" ng-model="paramobj.param_num_order" ng-init="paramobj.param_num_order=matchSpecil(paramobj.content_name)" />
+                        <input type="text" class="form-control" name="paramcontent" ng-model="paramobj.param_num" placeholder=""/>
+                    </div>
+                    <span class="mustWrite">*</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">备注</label>
+            <input type="text" class="form-control" name="remarks"  ng-model="remarks"/>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">取消</button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">确定</button>
+</div>
