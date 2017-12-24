@@ -18,7 +18,7 @@ import com.pxene.util.IOUtil;
 
 public class LoadLine {
 	private IOUtil ioUtil = IOUtil.getInstance();
-	private XSSFSheet sheet = ioUtil.getSheet();
+	private XSSFSheet sheet = ioUtil.getWb().getSheetAt(0);
 	private Map<String, Data> map = new HashMap<String, Data>();
 
 	/**

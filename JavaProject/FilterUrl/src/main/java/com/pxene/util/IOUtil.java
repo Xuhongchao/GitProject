@@ -12,12 +12,11 @@ import java.io.OutputStreamWriter;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
-
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.pxene.entity.Data;
@@ -30,10 +29,10 @@ import com.pxene.entity.Data;
 
 @SuppressWarnings("deprecation")
 public class IOUtil {
-	private final static String SOURCE_PATH = "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";
+	private final static String SOURCE_PATH = "C:\\Users\\xu\\Desktop\\app_crawl_detai.xlsx";
 	private final static IOUtil IO_UTIL = new IOUtil();
 	private XSSFWorkbook wb;
-	private XSSFSheet sheet;
+	// private XSSFSheet sheet;
 
 	private IOUtil() {
 		try {
@@ -42,11 +41,20 @@ public class IOUtil {
 			throw new RuntimeException("加载XSSFWorkbook失败 -- IOUtil");
 		}
 		// 工作簿
-		sheet = wb.getSheetAt(0);// 工作表
+		// sheet = wb.getSheetAt(0);// 工作表
 	}
 
 	public static IOUtil getInstance() {
 		return IO_UTIL;
+	}
+	
+	/**
+	 * 得到XSSFWorkbook对象
+	 * 
+	 * @return XSSFWorkbook
+	 */
+	public XSSFWorkbook getWb() {
+		return wb;
 	}
 
 	/**
@@ -54,9 +62,11 @@ public class IOUtil {
 	 * 
 	 * @return XSSFSheet
 	 */
-	public XSSFSheet getSheet() {
+	/* 注释掉，同时存在多个sheet的原因
+	 * 
+	 * public XSSFSheet getSheet() {
 		return sheet;
-	}
+	}*/
 
 	/**
 	 * 将map中数据写到文件中
@@ -90,6 +100,38 @@ public class IOUtil {
 		} catch (Exception e) {
 			throw new RuntimeException("写到文件中出错 -- IOUtil  >>  "
 					+ e.getMessage());
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				throw new RuntimeException("关闭写入流出错 -- IOUtil");
+			}
+		}
+	}
+	
+	/**
+	 * 将list中数据写到文件中
+	 * 
+	 * @param file
+	 *            要写入的文件
+	 * @param list
+	 *            要写入的数据集合
+	 */
+	public void writeToFile(File file, List<String> list) {
+		BufferedWriter bw = null;
+		try {
+			bw = new BufferedWriter(new OutputStreamWriter(
+					new FileOutputStream(file)));
+
+			for (String url : list) {
+				String value = url + "\r\n";
+
+				bw.append(value);
+				bw.flush();
+			}
+
+		} catch (Exception e) {
+			throw new RuntimeException("写到文件中出错 -- IOUtil  >>  " + e.getMessage());
 		} finally {
 			try {
 				bw.close();

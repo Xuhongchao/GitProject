@@ -19,7 +19,7 @@ import com.pxene.util.IOUtil;
 
 public class LoadReg {
 	private IOUtil ioUtil = IOUtil.getInstance();
-	private XSSFSheet sheet = ioUtil.getSheet();
+	private XSSFSheet sheet = ioUtil.getWb().getSheetAt(0);
 	private List<Data> list = new ArrayList<Data>();
 
 	/**

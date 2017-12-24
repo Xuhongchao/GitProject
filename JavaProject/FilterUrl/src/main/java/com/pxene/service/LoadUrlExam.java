@@ -17,7 +17,7 @@ import com.pxene.util.IOUtil;
 
 public class LoadUrlExam {
 	private IOUtil ioUtil = IOUtil.getInstance();
-	private XSSFSheet sheet = ioUtil.getSheet();
+	private XSSFSheet sheet = ioUtil.getWb().getSheetAt(0);
 	private Map<String, String> map = new HashMap<String, String>();
 
 	/**
