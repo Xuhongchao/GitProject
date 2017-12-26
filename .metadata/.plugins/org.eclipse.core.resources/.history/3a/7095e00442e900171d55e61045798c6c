@@ -1,0 +1,7 @@
+package cn.com.wisetrust.controller;
+/**
+* Created by @author xu on @date 2017年 月 日	下午3:05:35
+*/
+public class AccountController {
+
+}

@@ -1,0 +1,13 @@
+package cn.com.wisetrust;
+/**
+* Created by @author xu on @date 2017年 月 日	上午11:00:27
+*/
+public class TestCls {
+	public static void main(String[] args) {
+		String str1 = "LOGIN_NAME,CELLPHONE,PASSWORD,SALT,TYPE,POS,STATUS,LAST_LOGIN_TIME,GMT_CREATE,GMT_MODIFIED,OPEN_ID";
+		String str2 = "#{LOGIN_NAME},#{CELLPHONE},#{PASSWORD},#{SALT},#{TYPE},#{POS},#{STATUS},#{LAST_LOGIN_TIME},#{GMT_CREATE},#{GMT_MODIFIED},#{OPEN_ID}";
+		
+		String[] strs1 = str1.split(",");
+		String[] strs2 = str2.split(",");
+	}
+}

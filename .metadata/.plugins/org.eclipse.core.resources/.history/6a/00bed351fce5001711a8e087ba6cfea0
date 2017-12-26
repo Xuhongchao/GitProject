@@ -1,0 +1,11 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql:///pxene_app_rules_new?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+#url=jdbc:mysql://localhost/pxene_app_rules?useUnicode=true&characterEncoding=utf8
+username=root
+password=pxene123
+#password=mysql
+initialSize=0
+maxActive=200
+maxIdle=20
+minIdle=1
+maxWait=60000

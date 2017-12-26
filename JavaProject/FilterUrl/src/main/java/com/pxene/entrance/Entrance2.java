@@ -12,15 +12,15 @@ import com.pxene.service.PreInputCheckCore;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xu on @date 2017Äê 12ÔÂ 24ÈÕ ÏÂÎç2:14:30
+ * Created by @author xu on @date 2017å¹´ 12æœˆ 24æ—¥ ä¸‹åˆ2:14:30
  * 
  * <ul>
- * <li>Â¼ÈëÇ°ÅĞ¶ÏurlµÄ³ÌĞòÈë¿Ú</li>
- * <li>×¢ÒâÊÂÏî£º
+ * <li>å½•å…¥å‰åˆ¤æ–­urlçš„ç¨‹åºå…¥å£</li>
+ * <li>æ³¨æ„äº‹é¡¹ï¼š
  * <ul>
- * <li>1£¬Ê×ÏÈĞèÒªÔÚapp_crawl_detail.xlsxÎÄ¼şÖĞ´´½¨µÚ¶ş¸ö£¨±ØĞëÊÇµÚ¶ş¸ö£©sheet£¬²¢½«ÒªÂ¼ÈëµÄÊı¾İ·Åµ½Õâ¸ösheetÖĞ</li>
- * <li>2£¬ÔËĞĞ³ÌĞòĞèÒªÏÈÔÚÖ¸¶¨Î»ÖÃ´¦½¨Á¢same.txtºÍdiff.txtÁ½¸öÎÄ¼ş</li>
- * <li>3£¬Ô´ÎÄ¼şµØÖ·Îª£¨ÈçĞèĞŞ¸ÄÇë¸ÄIOUtilÀàÖĞµÄSOURCE_PATHµÄÖµ¼´¿É£©£ºSOURCE_PATH =
+ * <li>1ï¼Œé¦–å…ˆéœ€è¦åœ¨app_crawl_detail.xlsxæ–‡ä»¶ä¸­åˆ›å»ºç¬¬äºŒä¸ªï¼ˆå¿…é¡»æ˜¯ç¬¬äºŒä¸ªï¼‰sheetï¼Œå¹¶å°†è¦å½•å…¥çš„æ•°æ®æ”¾åˆ°è¿™ä¸ªsheetä¸­</li>
+ * <li>2ï¼Œè¿è¡Œç¨‹åºéœ€è¦å…ˆåœ¨æŒ‡å®šä½ç½®å¤„å»ºç«‹same.txtå’Œdiff.txtä¸¤ä¸ªæ–‡ä»¶</li>
+ * <li>3ï¼Œæºæ–‡ä»¶åœ°å€ä¸ºï¼ˆå¦‚éœ€ä¿®æ”¹è¯·æ”¹IOUtilç±»ä¸­çš„SOURCE_PATHçš„å€¼å³å¯ï¼‰ï¼šSOURCE_PATH =
  * "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";</li>
  * </ul>
  * </li>
@@ -33,11 +33,11 @@ public class Entrance2 {
 	public static void main(String[] args) {
 		IOUtil ioUtil = IOUtil.getInstance();
 		
-		List<Data> list = new LoadReg().readFromExcelToData(); // ÄÃÕıÔò
+		List<Data> list = new LoadReg().readFromExcelToData(); // æ‹¿æ­£åˆ™
 
-		List<String> noEnterUrl = new LoadNotEnterUrl().getNotEnterUrl(); // ÄÃ´ıÂ¼ÈëÊı¾İ
+		List<String> noEnterUrl = new LoadNotEnterUrl().getNotEnterUrl(); // å¾…å½•å…¥çš„url
 
-		Map<List<String>, List<String>> map = new PreInputCheckCore().check(list, noEnterUrl); // ½«ÒÑ¾­ÔÚÊı¾İ¿âÖĞ·Åµ½Ò»¸ö¼¯ºÏÖĞ£¬²»ÔÚÊı¾İ¿âµÄ·Åµ½Ò»¸ö¼¯ºÏÖĞ
+		Map<List<String>, List<String>> map = new PreInputCheckCore().check(list, noEnterUrl); // åœ¨å½•å…¥å‰è¿›è¡Œæ£€æŸ¥
 		
 		for(Entry<List<String>, List<String>> entry : map.entrySet()){
 			List<String> same = entry.getKey();

@@ -1,0 +1,9 @@
+package cn.com.wisetrust;
+/**
+* Created by @author xu on @date 2017年 月 日	上午11:00:27
+*/
+public class TestCls {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package cn.com.wisetrust.entity;
+/**
+* Created by @author xu on @date 2017年 月 日	上午11:35:01
+*/
+public class Account {
+
+}

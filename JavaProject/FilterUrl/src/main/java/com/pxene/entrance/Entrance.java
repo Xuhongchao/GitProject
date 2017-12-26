@@ -9,19 +9,18 @@ import com.pxene.service.LoadReg;
 import com.pxene.service.LoadUrlExam;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê 11ÔÂ 13ÈÕ ÏÂÎç7:42:00
+ * Created by @author xuhongchao on @date 2017å¹´ 11æœˆ 13æ—¥ ä¸‹åˆ7:42:00
  * <ul>
- * <li>±¾³ÌĞòµÄÈë¿Ú</li>
- * <li>×¢ÒâÊÂÏî£º
+ * <li>æœ¬ç¨‹åºçš„å…¥å£</li>
+ * <li>æ³¨æ„äº‹é¡¹ï¼š
  * <ul>
- * <li>1£¬ÔËĞĞ³ÌĞòĞèÒªÏÈÔÚÖ¸¶¨Î»ÖÃ´¦½¨Á¢resºÍres2Á½¸öÎÄ¼ş¼Ğ</li>
- * <li>2£¬Ô´ÎÄ¼şµØÖ·Îª£¨ÈçĞèĞŞ¸ÄÇë¸ÄIOUtilÀàÖĞµÄSOURCE_PATHµÄÖµ¼´¿É£©£ºSOURCE_PATH =
+ * <li>1ï¼Œè¿è¡Œç¨‹åºéœ€è¦å…ˆåœ¨æŒ‡å®šä½ç½®å¤„å»ºç«‹reså’Œres2ä¸¤ä¸ªæ–‡ä»¶å¤¹</li>
+ * <li>2ï¼Œæºæ–‡ä»¶åœ°å€ä¸ºï¼ˆå¦‚éœ€ä¿®æ”¹è¯·æ”¹IOUtilç±»ä¸­çš„SOURCE_PATHçš„å€¼å³å¯ï¼‰ï¼šSOURCE_PATH =
  * "C:\\Users\\xuhongchao\\Desktop\\app_crawl_detail.xlsx";</li>
  * </ul>
  * </li>
  * </ul>
  */
-
 public class Entrance {
 	private static final String START_PATH = "C:\\Users\\xuhongchao\\Desktop\\res\\";
 	private static final String TEMP_PATH = "C:\\Users\\xuhongchao\\Desktop\\res2\\";
@@ -29,14 +28,14 @@ public class Entrance {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		List<Data> list = new LoadReg().readFromExcelToData(); // ÄÃÕıÔò
-		Map<String, String> map = new LoadUrlExam().getAllUrl(); // ÄÃurl
-		Map<String, Data> line = new LoadLine().readAll(); // ÄÃµ½Ò»ĞĞ
+		List<Data> list = new LoadReg().readFromExcelToData(); // æ‹¿æ­£åˆ™
+		Map<String, String> map = new LoadUrlExam().getAllUrl(); // æ‹¿url
+		Map<String, Data> line = new LoadLine().readAll(); // æ‹¿åˆ°ä¸€è¡Œ
 		Core core = new Core();
-		core.filter(list, map, START_PATH, line); // µÚÒ»´Î¹ıÂË
-		core.secondFilter(START_PATH, TEMP_PATH); // µÚ¶ş´Î¹ıÂË
+		core.filter(list, map, START_PATH, line); // ç¬¬ä¸€æ¬¡è¿‡æ»¤
+		core.secondFilter(START_PATH, TEMP_PATH); // ç¬¬äºŒæ¬¡è¿‡æ»¤
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		long end = System.currentTimeMillis();
-		System.out.println("ÔËĞĞÊ±¼ä£º" + (end - start) / 1000 + "s");
+		System.out.println("è¿è¡Œæ—¶é—´ï¼š" + (end - start) / 1000 + "s");
 	}
 }

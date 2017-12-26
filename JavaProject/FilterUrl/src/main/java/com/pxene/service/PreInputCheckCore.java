@@ -11,27 +11,27 @@ import com.pxene.entity.Data;
 import com.pxene.util.StringUtil;
 
 /**
- * Created by @author xu on @date 2017Äê 12ÔÂ 24ÈÕ ÏÂÎç3:42:45
+ * Created by @author xu on @date 2017å¹´ 12æœˆ 24æ—¥ ä¸‹åˆ3:42:45
  * 
- * ÔÚÊäÈëÇ°½øĞĞ¼ì²é
+ * åœ¨è¾“å…¥å‰è¿›è¡Œæ£€æŸ¥
  */
 public class PreInputCheckCore {
 
 	/**
-	 * ÔÚÂ¼Èëurl½øĞĞÅĞ¶Ï¸ÃurlÔÚÊı¾İ¿âÖĞÊÇ·ñÒÑ¾­´æÔÚÁË
+	 * åœ¨å½•å…¥urlè¿›è¡Œåˆ¤æ–­è¯¥urlåœ¨æ•°æ®åº“ä¸­æ˜¯å¦å·²ç»å­˜åœ¨äº†
 	 * 
 	 * @param list
-	 *            ÓÃÀ´»ñÈ¡ÕıÔò²¿·Ö
+	 *            ç”¨æ¥è·å–æ­£åˆ™éƒ¨åˆ†
 	 * @param noEnterUrl
-	 *            µÈ´ıÂ¼ÈëµÄurl
-	 * @return map - ´æ·ÅÒÑ´æÔÚµÄurlºÍÎ´´æÔÚµÄurl¡¾map.put(same, diff)¡¿
+	 *            ç­‰å¾…å½•å…¥çš„url
+	 * @return map - å­˜æ”¾å·²å­˜åœ¨çš„urlå’Œæœªå­˜åœ¨çš„urlã€map.put(same, diff)ã€‘
 	 */
 	public Map<List<String>, List<String>> check(List<Data> list, List<String> noEnterUrl) {
 		Map<List<String>, List<String>> map = new HashMap<List<String>, List<String>>();
 		List<String> diff = new ArrayList<String>();
 		List<String> same = new ArrayList<String>();
 
-		// ³õÊ¼»¯±êÊ¶Îª¼Ù
+		// åˆå§‹åŒ–æ ‡è¯†ä¸ºå‡
 		boolean b = false;
 
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ public class PreInputCheckCore {
 				String domain = data.getDomain();
 				String paramReg = data.getParam();
 				String urlReg = data.getUrlReg();
-				// ½øĞĞÆ¥Åä
+				// è¿›è¡ŒåŒ¹é…
 				String compile = domain + urlReg;
 				Pattern p = Pattern.compile(compile);
 				Matcher m = p.matcher(url);
@@ -50,7 +50,7 @@ public class PreInputCheckCore {
 				if (b) {
 					String[] params = paramReg.split("\t");
 					if (params.length == 1 && "NULL".equals(params[0])) {
-						// Èç¹û²ÎÊıÖ»ÎªNULL£¬¸ÃÇé¿öÊÇÖ÷ÓòÃûµÄÇé¿ö£¬Ö±½ÓÌø³öÊä³ötrue
+						// å¦‚æœå‚æ•°åªä¸ºNULLï¼Œè¯¥æƒ…å†µæ˜¯ä¸»åŸŸåçš„æƒ…å†µï¼Œç›´æ¥è·³å‡ºè¾“å‡ºtrue
 						continue;
 					}
 					for (int i = 0; i < params.length; i++) {
@@ -65,22 +65,22 @@ public class PreInputCheckCore {
 						}
 						m = p.matcher(url);
 						b = m.find();
-						if (!b) { // ÓĞÒ»¸ö²»Í¬¼´Îª²»Í¬
+						if (!b) { // æœ‰ä¸€ä¸ªä¸åŒå³ä¸ºä¸åŒ
 							break;
 						}
 					}
 				}
 
-				if (b) { // Âú×ãÖ÷ÓòÃû¡¢urlÕıÔò¡¢ËùÓĞ²ÎÊıÕıÔòµÄ²ÅËãÊÇtrue
+				if (b) { // æ»¡è¶³ä¸»åŸŸåã€urlæ­£åˆ™ã€æ‰€æœ‰å‚æ•°æ­£åˆ™çš„æ‰ç®—æ˜¯true
 					same.add(string);
-					break; // Èç¹û´æÔÚÒ»¸öÏàÍ¬µÄ£¬¾Í¿ÉÒÔÍË³öÑ­»·
+					break; // å¦‚æœå­˜åœ¨ä¸€ä¸ªç›¸åŒçš„ï¼Œå°±å¯ä»¥é€€å‡ºå¾ªç¯
 				}
 			}
 
 			/*
-			 * Çé¿öÃèÊö£º
-			 * 1£¬²»Âú×ãÖ÷ÓòÃû+urlÕıÔò×éºÏÌõ¼şµÄ
-			 * 2£¬²»Âú×ã²ÎÊıÕıÔòÌõ¼şµÄ£¬Ö»ÒªÓĞÒ»¸ö²»Âú×ãµÄ¾ÍËã£¨¿ÉÒÔÂú×ãÆäÖĞµÄÒ»¸ö»òÕß¼¸¸ö£©
+			 * æƒ…å†µæè¿°ï¼š
+			 * 1ï¼Œä¸æ»¡è¶³ä¸»åŸŸå+urlæ­£åˆ™ç»„åˆæ¡ä»¶çš„
+			 * 2ï¼Œä¸æ»¡è¶³å‚æ•°æ­£åˆ™æ¡ä»¶çš„ï¼Œåªè¦æœ‰ä¸€ä¸ªä¸æ»¡è¶³çš„å°±ç®—ï¼ˆå¯ä»¥æ»¡è¶³å…¶ä¸­çš„ä¸€ä¸ªæˆ–è€…å‡ ä¸ªï¼‰
 			 */
 			if (!b) {
 				diff.add(string);

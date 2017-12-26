@@ -12,9 +12,9 @@ import com.pxene.entity.Data;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê ÔÂ ÈÕ ÉÏÎç11:22:17
+ * Created by @author xuhongchao on @date 2017å¹´ æœˆ æ—¥ ä¸Šåˆ11:22:17
  * 
- * ¶ÁÈ¡ËùÓĞÊı¾İµ½data¶ÔÏóÖĞ£¬Ö÷Òª´ÓÖĞÄÃ³öÕıÔò²¿·Ö
+ * è¯»å–æ‰€æœ‰æ•°æ®åˆ°dataå¯¹è±¡ä¸­ï¼Œä¸»è¦ä»ä¸­æ‹¿å‡ºæ­£åˆ™éƒ¨åˆ†
  */
 
 public class LoadReg {
@@ -23,21 +23,21 @@ public class LoadReg {
 	private List<Data> list = new ArrayList<Data>();
 
 	/**
-	 * ¶ÁÈ¡ËùÓĞÊı¾İµ½data¶ÔÏóÖĞ£¬²»°üº¬paramÎªNULL²¢ÇÒurlRegÎª.*µÄÇé¿ö
+	 * è¯»å–æ‰€æœ‰æ•°æ®åˆ°dataå¯¹è±¡ä¸­ï¼Œä¸åŒ…å«paramä¸ºNULLå¹¶ä¸”urlRegä¸º.*çš„æƒ…å†µ
 	 * 
 	 * @throws IOException
 	 */
 	public List<Data> readFromExcelToData() {
-		// µÃµ½¹¤×÷±íµÄµÚÒ»ĞĞºÍ×îºóÒ»ĞĞ
+		// å¾—åˆ°å·¥ä½œè¡¨çš„ç¬¬ä¸€è¡Œå’Œæœ€åä¸€è¡Œ
 		int firstLine = sheet.getFirstRowNum();
 		int endLine = sheet.getLastRowNum();
 
 		for (int i = firstLine; i <= endLine; i++) {
-			// Ã¿ĞĞµÄ¶ÁÈ¡¶¼µ¥¶À´´½¨Ò»¸ödata¶ÔÏó
+			// æ¯è¡Œçš„è¯»å–éƒ½å•ç‹¬åˆ›å»ºä¸€ä¸ªdataå¯¹è±¡
 			Data data = new Data();
-			Row row = sheet.getRow(i);// µÃµ½Ã¿Ò»ĞĞ
+			Row row = sheet.getRow(i);// å¾—åˆ°æ¯ä¸€è¡Œ
 
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñcell
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼cell
 			Cell num = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
 			Cell domain = row.getCell(1, Row.CREATE_NULL_AS_BLANK);
 			Cell paramReg = row.getCell(2, Row.CREATE_NULL_AS_BLANK);
@@ -45,15 +45,15 @@ public class LoadReg {
 			Cell urlExam = row.getCell(4, Row.CREATE_NULL_AS_BLANK);
 
 			/*
-			 * ×¢ÊÍÔ­Òò£ºÔÚÕâÀï¹ıÂËµôÁËurlÕıÔòÎª'.*'²¢ÇÒ²ÎÊıÕıÔòÎªNULLÇé¿öµÄurl
+			 * æ³¨é‡ŠåŸå› ï¼šåœ¨è¿™é‡Œè¿‡æ»¤æ‰äº†urlæ­£åˆ™ä¸º'.*'å¹¶ä¸”å‚æ•°æ­£åˆ™ä¸ºNULLæƒ…å†µçš„url
 			 * 
 			 * 
 			 * if ("NULL".equals(paramReg) && ".*".equals(urlReg)) {
-			 * System.out.println("¼ìÑé½á¹û£º" + ioUtil.turn(paramReg) + "-" +
+			 * System.out.println("æ£€éªŒç»“æœï¼š" + ioUtil.turn(paramReg) + "-" +
 			 * ioUtil.turn(urlReg)); }
 			 */
 
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñµÄÊı¾İ²¢·â×°µ½data¶ÔÏóÖĞ
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼çš„æ•°æ®å¹¶å°è£…åˆ°dataå¯¹è±¡ä¸­
 			data.setNum(ioUtil.turn(num));
 			data.setDomain(ioUtil.turn(domain));
 			if ("NULL".equals(ioUtil.turn(paramReg))) {

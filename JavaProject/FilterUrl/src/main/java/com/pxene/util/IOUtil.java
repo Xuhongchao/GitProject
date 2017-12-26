@@ -22,9 +22,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.pxene.entity.Data;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê 11ÔÂ 13ÈÕ ÏÂÎç7:44:15
+ * Created by @author xuhongchao on @date 2017å¹´ 11æœˆ 13æ—¥ ä¸‹åˆ7:44:15
  * 
- * ¶ÁÈ¡excel¡¢Ğ´ÈëtxtµÄ¹¤¾ßÀà
+ * è¯»å–excelã€å†™å…¥txtçš„å·¥å…·ç±»
  */
 
 @SuppressWarnings("deprecation")
@@ -38,10 +38,10 @@ public class IOUtil {
 		try {
 			wb = new XSSFWorkbook(SOURCE_PATH);
 		} catch (IOException e) {
-			throw new RuntimeException("¼ÓÔØXSSFWorkbookÊ§°Ü -- IOUtil");
+			throw new RuntimeException("åŠ è½½XSSFWorkbookå¤±è´¥ -- IOUtil");
 		}
-		// ¹¤×÷²¾
-		// sheet = wb.getSheetAt(0);// ¹¤×÷±í
+		// å·¥ä½œç°¿
+		// sheet = wb.getSheetAt(0);// å·¥ä½œè¡¨
 	}
 
 	public static IOUtil getInstance() {
@@ -49,7 +49,7 @@ public class IOUtil {
 	}
 	
 	/**
-	 * µÃµ½XSSFWorkbook¶ÔÏó
+	 * å¾—åˆ°XSSFWorkbookå¯¹è±¡
 	 * 
 	 * @return XSSFWorkbook
 	 */
@@ -58,25 +58,25 @@ public class IOUtil {
 	}
 
 	/**
-	 * µÃµ½Ò»¸öXSSFSheet
+	 * å¾—åˆ°ä¸€ä¸ªXSSFSheet
 	 * 
 	 * @return XSSFSheet
 	 */
-	/* ×¢ÊÍµô£¬Í¬Ê±´æÔÚ¶à¸ösheetµÄÔ­Òò
+	/* æ³¨é‡Šæ‰ï¼ŒåŒæ—¶å­˜åœ¨å¤šä¸ªsheetçš„åŸå› 
 	 * 
 	 * public XSSFSheet getSheet() {
 		return sheet;
 	}*/
 
 	/**
-	 * ½«mapÖĞÊı¾İĞ´µ½ÎÄ¼şÖĞ
+	 * å°†mapä¸­æ•°æ®å†™åˆ°æ–‡ä»¶ä¸­
 	 * 
 	 * @param file
-	 *            ÎÄ¼ş
+	 *            æ–‡ä»¶
 	 * @param map
-	 *            Ö»º¬ÓĞnum-urlExamµÄÊı¾İ
+	 *            åªå«æœ‰num-urlExamçš„æ•°æ®
 	 * @param line
-	 *            num-data(³ınumÍâµÄÆäËûÊı¾İ)ĞÎÊ½µÄÊı¾İ
+	 *            num-data(é™¤numå¤–çš„å…¶ä»–æ•°æ®)å½¢å¼çš„æ•°æ®
 	 */
 	public void writeToFile(File file, Map<String, String> map,
 			Map<String, Data> line) {
@@ -98,24 +98,24 @@ public class IOUtil {
 			}
 
 		} catch (Exception e) {
-			throw new RuntimeException("Ğ´µ½ÎÄ¼şÖĞ³ö´í -- IOUtil  >>  "
+			throw new RuntimeException("å†™åˆ°æ–‡ä»¶ä¸­å‡ºé”™ -- IOUtil  >>  "
 					+ e.getMessage());
 		} finally {
 			try {
 				bw.close();
 			} catch (IOException e) {
-				throw new RuntimeException("¹Ø±ÕĞ´ÈëÁ÷³ö´í -- IOUtil");
+				throw new RuntimeException("å…³é—­å†™å…¥æµå‡ºé”™ -- IOUtil");
 			}
 		}
 	}
 	
 	/**
-	 * ½«listÖĞÊı¾İĞ´µ½ÎÄ¼şÖĞ
+	 * å°†listä¸­æ•°æ®å†™åˆ°æ–‡ä»¶ä¸­
 	 * 
 	 * @param file
-	 *            ÒªĞ´ÈëµÄÎÄ¼ş
+	 *            è¦å†™å…¥çš„æ–‡ä»¶
 	 * @param list
-	 *            ÒªĞ´ÈëµÄÊı¾İ¼¯ºÏ
+	 *            è¦å†™å…¥çš„æ•°æ®é›†åˆ
 	 */
 	public void writeToFile(File file, List<String> list) {
 		BufferedWriter bw = null;
@@ -131,21 +131,21 @@ public class IOUtil {
 			}
 
 		} catch (Exception e) {
-			throw new RuntimeException("Ğ´µ½ÎÄ¼şÖĞ³ö´í -- IOUtil  >>  " + e.getMessage());
+			throw new RuntimeException("å†™åˆ°æ–‡ä»¶ä¸­å‡ºé”™ -- IOUtil  >>  " + e.getMessage());
 		} finally {
 			try {
 				bw.close();
 			} catch (IOException e) {
-				throw new RuntimeException("¹Ø±ÕĞ´ÈëÁ÷³ö´í -- IOUtil");
+				throw new RuntimeException("å…³é—­å†™å…¥æµå‡ºé”™ -- IOUtil");
 			}
 		}
 	}
 
 	/**
-	 * ´ÓÎÄ¼şÖĞ¶ÁÊı¾İ
+	 * ä»æ–‡ä»¶ä¸­è¯»æ•°æ®
 	 * 
 	 * @param file
-	 *            Òª¶ÁÈ¡µÄÎÄ¼ş
+	 *            è¦è¯»å–çš„æ–‡ä»¶
 	 */
 	public String readFromTxt(File file) {
 		BufferedReader br = null;
@@ -153,38 +153,38 @@ public class IOUtil {
 		try {
 			br = new BufferedReader(new InputStreamReader(new FileInputStream(
 					file)));
-			// Ò»´Î¶ÁÈ¡Ò»ĞĞ
+			// ä¸€æ¬¡è¯»å–ä¸€è¡Œ
 			String line = "";
 			while ((line = br.readLine()) != null) {
 				sb.append(line.split("\t")[0] + "-");
 			}
 			return sb.substring(0, sb.lastIndexOf("-")).toString();
 		} catch (StringIndexOutOfBoundsException e) {
-			System.out.println("³ö´íµÄÓï¾äÊÇ£º" + sb.toString());
-			throw new RuntimeException("¶ÁÈ¡ÎÄ¼ş³öÏÖ´íÎó -- IOUtil");
+			System.out.println("å‡ºé”™çš„è¯­å¥æ˜¯ï¼š" + sb.toString());
+			throw new RuntimeException("è¯»å–æ–‡ä»¶å‡ºç°é”™è¯¯ -- IOUtil");
 		}catch (FileNotFoundException e) {
-			throw new RuntimeException("¶ÁÈ¡ÎÄ¼şÕÒ²»µ½ -- IOUtil");
+			throw new RuntimeException("è¯»å–æ–‡ä»¶æ‰¾ä¸åˆ° -- IOUtil");
 		} catch (IOException e) {
-			throw new RuntimeException("¶ÁÈ¡ÎÄ¼ş³öÏÖio´íÎó -- IOUtil");
+			throw new RuntimeException("è¯»å–æ–‡ä»¶å‡ºç°ioé”™è¯¯ -- IOUtil");
 		}  finally {
 			try {
 				br.close();
 			} catch (IOException e) {
-				throw new RuntimeException("¹Ø±Õ¶ÁÈ¡Á÷³ö´í -- IOUtil");
+				throw new RuntimeException("å…³é—­è¯»å–æµå‡ºé”™ -- IOUtil");
 			}
 		}
 	}
 
 	/**
-	 * ÓÃÀ´¶Ô¶ÁÈ¡µÄÊı¾İ½øĞĞ×ª»¯
+	 * ç”¨æ¥å¯¹è¯»å–çš„æ•°æ®è¿›è¡Œè½¬åŒ–
 	 * 
 	 * @param cell
-	 * @return ×Ô¶¨ÒåÊä³öµÄÖµ
+	 * @return è‡ªå®šä¹‰è¾“å‡ºçš„å€¼
 	 */
 	public String turn(Cell cell) {
 		String value = null;
 		switch (cell.getCellType()) {
-		case HSSFCell.CELL_TYPE_NUMERIC: // Êı×Ö
+		case HSSFCell.CELL_TYPE_NUMERIC: // æ•°å­—
 			value = cell.getNumericCellValue() + "";
 			if (HSSFDateUtil.isCellDateFormatted(cell)) {
 				Date date = cell.getDateCellValue();
@@ -198,23 +198,23 @@ public class IOUtil {
 						.getNumericCellValue());
 			}
 			break;
-		case HSSFCell.CELL_TYPE_STRING: // ×Ö·û´®
+		case HSSFCell.CELL_TYPE_STRING: // å­—ç¬¦ä¸²
 			value = cell.getStringCellValue();
 			break;
 		case HSSFCell.CELL_TYPE_BOOLEAN: // Boolean
 			value = cell.getBooleanCellValue() + "";
 			break;
-		case HSSFCell.CELL_TYPE_FORMULA: // ¹«Ê½
+		case HSSFCell.CELL_TYPE_FORMULA: // å…¬å¼
 			value = cell.getCellFormula() + "";
 			break;
-		case HSSFCell.CELL_TYPE_BLANK: // ¿ÕÖµ
+		case HSSFCell.CELL_TYPE_BLANK: // ç©ºå€¼
 			value = "";
 			break;
-		case HSSFCell.CELL_TYPE_ERROR: // ¹ÊÕÏ
-			value = "·Ç·¨×Ö·û";
+		case HSSFCell.CELL_TYPE_ERROR: // æ•…éšœ
+			value = "éæ³•å­—ç¬¦";
 			break;
 		default:
-			value = "Î´ÖªÀàĞÍ";
+			value = "æœªçŸ¥ç±»å‹";
 			break;
 		}
 		return value;

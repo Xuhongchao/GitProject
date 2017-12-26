@@ -1,0 +1,22 @@
+package cn.com.wisetrust.dao;
+
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+/**
+ * Created by @author xu on @date 2017年 12月 21日 上午11:23:19
+ */
+public class GetSqlSession {
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+
+	static {
+		reader = Resources.getResourceAsReader("");
+	}
+
+	public void getSqlSession() {
+
+	}
+}

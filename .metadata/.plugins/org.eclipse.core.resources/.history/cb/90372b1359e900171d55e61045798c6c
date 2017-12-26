@@ -1,0 +1,7 @@
+server
+	tomcat
+		uri-encoding: UTF-8
+	http.encoding.charset=UTF-8
+	http.encoding.enabled=true
+	http.encoding.force=true
+	messages.encoding=UTF-8

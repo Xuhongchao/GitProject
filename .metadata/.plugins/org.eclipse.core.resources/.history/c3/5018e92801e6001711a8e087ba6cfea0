@@ -1,0 +1,6 @@
+package cn.com.wisetrust.entity;
+/**
+* Created by @author xu on @date 2017年 12月 21日	上午11:35:01
+*/
+
+import java.util.Date;

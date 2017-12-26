@@ -1,0 +1,19 @@
+package cn.com.wisetrust.entity;
+
+import java.util.Date;
+
+/**
+* Created by @author xu on @date 2017年 12月 21日	上午11:35:01
+*/
+public class Account {
+	private int id;
+	private String login_name;
+	private String cellphone;
+	private String password;
+	private String salt;
+	private int type;
+	private String pos;
+	private int status;
+	private Date last_login_time;
+	
+}

@@ -1,0 +1,7 @@
+package cn.com.wisetrust.dao;
+
+public class GetSqlSession {
+	/**
+	* Created by @author ${user} on @date ${year}Äê ÔÂ ÈÕ	${time}
+	*/
+}

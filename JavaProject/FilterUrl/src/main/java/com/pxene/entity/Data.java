@@ -1,7 +1,7 @@
 package com.pxene.entity;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê ÔÂ ÈÕ ÉÏÎç10:21:41
+ * Created by @author xuhongchao on @date 2017å¹´ æœˆ æ—¥  10:21:41
  */
 
 public class Data {

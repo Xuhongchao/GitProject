@@ -1,8 +1,6 @@
 package com.pxene.service;
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,9 +11,9 @@ import com.pxene.util.IOUtil;
 import com.pxene.util.StringUtil;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê ÔÂ ÈÕ ÏÂÎç1:33:52
+ * Created by @author xuhongchao on @date 2017å¹´ æœˆ æ—¥ ä¸‹åˆ1:33:52
  * 
- * ½øĞĞ¹ıÂË
+ * è¿›è¡Œè¿‡æ»¤
  */
 
 public class Core {
@@ -23,19 +21,19 @@ public class Core {
 	private IOUtil ioUtil = IOUtil.getInstance();
 
 	/**
-	 * ÈÃËùÓĞµÄurl¹ıÂËÕıÔò£¬¹ıÂËÁ÷³ÌÊÇËùÓĞurl¹ıÂËÒ»¸öÕıÔò
+	 * è®©æ‰€æœ‰çš„urlè¿‡æ»¤æ­£åˆ™ï¼Œè¿‡æ»¤æµç¨‹æ˜¯æ‰€æœ‰urlè¿‡æ»¤ä¸€ä¸ªæ­£åˆ™
 	 * 
 	 * @param list
-	 *            ÓÃÀ´È¡ÕıÔò
+	 *            ç”¨æ¥å–æ­£åˆ™
 	 * @param map
-	 *            ÓÃÀ´È¡url
+	 *            ç”¨æ¥å–url
 	 * @param START_PATH
-	 *            µÚÒ»´Î¹ıÂË³öµÄÎÄ¼şÂ·¾¶
+	 *            ç¬¬ä¸€æ¬¡è¿‡æ»¤å‡ºçš„æ–‡ä»¶è·¯å¾„
 	 */
 	public void filter(List<Data> list, Map<String, String> map,
 			String START_PATH, Map<String, Data> line) {
 		Map<String, String> container = null;
-		// ³õÊ¼»¯±êÊ¶Îª¼Ù
+		// åˆå§‹åŒ–æ ‡è¯†ä¸ºå‡
 		boolean b = false;
 
 		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,12 +44,12 @@ public class Core {
 			String paramReg = data.getParam();
 			String urlReg = data.getUrlReg();
 
-			// ½øĞĞÆ¥Åä
+			// è¿›è¡ŒåŒ¹é…
 			String compile = domain + urlReg;
 			for (Map.Entry<String, String> entry : map.entrySet()) {
 				/*
-				 * ·ÖÁ½²½×ß£º Ê×ÏÈÈÃÃ¿Ò»¸öurl¹ı£¨domain + urlReg£© £» È»ºóÔÙÒ»¸öÒ»¸öµÄ¹ı²ÎÊıÕıÔò£¨²ÎÊıÕıÔò¿ÉÄÜÓĞ¶à¸ö£©£»
-				 * È«¹ıÖ®ºó¾Í+1£»
+				 * åˆ†ä¸¤æ­¥èµ°ï¼š é¦–å…ˆè®©æ¯ä¸€ä¸ªurlè¿‡ï¼ˆdomain + urlRegï¼‰ ï¼› ç„¶åå†ä¸€ä¸ªä¸€ä¸ªçš„è¿‡å‚æ•°æ­£åˆ™ï¼ˆå‚æ•°æ­£åˆ™å¯èƒ½æœ‰å¤šä¸ªï¼‰ï¼›
+				 * å…¨è¿‡ä¹‹åå°±+1ï¼›
 				 */
 				String url = StringUtil.decode(StringUtil.killBeginOfUrl(entry.getValue().replaceAll(
 						"%(?![0-9a-fA-F]{2})", "%25")));
@@ -61,7 +59,7 @@ public class Core {
 				if (b) {
 					String[] params = paramReg.split("\t");
 					if (params.length == 1 && "NULL".equals(params[0])) {
-						// Èç¹û²ÎÊıÖ»ÎªNULL£¬¸ÃÇé¿öÊÇÖ÷ÓòÃûµÄÇé¿ö£¬Ö±½ÓÌø³öÊä³ötrue
+						// å¦‚æœå‚æ•°åªä¸ºNULLï¼Œè¯¥æƒ…å†µæ˜¯ä¸»åŸŸåçš„æƒ…å†µï¼Œç›´æ¥è·³å‡ºè¾“å‡ºtrue
 						container.put(entry.getKey(), entry.getValue());
 						continue;
 					}
@@ -77,19 +75,19 @@ public class Core {
 						}
 						m = p.matcher(url);
 						b = m.find();
-						if (!b) { // ÓĞÒ»¸ö²»Í¬¼´Îª²»Í¬
+						if (!b) { // æœ‰ä¸€ä¸ªä¸åŒå³ä¸ºä¸åŒ
 							break;
 						}
 					}
 
 					if (b) {
-						// ¼ÇÂ¼Ò»ÏÂÍ¨¹ıµÄurlºÍnum
+						// è®°å½•ä¸€ä¸‹é€šè¿‡çš„urlå’Œnum
 						container.put(entry.getKey(), entry.getValue());
 					}
 				}
 			}
 			if (container.size() > 1) {
-				// ÏÈĞ´³öÈ¥£¬È»ºóºóÃæ»á×öÉ¾³ı¶¯×÷
+				// å…ˆå†™å‡ºå»ï¼Œç„¶ååé¢ä¼šåšåˆ é™¤åŠ¨ä½œ
 				ioUtil.writeToFile(new File(START_PATH + (count++) + ".txt"),
 						container, line);
 
@@ -101,12 +99,12 @@ public class Core {
 	}
 
 	/**
-	 * ¶ÔµÚÒ»´ÎÊä³öµÄÄ¿Â¼ÎÄ¼şÔÙ´Î½øĞĞ¹ıÂË£¬ÕÒ³ö×îÖÕµÄ½á¹û
+	 * å¯¹ç¬¬ä¸€æ¬¡è¾“å‡ºçš„ç›®å½•æ–‡ä»¶å†æ¬¡è¿›è¡Œè¿‡æ»¤ï¼Œæ‰¾å‡ºæœ€ç»ˆçš„ç»“æœ
 	 * 
 	 * @param START_PATH
-	 *            res1µÄÄ¿Â¼
+	 *            res1çš„ç›®å½•
 	 * @param TEMP_PATH
-	 *            res2µÄÄ¿Â¼
+	 *            res2çš„ç›®å½•
 	 */
 	public void secondFilter(String START_PATH, String TEMP_PATH) {
 		File file = new File(START_PATH);
@@ -117,13 +115,13 @@ public class Core {
 
 		for (int i = 0; i < files.length; i++) {
 			String numStr = ioUtil.readFromTxt(files[i]);
-			// ´¦ÀíÂß¼­
+			// å¤„ç†é€»è¾‘
 			String[] nums = numStr.split("-");
 			String[] temp = new String[nums.length];
 			for (int j = 0; j < nums.length; j++) {
 				temp[j] = nums[j].substring(8, 11);
 			}
-			// true´ú±í²ÎÊıÏàÍ¬
+			// trueä»£è¡¨å‚æ•°ç›¸åŒ
 			boolean flag = true;
 			for (int k = 0; k < temp.length - 1; k++) {
 				for (int p = 1; p < temp.length; p++) {
@@ -136,7 +134,7 @@ public class Core {
 					break;
 				}
 			}
-			if (flag) { // ½«²ÎÊıÏàÍ¬µÄÎÄ¼şÒÆ¶¯µ½ÁíÒ»¸öÎÄ¼ş¼ĞÏÂ
+			if (flag) { // å°†å‚æ•°ç›¸åŒçš„æ–‡ä»¶ç§»åŠ¨åˆ°å¦ä¸€ä¸ªæ–‡ä»¶å¤¹ä¸‹
 				files[i].renameTo(new File(TEMP_PATH + files[i].getName()));
 			}
 		}

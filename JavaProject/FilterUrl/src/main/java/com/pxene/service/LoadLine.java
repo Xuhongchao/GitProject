@@ -11,9 +11,9 @@ import com.pxene.entity.Data;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê ÔÂ ÈÕ ÉÏÎç10:28:04
+ * Created by @author xuhongchao on @date 2017å¹´ æœˆ æ—¥ ä¸Šåˆ10:28:04
  * 
- * °´ÕÕkvµÄ¸ñÊ½À´¼ÓÔØÒ»ĞĞÊı¾İµ½mapÖĞ£¬ĞÎ³É×Öµä£¬ÒÔ±ãÍ¨¹ıkÀ´ÕÒÖµ
+ * æŒ‰ç…§kvçš„æ ¼å¼æ¥åŠ è½½ä¸€è¡Œæ•°æ®åˆ°mapä¸­ï¼Œå½¢æˆå­—å…¸ï¼Œä»¥ä¾¿é€šè¿‡kæ¥æ‰¾å€¼
  */
 
 public class LoadLine {
@@ -22,21 +22,21 @@ public class LoadLine {
 	private Map<String, Data> map = new HashMap<String, Data>();
 
 	/**
-	 * ´ÓExcelÖĞ¶ÁÈ¡Ò»ĞĞÊı¾İ£¬°´ÕÕnum-data(³ınumµÄÆäËû²¿·Ö)´æ·Åµ½mapÖĞ
+	 * ä»Excelä¸­è¯»å–ä¸€è¡Œæ•°æ®ï¼ŒæŒ‰ç…§num-data(é™¤numçš„å…¶ä»–éƒ¨åˆ†)å­˜æ”¾åˆ°mapä¸­
 	 * 
-	 * @return map¼¯ºÏ£¬ÆäÖĞkeyÎªnum£¬valueÎªdata¶ÔÏó
+	 * @return mapé›†åˆï¼Œå…¶ä¸­keyä¸ºnumï¼Œvalueä¸ºdataå¯¹è±¡
 	 */
 	public Map<String, Data> readAll() {
-		// µÃµ½¹¤×÷±íµÄµÚÒ»ĞĞºÍ×îºóÒ»ĞĞ
+		// å¾—åˆ°å·¥ä½œè¡¨çš„ç¬¬ä¸€è¡Œå’Œæœ€åä¸€è¡Œ
 		int firstLine = sheet.getFirstRowNum();
 		int endLine = sheet.getLastRowNum();
 
 		for (int i = firstLine; i <= endLine; i++) {
-			// Ã¿ĞĞµÄ¶ÁÈ¡¶¼µ¥¶À´´½¨Ò»¸ödata¶ÔÏó
+			// æ¯è¡Œçš„è¯»å–éƒ½å•ç‹¬åˆ›å»ºä¸€ä¸ªdataå¯¹è±¡
 			Data data = new Data();
-			Row row = sheet.getRow(i);// µÃµ½Ã¿Ò»ĞĞ
+			Row row = sheet.getRow(i);// å¾—åˆ°æ¯ä¸€è¡Œ
 
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñcell
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼cell
 			Cell num = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
 			Cell domain = row.getCell(1, Row.CREATE_NULL_AS_BLANK);
 			Cell paramReg = row.getCell(2, Row.CREATE_NULL_AS_BLANK);
@@ -48,7 +48,7 @@ public class LoadLine {
 			 * ".*".equals(ioUtil.turn(urlReg))) { continue; }
 			 */
 
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñµÄÊı¾İ²¢·â×°µ½data¶ÔÏóÖĞ
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼çš„æ•°æ®å¹¶å°è£…åˆ°dataå¯¹è±¡ä¸­
 			data.setDomain(ioUtil.turn(domain));
 			data.setParam(ioUtil.turn(paramReg));
 			data.setUrlReg(ioUtil.turn(urlReg));

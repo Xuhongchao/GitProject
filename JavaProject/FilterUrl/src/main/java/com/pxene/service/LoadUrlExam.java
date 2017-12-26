@@ -10,9 +10,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xuhongchao on @date 2017Äê ÔÂ ÈÕ ÉÏÎç11:44:37
+ * Created by @author xuhongchao on @date 2017å¹´ æœˆ æ—¥ ä¸Šåˆ11:44:37
  * 
- * ¼ÓÔØËùÓĞµÄurl
+ * åŠ è½½æ‰€æœ‰çš„url
  */
 
 public class LoadUrlExam {
@@ -21,18 +21,18 @@ public class LoadUrlExam {
 	private Map<String, String> map = new HashMap<String, String>();
 
 	/**
-	 * °´ÕÕnum-urlµÄ¸ñÊ½¼ÓÔØËùÓĞµÄurl
+	 * æŒ‰ç…§num-urlçš„æ ¼å¼åŠ è½½æ‰€æœ‰çš„url
 	 * 
-	 * @return map¼¯ºÏ
+	 * @return mapé›†åˆ
 	 */
 	public Map<String, String> getAllUrl() {
-		// µÃµ½¹¤×÷±íµÄµÚÒ»ĞĞºÍ×îºóÒ»ĞĞ
+		// å¾—åˆ°å·¥ä½œè¡¨çš„ç¬¬ä¸€è¡Œå’Œæœ€åä¸€è¡Œ
 		int firstLine = sheet.getFirstRowNum();
 		int endLine = sheet.getLastRowNum();
 
 		for (int i = firstLine; i <= endLine; i++) {
-			Row row = sheet.getRow(i);// µÃµ½Ã¿Ò»ĞĞ
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñcell
+			Row row = sheet.getRow(i);// å¾—åˆ°æ¯ä¸€è¡Œ
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼cell
 			Cell num = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
 			Cell urlExam = row.getCell(4, Row.CREATE_NULL_AS_BLANK);
 

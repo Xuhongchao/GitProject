@@ -9,23 +9,23 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import com.pxene.util.IOUtil;
 
 /**
- * Created by @author xu on @date 2017Äê 12ÔÂ 24ÈÕ ÏÂÎç2:24:37
+ * Created by @author xu on @date 2017å¹´ 12æœˆ 24æ—¥ ä¸‹åˆ2:24:37
  * 
- * ¼ÓÔØ¼´½«ÒªÂ¼ÈëµÄurl
+ * åŠ è½½å³å°†è¦å½•å…¥çš„url
  */
 public class LoadNotEnterUrl {
 	private IOUtil ioUtil = IOUtil.getInstance();
-	private XSSFSheet sheet = ioUtil.getWb().getSheetAt(1); // ´ıÂ¼ÈëµÄurlÔÚÍ¬Ò»¸öexcelµÄµÚ¶ş¸ösheetÉÏ
+	private XSSFSheet sheet = ioUtil.getWb().getSheetAt(1); // å¾…å½•å…¥çš„urlåœ¨åŒä¸€ä¸ªexcelçš„ç¬¬äºŒä¸ªsheetä¸Š
 
 	public List<String> getNotEnterUrl() {
 		LinkedList<String> list = new LinkedList<String>();
-		// µÃµ½¹¤×÷±íµÄµÚÒ»ĞĞºÍ×îºóÒ»ĞĞ
+		// å¾—åˆ°å·¥ä½œè¡¨çš„ç¬¬ä¸€è¡Œå’Œæœ€åä¸€è¡Œ
 		int firstLine = sheet.getFirstRowNum();
 		int endLine = sheet.getLastRowNum();
 
 		for (int i = firstLine; i <= endLine; i++) {
-			Row row = sheet.getRow(i);// µÃµ½Ã¿Ò»ĞĞ
-			// µÃµ½Ã¿Ò»¸öµ¥Ôª¸ñcell
+			Row row = sheet.getRow(i);// å¾—åˆ°æ¯ä¸€è¡Œ
+			// å¾—åˆ°æ¯ä¸€ä¸ªå•å…ƒæ ¼cell
 			Cell url = row.getCell(0, Row.CREATE_NULL_AS_BLANK);
 
 			list.add(ioUtil.turn(url));

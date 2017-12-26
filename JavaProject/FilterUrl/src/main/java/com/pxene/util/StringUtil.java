@@ -4,14 +4,14 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
 /**
- * Created by @author xu on @date 2017Äê 12ÔÂ 24ÈÕ ÏÂÎç8:57:34
+ * Created by @author xu on @date 2017å¹´ 12æœˆ 24æ—¥ ä¸‹åˆ8:57:34
  */
 public class StringUtil {
 	/**
-	 * ½«url¿ªÍ·µÄhttp»òÕßhttpsÈ¥µô
+	 * å°†urlå¼€å¤´çš„httpæˆ–è€…httpså»æ‰
 	 * 
 	 * @param url
-	 * @return ·µ»Ø½ØÈ¡ºóµÄ×Ö·û´®
+	 * @return è¿”å›æˆªå–åçš„å­—ç¬¦ä¸²
 	 */
 	public static String killBeginOfUrl(String url) {
 		if (url.startsWith("http://")) {
@@ -23,11 +23,11 @@ public class StringUtil {
 	}
 
 	/**
-	 * ¶Ôurl½øĞĞ½âÂë
+	 * å¯¹urlè¿›è¡Œè§£ç 
 	 * 
 	 * @param str
-	 *            Ô­×Ö·û´®
-	 * @return ½âÂëºóµÄ×Ö·û´®
+	 *            åŸå­—ç¬¦ä¸²
+	 * @return è§£ç åçš„å­—ç¬¦ä¸²
 	 */
 	public static String decode(String str) {
 		String value = null;

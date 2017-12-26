@@ -8,7 +8,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<jdk.compiler.version>1.7</jdk.compiler.version>
+		<jdk.compiler.version>1.8</jdk.compiler.version>
 	</properties>
 
 	<!-- 放置依赖 -->
