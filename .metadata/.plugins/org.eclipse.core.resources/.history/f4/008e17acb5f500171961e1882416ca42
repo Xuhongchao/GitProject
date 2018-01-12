@@ -1,0 +1,18 @@
+package com.wisetrust.test;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.junit.Test;
+
+import com.wisetrust.jsonproject.IOUtils;
+
+/**
+ * Created by @author xu on @date 2018年 月 日 上午11:06:53
+ */
+public class IOTest {
+	@Test
+	public void testName() throws Exception {
+		HttpServletRequest request = null;
+		IOUtils.ReadFile(this.getClass().getClassLoader().getResource("").getRealPath("/resource/test.json")).toString();
+	}
+}

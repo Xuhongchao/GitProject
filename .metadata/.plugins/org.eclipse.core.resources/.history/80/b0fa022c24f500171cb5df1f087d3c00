@@ -1,0 +1,14 @@
+package com.wisetrust.request;
+
+/**
+ * Created by @author xu on @date 2018年 1月 9日 下午5:55:06
+ */
+public class AccountUpdateRequest extends BaseRequest {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Long id;
+}

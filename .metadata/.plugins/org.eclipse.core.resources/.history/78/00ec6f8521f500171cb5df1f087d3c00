@@ -1,0 +1,7 @@
+	<p>欢迎你：${sessionScope.loginAccount }</p>
+	${pageContext.request.contextPath }
+	<br />
+	<hr />
+
+	<a href="${pageContext.request.contextPath }/account/list">查看账户列表</a>
+	<a href="${pageContext.request.contextPath }/account/add">添加账户</a>

@@ -1,0 +1,6 @@
+	
+	
+	<p>欢迎你：${sessionScope.loginAccount }</p>
+	${pageContext.request.contextPath }
+	<br />
+	<hr />

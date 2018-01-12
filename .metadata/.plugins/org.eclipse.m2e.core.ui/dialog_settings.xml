@@ -4,13 +4,14 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="wisetrust"/>
 			<item value="cn.com.wisetrust"/>
+			<item value="wisetrust"/>
 		</list>
 		<list key="name">
 			<item value="myBatisDemo"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringmvcDemo"/>
 			<item value="MyBatisDemo"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -37,6 +38,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\office\GitProject\SpringmvcDemo"/>
 			<item value="D:\office\GitProject\JavaProject"/>
 			<item value="D:\office\GitProject\pxene-website"/>
 		</list>
@@ -61,6 +63,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\office\GitProject\SpringBootDemo"/>
 			<item value="D:\office\GitProject\"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -1,8 +1,0 @@
-package cn.com.wisetrust.dao;
-
-/**
- * Created by @author xu on @date 2017年 12月 21日 上午11:23:19
- */
-public class GetSqlSession {
-	
-}

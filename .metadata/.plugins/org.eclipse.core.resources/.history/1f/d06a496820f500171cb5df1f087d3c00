@@ -1,0 +1,20 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>首页</title>
+</head>
+<body>
+	<p>欢迎你：${sessionScope.loginAccount }</p>
+
+	Hello World!
+	<br />
+	<hr />
+
+	<a href="${pageContext.request.contextPath }/account/list">查看账户列表</a>
+	<a href="${pageContext.request.contextPath }/account/add">添加账户</a>
+
+</body>
+</html>

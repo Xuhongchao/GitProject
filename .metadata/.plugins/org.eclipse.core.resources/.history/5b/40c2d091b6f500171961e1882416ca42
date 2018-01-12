@@ -1,0 +1,21 @@
+package com.wisetrust.test;
+
+import javax.servlet.http.HttpServletRequest;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.wisetrust.jsonproject.IOUtils;
+
+/**
+ * Created by @author xu on @date 2018年 月 日 上午11:06:53
+ */
+public class IOTest {
+	@Autowired
+	public HttpServletRequest Request;
+
+	@Test
+	public void testName() throws Exception {
+		IOUtils.ReadFile()
+				.toString();
+	}
+}

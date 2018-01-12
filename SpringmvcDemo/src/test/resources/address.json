@@ -1,0 +1,39 @@
+{
+    "code":0,
+    "requestNo": "230f3452-18c4-4315-8d46-6374b26447e9",
+    "sessionId": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5IiwiaWF0IjoxNTE0ODc4Mzg0LCJzdWIiOiI5In0.jL3AkHTpDeVOlgcJ1D9m7pUQKQq6u9bk-qHNl24inS8",
+    "accountId": 9,
+    "res": 0,
+    "success": true,
+    "data": [ {
+            "provinceCode": "110000",
+            "provinceName": "北京",
+            "cityCode": "110100",
+            "cityName": "市辖区",
+            "areaCode": "110101",
+            "areaName":  "西城区"
+            } ,{
+                "provinceCode": "110000",
+                "provinceName": "北京",
+                "cityCode": "110100",
+                "cityName": "市辖区",
+                "areaCode": "110102",
+                "areaName":  "东城区"
+                            
+             },{
+                "provinceCode": "110000",
+                "provinceName": "北京",
+                "cityCode": "110100",
+                "cityName": "市辖区",
+                "areaCode": "110103",
+                "areaName":  "海淀区"
+            },{
+                "provinceCode": "110000",
+                "provinceName": "北京",
+                "cityCode": "110100",
+                "cityName": "市辖区",
+                "areaCode": "110104",
+                "areaName":  "朝阳区"
+             }]
+
+}

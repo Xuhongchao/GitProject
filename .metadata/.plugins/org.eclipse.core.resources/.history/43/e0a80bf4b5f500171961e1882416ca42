@@ -1,0 +1,15 @@
+package com.wisetrust.test;
+
+import org.junit.Test;
+
+import com.wisetrust.jsonproject.IOUtils;
+
+/**
+ * Created by @author xu on @date 2018年 月 日 上午11:06:53
+ */
+public class IOTest {
+	@Test
+	public void testName() throws Exception {
+		IOUtils.ReadFile(this.getClass().getClassLoader().getResource("/src/test/resources/address.json").getPath()).toString();
+	}
+}
