@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wisetrust.dao.WorkMapper" >
+  <resultMap id="BaseResultMap" type="com.wisetrust.pojo.Work" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="visit_time" property="visitTime" jdbcType="TIMESTAMP" />
+    <result column="manager_id" property="managerId" jdbcType="BIGINT" />
+    <result column="manager" property="manager" jdbcType="VARCHAR" />
+    <result column="submitted" property="submitted" jdbcType="BIT" />
+    <result column="bank" property="bank" jdbcType="VARCHAR" />
+    <result column="branch" property="branch" jdbcType="VARCHAR" />
+    <result column="subbranch" property="subbranch" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="bank_id" property="bankId" jdbcType="BIGINT" />
+    <result column="branch_id" property="branchId" jdbcType="BIGINT" />
+    <result column="subbranch_id" property="subbranchId" jdbcType="BIGINT" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="region" property="region" jdbcType="VARCHAR" />
+    <result column="addr" property="addr" jdbcType="VARCHAR" />
+    <result column="cell" property="cell" jdbcType="VARCHAR" />
+    <result column="purpose" property="purpose" jdbcType="VARCHAR" />
+    <result column="process" property="process" jdbcType="VARCHAR" />
+    <result column="result" property="result" jdbcType="VARCHAR" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, visit_time, manager_id, manager, submitted, bank, branch, subbranch, description, 
+    bank_id, branch_id, subbranch_id, province, city, district, region, addr, cell, purpose, 
+    process, result, gmt_create, gmt_modified
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wisetrust.pojo.WorkExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from work
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from work
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from work
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.wisetrust.pojo.Work" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into work (visit_time, manager_id, manager, 
+      submitted, bank, branch, 
+      subbranch, description, bank_id, 
+      branch_id, subbranch_id, province, 
+      city, district, region, 
+      addr, cell, purpose, 
+      process, result, gmt_create, 
+      gmt_modified)
+    values (#{visitTime,jdbcType=TIMESTAMP}, #{managerId,jdbcType=BIGINT}, #{manager,jdbcType=VARCHAR}, 
+      #{submitted,jdbcType=BIT}, #{bank,jdbcType=VARCHAR}, #{branch,jdbcType=VARCHAR}, 
+      #{subbranch,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{bankId,jdbcType=BIGINT}, 
+      #{branchId,jdbcType=BIGINT}, #{subbranchId,jdbcType=BIGINT}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{district,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, 
+      #{addr,jdbcType=VARCHAR}, #{cell,jdbcType=VARCHAR}, #{purpose,jdbcType=VARCHAR}, 
+      #{process,jdbcType=VARCHAR}, #{result,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModified,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wisetrust.pojo.Work" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into work
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="visitTime != null" >
+        visit_time,
+      </if>
+      <if test="managerId != null" >
+        manager_id,
+      </if>
+      <if test="manager != null" >
+        manager,
+      </if>
+      <if test="submitted != null" >
+        submitted,
+      </if>
+      <if test="bank != null" >
+        bank,
+      </if>
+      <if test="branch != null" >
+        branch,
+      </if>
+      <if test="subbranch != null" >
+        subbranch,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="bankId != null" >
+        bank_id,
+      </if>
+      <if test="branchId != null" >
+        branch_id,
+      </if>
+      <if test="subbranchId != null" >
+        subbranch_id,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="district != null" >
+        district,
+      </if>
+      <if test="region != null" >
+        region,
+      </if>
+      <if test="addr != null" >
+        addr,
+      </if>
+      <if test="cell != null" >
+        cell,
+      </if>
+      <if test="purpose != null" >
+        purpose,
+      </if>
+      <if test="process != null" >
+        process,
+      </if>
+      <if test="result != null" >
+        result,
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create,
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="visitTime != null" >
+        #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="managerId != null" >
+        #{managerId,jdbcType=BIGINT},
+      </if>
+      <if test="manager != null" >
+        #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="submitted != null" >
+        #{submitted,jdbcType=BIT},
+      </if>
+      <if test="bank != null" >
+        #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="branch != null" >
+        #{branch,jdbcType=VARCHAR},
+      </if>
+      <if test="subbranch != null" >
+        #{subbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="bankId != null" >
+        #{bankId,jdbcType=BIGINT},
+      </if>
+      <if test="branchId != null" >
+        #{branchId,jdbcType=BIGINT},
+      </if>
+      <if test="subbranchId != null" >
+        #{subbranchId,jdbcType=BIGINT},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="district != null" >
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null" >
+        #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="cell != null" >
+        #{cell,jdbcType=VARCHAR},
+      </if>
+      <if test="purpose != null" >
+        #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="process != null" >
+        #{process,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null" >
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wisetrust.pojo.WorkExample" resultType="java.lang.Integer" >
+    select count(*) from work
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wisetrust.pojo.Work" >
+    update work
+    <set >
+      <if test="visitTime != null" >
+        visit_time = #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="managerId != null" >
+        manager_id = #{managerId,jdbcType=BIGINT},
+      </if>
+      <if test="manager != null" >
+        manager = #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="submitted != null" >
+        submitted = #{submitted,jdbcType=BIT},
+      </if>
+      <if test="bank != null" >
+        bank = #{bank,jdbcType=VARCHAR},
+      </if>
+      <if test="branch != null" >
+        branch = #{branch,jdbcType=VARCHAR},
+      </if>
+      <if test="subbranch != null" >
+        subbranch = #{subbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="bankId != null" >
+        bank_id = #{bankId,jdbcType=BIGINT},
+      </if>
+      <if test="branchId != null" >
+        branch_id = #{branchId,jdbcType=BIGINT},
+      </if>
+      <if test="subbranchId != null" >
+        subbranch_id = #{subbranchId,jdbcType=BIGINT},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="district != null" >
+        district = #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="region != null" >
+        region = #{region,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        addr = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="cell != null" >
+        cell = #{cell,jdbcType=VARCHAR},
+      </if>
+      <if test="purpose != null" >
+        purpose = #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="process != null" >
+        process = #{process,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null" >
+        result = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wisetrust.pojo.Work" >
+    update work
+    set visit_time = #{visitTime,jdbcType=TIMESTAMP},
+      manager_id = #{managerId,jdbcType=BIGINT},
+      manager = #{manager,jdbcType=VARCHAR},
+      submitted = #{submitted,jdbcType=BIT},
+      bank = #{bank,jdbcType=VARCHAR},
+      branch = #{branch,jdbcType=VARCHAR},
+      subbranch = #{subbranch,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      bank_id = #{bankId,jdbcType=BIGINT},
+      branch_id = #{branchId,jdbcType=BIGINT},
+      subbranch_id = #{subbranchId,jdbcType=BIGINT},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      district = #{district,jdbcType=VARCHAR},
+      region = #{region,jdbcType=VARCHAR},
+      addr = #{addr,jdbcType=VARCHAR},
+      cell = #{cell,jdbcType=VARCHAR},
+      purpose = #{purpose,jdbcType=VARCHAR},
+      process = #{process,jdbcType=VARCHAR},
+      result = #{result,jdbcType=VARCHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

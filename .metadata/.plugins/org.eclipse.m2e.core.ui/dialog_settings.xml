@@ -5,14 +5,15 @@
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
 			<item value="cn.com.wisetrust"/>
-			<item value="wisetrust"/>
+			<item value="com.wisetrust"/>
 		</list>
 		<list key="name">
-			<item value="myBatisDemo"/>
+			<item value="bs"/>
+			<item value="ssmIntegrate"/>
 		</list>
 		<list key="artifactId">
-			<item value="SpringmvcDemo"/>
-			<item value="MyBatisDemo"/>
+			<item value="bookstore"/>
+			<item value="SSM"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -38,6 +39,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\office\GitProject\PLMCodeTemplate"/>
 			<item value="D:\office\GitProject\SpringmvcDemo"/>
 			<item value="D:\office\GitProject\JavaProject"/>
 			<item value="D:\office\GitProject\pxene-website"/>
@@ -52,6 +54,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -63,6 +66,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\office\GitProject\ssmDemo2"/>
+			<item value="D:\office\GitProject\ssmDemo"/>
 			<item value="D:\office\GitProject\SpringBootDemo"/>
 			<item value="D:\office\GitProject\"/>
 		</list>

@@ -2,15 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="mappedHandler" key="selection"/>
+		<item value="id=&quot;BaseResultMap&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="mappedHandler"/>
-			<item value="mappedHandler = getHandler(processedRequest, false)"/>
-			<item value="mappedHandler = getHandler(processedRequest, false);"/>
+			<item value="id=&quot;BaseResultMap&quot;"/>
+			<item value="BaseResultMap"/>
+			<item value="Example_Where_Clause"/>
+			<item value="parameterType=&quot;int&quot;"/>
+			<item value="lombok"/>
+			<item value="junit"/>
+			<item value="junite"/>
+			<item value="fast"/>
 		</list>
 		<list key="replacehistory">
 		</list>

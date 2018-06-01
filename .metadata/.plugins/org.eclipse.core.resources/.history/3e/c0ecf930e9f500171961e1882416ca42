@@ -1,8 +1,0 @@
-<%@page contentType="text/html"%>
-<%@page pageEncoding="UTF-8"%>
-
-<div></div>
-<p>欢迎你：${sessionScope.loginAccount }</p>
-${pageContext.request.contextPath }
-<br />
-<hr />

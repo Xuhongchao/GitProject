@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:10:53:08 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:10:54:08 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+127.0.0.1 - - [15/Feb/2018:11:33:12 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:33:13 +0800] "GET /bookstore/ HTTP/1.1" 200 931
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:33:17 +0800] "GET /bookstore/jQuery/jquery.min.js HTTP/1.1" 404 1054
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:36:01 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:36:24 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:36:43 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:38:24 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:38:48 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590
+0:0:0:0:0:0:0:1 - - [15/Feb/2018:11:51:49 +0800] "POST /bookstore/user/create HTTP/1.1" 500 6590

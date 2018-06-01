@@ -1,0 +1,64 @@
+package cn.com.wisetrust.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.com.wisetrust.entity.User;
+import cn.com.wisetrust.request.UserCreateRequest;
+import cn.com.wisetrust.service.UserService;
+import cn.com.wisetrust.util.ErrorCode;
+import cn.com.wisetrust.util.Executor;
+import cn.com.wisetrust.util.OutputMessage;
+import cn.com.wisetrust.util.ServiceException;
+
+/**
+ * Created by @author xu on @date 2018年 2月 8日 下午5:07:51<br/>
+ * 
+ * 用户控制器<br/>
+ */
+@Controller
+@RequestMapping("/user")
+public class UserController {
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+	@Autowired
+	private UserService userService;
+
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	
+	OutputMessage @ResponseBody create(@Validated UserCreateRequest request, BindingResult result) {
+		return Executor.execute(new Executor() {
+
+			@Override
+			protected Object execute() {
+				logger.info("添加用户操作");
+				if (userService.queryByName(request.getUsername()) != null) {
+					throw new ServiceException("用户名已经存在", ErrorCode.ACCOUNT_INVALID);
+				}
+
+				User user = new User();
+				user.setUsername(request.getUsername());
+				user.setPassword(request.getPassword());
+				user.setPhone(request.getPhone());
+				user.setCellphone(request.getCellphone());
+				user.setEmail(request.getEmail());
+				user.setAddress(request.getAddress());
+				int num = userService.add(user);
+				if (num != 1) {
+					// 此处应该回滚刚才的数据，有可能数据已经被添加，会导致昵称不可用
+					throw new ServiceException("添加失败", ErrorCode.SYSTEM_SERVER_ERROR);
+				}
+
+				return null;
+			}
+		}, result);
+	}
+
+}

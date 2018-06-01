@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE generatorConfiguration    
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"    
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 数据库驱动 -->
+	<classPathEntry
+		location="D:\office\mavenRepository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar" />
+	<context id="mysql" targetRuntime="MyBatis3">
+		<property name="autoDelimitKeywords" value="false" />
+		<!-- 生成的Java文件的编码 -->
+		<property name="javaFileEncoding" value="UTF-8" />
+		<!-- 格式化java代码 -->
+		<property name="javaFormatter"
+			value="org.mybatis.generator.api.dom.DefaultJavaFormatter" />
+		<!-- 格式化XML代码 -->
+		<property name="xmlFormatter"
+			value="org.mybatis.generator.api.dom.DefaultXmlFormatter" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!--数据库链接URL，用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/business_promotion_dev"
+			userId="root" password="root">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="true" />
+		</javaTypeResolver>
+
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.wisetrust.pojo"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+
+		<!-- 生成映射文件的包名和位置 -->
+		<sqlMapGenerator targetPackage="com.wisetrust.mapping"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.wisetrust.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- 要生成的表 -->
+		<table tableName="account" domainObjectName="Account"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="work" domainObjectName="Work"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="contact" domainObjectName="Contact"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="bank" domainObjectName="Bank"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="branch_bank" domainObjectName="BranchBank"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="sub_branch_bank" domainObjectName="SubBranchBank"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="province_data" domainObjectName="ProvinceData"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="city_data" domainObjectName="CityData"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+		<table tableName="area_data" domainObjectName="AreaData"
+			enableCountByExample="true" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="false">
+			<generatedKey column="id" sqlStatement="Mysql" identity="true"
+				type="post" />
+		</table>
+	</context>
+</generatorConfiguration>

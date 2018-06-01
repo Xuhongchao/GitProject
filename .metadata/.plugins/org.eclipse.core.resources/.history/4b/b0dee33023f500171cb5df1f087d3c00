@@ -1,8 +1,0 @@
-package com.wisetrust.request;
-
-/**
- * Created by @author xu on @date 2018年 月 日 下午5:55:06
- */
-public class AccountUpdateRequest extends BaseRequest {
-
-}

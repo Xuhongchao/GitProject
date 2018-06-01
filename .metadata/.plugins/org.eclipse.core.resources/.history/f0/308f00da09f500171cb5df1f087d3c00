@@ -1,7 +1,0 @@
-package com.wisetrust.request;
-/**
-* Created by @author xu on @date 2018年 月 日	下午2:53:48
-*/
-public class BaseRequest {
-
-}
