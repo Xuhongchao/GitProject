@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
-<fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
 <fullyQualifiedTypeName name="com.wisetrust.test.BaseTest"/>
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Long"/>
 <fullyQualifiedTypeName name="com.wisetrust.entity.Account"/>
 <fullyQualifiedTypeName name="com.wisetrust.dao.AccountDao"/>
@@ -52,7 +49,6 @@
 <fullyQualifiedTypeName name="javax.validation.constraints.Pattern"/>
 <fullyQualifiedTypeName name="org.springframework.validation.annotation.Validated"/>
 <fullyQualifiedTypeName name="cn.com.wisetrust.request.UserCreateRequest"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="cn.com.wisetrust.entity.User"/>
 <fullyQualifiedTypeName name="cn.com.wisetrust.util.ServiceException"/>
 <fullyQualifiedTypeName name="cn.com.wisetrust.util.ErrorCode"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="day1.BubblingSort"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
