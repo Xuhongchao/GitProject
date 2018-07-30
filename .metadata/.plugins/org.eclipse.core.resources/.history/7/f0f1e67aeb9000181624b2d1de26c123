@@ -1,0 +1,22 @@
+package day2;
+
+/**
+ * Created by @author xu on @date 2018年 月 日 下午11:46:46
+ * 
+ * 荷兰国旗问题
+ */
+public class FlagOfTheNetherlandsMethod {
+
+	private FlagOfTheNetherlandsMethod() {
+	}
+
+	public static void partition(Integer[] arr) {
+		int less = -1;
+		int more = arr.length + 1;
+		int current = 0;
+		while(){
+			
+		}
+	}
+
+}

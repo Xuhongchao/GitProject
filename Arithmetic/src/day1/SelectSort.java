@@ -27,7 +27,7 @@ public class SelectSort {
 		for (int i = 0; i < arr.length - 1; i++) {
 			int minIndex = i;
 			for (int j = i + 1; j < arr.length; j++) {
-				minIndex = arr[j] > arr[minIndex] ? j : minIndex; // 交换下标
+				minIndex = arr[j] < arr[minIndex] ? j : minIndex; // 交换下标
 			}
 			arr = swap(arr, i, minIndex); // 交换值
 		}

@@ -1,0 +1,13 @@
+package day2;
+
+/**
+ * Created by @author xu on @date 2018年 月 日 下午11:46:46
+ * 
+ * 荷兰国旗问题
+ */
+public class FlagOfTheNetherlandsMethod {
+
+	private FlagOfTheNetherlandsMethod() {
+	}
+
+}
