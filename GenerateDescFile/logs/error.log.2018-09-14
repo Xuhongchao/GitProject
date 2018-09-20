@@ -1,0 +1,3 @@
+2018-09-14 09:46:32  [ main:3053 ] - [ ERROR ]  生成表格的过程中出现了未知错误,org.apache.xmlbeans.impl.values.XmlValueOutOfRangeException: union value '#000000' does not match any members of 'ST_HexColor in namespace http://schemas.openxmlformats.org/wordprocessingml/2006/main'
+2018-09-14 14:21:41  [ main:3505 ] - [ ERROR ]  文件没找到,java.io.FileNotFoundException: D:\result.docx (另一个程序正在使用此文件，进程无法访问。)
+2018-09-14 14:23:37  [ main:3294 ] - [ ERROR ]  文件没找到,java.io.FileNotFoundException: D:\result.docx (另一个程序正在使用此文件，进程无法访问。)

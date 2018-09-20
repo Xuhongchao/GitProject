@@ -1,0 +1,300 @@
+2018-09-11 14:40:12  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 14:40:12  [ main:12 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 14:40:12  [ main:12 ] - [ INFO ]  开启数据库连接池
+2018-09-11 14:40:12  [ main:13 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 14:40:12  [ main:73 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 14:40:12  [ main:80 ] - [ INFO ]  程序结束
+2018-09-11 14:55:49  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 14:55:49  [ main:11 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 14:55:49  [ main:11 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 14:55:49  [ main:29 ] - [ INFO ]  开启数据库连接池
+2018-09-11 14:55:49  [ main:70 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 14:55:49  [ main:75 ] - [ INFO ]  程序结束
+2018-09-11 14:59:35  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 14:59:35  [ main:28 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 14:59:35  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 14:59:35  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 14:59:35  [ main:18 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 14:59:35  [ main:19 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 14:59:35  [ main:101 ] - [ INFO ]  开启数据库连接池
+2018-09-11 14:59:35  [ main:78 ] - [ INFO ]  开启数据库连接池
+2018-09-11 14:59:35  [ main:133 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 14:59:35  [ main:156 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 14:59:35  [ main:154 ] - [ INFO ]  程序结束
+2018-09-11 14:59:35  [ main:197 ] - [ INFO ]  程序结束
+2018-09-11 15:00:45  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 15:00:45  [ main:7 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:00:45  [ main:8 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:00:45  [ main:25 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:00:45  [ main:48 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 15:00:45  [ main:60 ] - [ INFO ]  程序结束
+2018-09-11 15:01:03  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 15:01:03  [ main:12 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:01:03  [ main:13 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:01:03  [ main:29 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:01:03  [ main:49 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: No suitable driver found for http://localhost:3306/test
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 15:01:03  [ main:62 ] - [ INFO ]  程序结束
+2018-09-11 15:02:34  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 15:02:34  [ main:12 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:02:34  [ main:13 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:02:34  [ main:30 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:02:36  [ main:1414 ] - [ ERROR ]  获取数据库链接失败!
+java.sql.SQLException: Access denied for user 'sa'@'localhost' (using password: NO)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+	at org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.unicom.utils.JDBCUtil.getConnection(JDBCUtil.java:71)
+	at com.unicom.in.Entrance.main(Entrance.java:32)
+2018-09-11 15:02:36  [ main:1418 ] - [ INFO ]  程序结束
+2018-09-11 15:03:22  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 15:03:22  [ main:8 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:03:22  [ main:9 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:03:22  [ main:26 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:03:23  [ main:1269 ] - [ INFO ]  程序结束
+2018-09-11 15:04:26  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 15:04:26  [ main:11 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:04:26  [ main:11 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:04:26  [ main:28 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:04:27  [ main:1254 ] - [ INFO ]  程序结束
+2018-09-11 15:05:06  [ main:1 ] - [ INFO ]  程序开始
+2018-09-11 15:05:06  [ main:7 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 15:05:06  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 15:05:06  [ main:28 ] - [ INFO ]  开启数据库连接池
+2018-09-11 15:05:07  [ main:1330 ] - [ INFO ]  程序结束
+2018-09-11 16:39:23  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 16:39:23  [ main:10 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 16:39:23  [ main:11 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 16:39:23  [ main:26 ] - [ INFO ]  开启数据库连接池
+2018-09-11 16:39:24  [ main:1240 ] - [ INFO ]  程序结束
+2018-09-11 16:41:23  [ main:1 ] - [ INFO ]  程序开始
+2018-09-11 16:41:23  [ main:8 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 16:41:23  [ main:8 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 16:41:23  [ main:25 ] - [ INFO ]  开启数据库连接池
+2018-09-11 16:41:24  [ main:1178 ] - [ INFO ]  程序结束
+2018-09-11 16:46:20  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 16:46:20  [ main:8 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 16:46:20  [ main:8 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 16:46:20  [ main:22 ] - [ INFO ]  开启数据库连接池
+2018-09-11 16:46:21  [ main:1214 ] - [ INFO ]  程序结束
+2018-09-11 17:10:29  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 17:10:29  [ main:6 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 17:10:29  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 17:10:29  [ main:22 ] - [ INFO ]  开启数据库连接池
+2018-09-11 17:10:31  [ main:1421 ] - [ INFO ]  生成AnalysisDatabaseStructure实例
+2018-09-11 17:10:31  [ main:1442 ] - [ INFO ]  程序结束
+2018-09-11 17:11:06  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 17:11:06  [ main:7 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 17:11:06  [ main:8 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 17:11:06  [ main:22 ] - [ INFO ]  开启数据库连接池
+2018-09-11 17:11:08  [ main:1186 ] - [ INFO ]  生成AnalysisDatabaseStructure实例
+2018-09-11 17:11:08  [ main:1200 ] - [ INFO ]  程序结束
+2018-09-11 17:11:41  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 17:11:41  [ main:7 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 17:11:41  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 17:11:41  [ main:24 ] - [ INFO ]  开启数据库连接池
+2018-09-11 17:11:43  [ main:1182 ] - [ INFO ]  生成AnalysisDatabaseStructure实例
+2018-09-11 17:11:43  [ main:1195 ] - [ INFO ]  程序结束
+2018-09-11 18:44:09  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 18:44:09  [ main:8 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 18:44:09  [ main:8 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 18:44:09  [ main:28 ] - [ INFO ]  开启数据库连接池
+2018-09-11 18:44:10  [ main:1253 ] - [ INFO ]  程序结束
+2018-09-11 18:44:56  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 18:44:56  [ main:7 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 18:44:56  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 18:44:56  [ main:23 ] - [ INFO ]  开启数据库连接池
+2018-09-11 18:44:58  [ main:1274 ] - [ INFO ]  程序结束
+2018-09-11 18:46:29  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 18:46:29  [ main:6 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 18:46:29  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 18:46:29  [ main:22 ] - [ INFO ]  开启数据库连接池
+2018-09-11 18:46:30  [ main:1176 ] - [ INFO ]  AnalysisDatabaseStructure实例化的参数connection为空
+2018-09-11 18:47:10  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 18:47:10  [ main:6 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 18:47:10  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 18:47:10  [ main:27 ] - [ INFO ]  开启数据库连接池
+2018-09-11 18:47:12  [ main:1309 ] - [ INFO ]  程序结束
+2018-09-11 18:48:10  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 18:48:10  [ main:6 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 18:48:10  [ main:7 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 18:48:10  [ main:23 ] - [ INFO ]  开启数据库连接池
+2018-09-11 18:48:12  [ main:1186 ] - [ INFO ]  程序结束
+2018-09-11 19:21:59  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:21:59  [ main:24 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:21:59  [ main:24 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:21:59  [ main:24 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:21:59  [ main:36 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:22:00  [ main:1496 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:22:00  [ main:1497 ] - [ INFO ]  程序结束
+2018-09-11 19:23:34  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:23:34  [ main:20 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:23:34  [ main:21 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:23:34  [ main:21 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:23:34  [ main:34 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:23:35  [ main:1469 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:23:35  [ main:1471 ] - [ INFO ]  程序结束
+2018-09-11 19:24:57  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:24:57  [ main:22 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:24:57  [ main:22 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:24:57  [ main:22 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:24:57  [ main:35 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:24:58  [ main:1650 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:24:58  [ main:1650 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:24:58  [ main:1650 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:24:58  [ main:1658 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:24:58  [ main:1659 ] - [ INFO ]  程序结束
+2018-09-11 19:28:09  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:28:09  [ main:38 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:28:09  [ main:57 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:28:09  [ main:89 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:28:11  [ main:1494 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:28:11  [ main:1526 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:28:11  [ main:1527 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:28:11  [ main:1528 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:28:11  [ main:1535 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:28:11  [ main:1536 ] - [ INFO ]  程序结束
+2018-09-11 19:30:33  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:30:33  [ main:19 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:30:33  [ main:31 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:30:33  [ main:61 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:30:35  [ main:1404 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:30:35  [ main:1436 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:30:35  [ main:1437 ] - [ INFO ]  程序结束
+2018-09-11 19:33:55  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:33:56  [ main:23 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:33:56  [ main:34 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:33:56  [ main:65 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:33:57  [ main:1413 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:33:57  [ main:1445 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:33:57  [ main:1445 ] - [ INFO ]  程序结束
+2018-09-11 19:34:48  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:34:48  [ main:28 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:34:48  [ main:48 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:34:48  [ main:94 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:34:49  [ main:1479 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:34:49  [ main:1510 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:34:49  [ main:1511 ] - [ INFO ]  程序结束
+2018-09-11 19:35:50  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:35:50  [ main:21 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:35:50  [ main:32 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:35:50  [ main:62 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:35:51  [ main:1684 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:35:51  [ main:1720 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:35:51  [ main:1721 ] - [ INFO ]  程序结束
+2018-09-11 19:36:00  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:36:00  [ main:38 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:36:00  [ main:59 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:36:00  [ main:98 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:36:02  [ main:1786 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:36:02  [ main:1823 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:36:02  [ main:1824 ] - [ INFO ]  程序结束
+2018-09-11 19:39:45  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:39:45  [ main:25 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:39:45  [ main:37 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:39:45  [ main:67 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:39:46  [ main:1584 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:39:46  [ main:1627 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:39:46  [ main:1634 ] - [ INFO ]  程序结束
+2018-09-11 19:40:24  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:40:24  [ main:28 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:40:24  [ main:39 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:40:24  [ main:76 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:40:26  [ main:1597 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:40:26  [ main:1628 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:40:26  [ main:1633 ] - [ INFO ]  程序结束
+2018-09-11 19:40:49  [ main:0 ] - [ INFO ]  程序开始
+2018-09-11 19:40:49  [ main:23 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-11 19:40:49  [ main:35 ] - [ INFO ]  开启数据库连接池
+2018-09-11 19:40:50  [ main:68 ] - [ INFO ]  从数据库连接池中获取数据库链接
+2018-09-11 19:40:51  [ main:1458 ] - [ INFO ]  执行的sql语句是：show table status;
+2018-09-11 19:40:51  [ main:1501 ] - [ INFO ]  关闭数据库链接，释放资源
+2018-09-11 19:40:51  [ main:1506 ] - [ INFO ]  程序结束

@@ -1,0 +1,181 @@
+2018-09-19 09:28:59  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:28:59  [ main:29 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:28:59  [ main:41 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:29:01  [ main:1976 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:29:01  [ main:1979 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:29:01  [ main:2492 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:29:01  [ main:2602 ] - [ INFO ]  程序结束
+2018-09-19 09:30:37  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:30:46  [ main:9475 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:30:46  [ main:9501 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:31:42  [ main:65164 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:31:42  [ main:65166 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:31:43  [ main:65763 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:31:43  [ main:65856 ] - [ INFO ]  程序结束
+2018-09-19 09:33:49  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:33:49  [ main:29 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:33:49  [ main:42 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:33:52  [ main:3086 ] - [ INFO ]  程序结束
+2018-09-19 09:35:32  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:36:27  [ main:55372 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:36:27  [ main:55391 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:36:35  [ main:63527 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:36:45  [ main:73604 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:36:47  [ main:75130 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:36:50  [ main:77950 ] - [ INFO ]  程序结束
+2018-09-19 09:37:01  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:37:35  [ main:34165 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:37:35  [ main:34185 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:45:25  [ main:504833 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:45:25  [ main:504834 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:45:26  [ main:505489 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:47:57  [ main:656244 ] - [ INFO ]  程序结束
+2018-09-19 09:48:11  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:48:11  [ main:37 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:48:11  [ main:50 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:48:12  [ main:1297 ] - [ INFO ]  执行sql语句出错，sql语句是：SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE, CREATE_TIME, TABLE_COMMENT FROM information_schema.TABLES WHERE 1=1 AND TABLE_SCHEMA <> 'mysql' AND TABLE_SCHEMA <> 'information_schema' AND TABLE_SCHEMA <> 'performance_schema' AND SCHEMA_NAME <> 'sys'  ORDER BY TABLE_TYPE, CREATE_TIME;
+2018-09-19 09:48:12  [ main:1297 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:48:12  [ main:1297 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:48:13  [ main:1731 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:48:13  [ main:1805 ] - [ INFO ]  程序结束
+2018-09-19 09:49:15  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:49:15  [ main:26 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:49:15  [ main:36 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:49:16  [ main:1560 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:49:16  [ main:1561 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:49:17  [ main:2028 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:49:17  [ main:2103 ] - [ INFO ]  程序结束
+2018-09-19 09:50:26  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:50:26  [ main:33 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:50:26  [ main:43 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:50:27  [ main:1539 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:50:27  [ main:1540 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:50:28  [ main:2019 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:50:28  [ main:2103 ] - [ INFO ]  程序结束
+2018-09-19 09:51:48  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:51:48  [ main:27 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:51:48  [ main:37 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:51:50  [ main:1473 ] - [ ERROR ]  AnalysisDatabaseStructureService服务的setTableEntity出现错误：java.lang.NullPointerException
+2018-09-19 09:51:50  [ main:1475 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:51:50  [ main:1978 ] - [ ERROR ]  WriteData2DocsService服务的exportSTToWord出现错误：java.lang.NullPointerException
+2018-09-19 09:51:50  [ main:2052 ] - [ INFO ]  程序结束
+2018-09-19 09:52:11  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:52:11  [ main:32 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:52:11  [ main:42 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:52:16  [ main:5336 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:52:21  [ main:9534 ] - [ INFO ]  程序结束
+2018-09-19 09:52:46  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:52:46  [ main:24 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:52:46  [ main:36 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:52:50  [ main:4132 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:52:54  [ main:7954 ] - [ INFO ]  程序结束
+2018-09-19 09:58:04  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 09:58:04  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 09:58:04  [ main:40 ] - [ INFO ]  开启数据库连接池
+2018-09-19 09:58:09  [ main:4311 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 09:58:13  [ main:8453 ] - [ INFO ]  程序结束
+2018-09-19 10:00:07  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 10:00:07  [ main:20 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 10:00:07  [ main:30 ] - [ INFO ]  开启数据库连接池
+2018-09-19 10:00:12  [ main:4959 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 10:00:16  [ main:8908 ] - [ INFO ]  程序结束
+2018-09-19 10:09:01  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 10:09:01  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 10:09:01  [ main:40 ] - [ INFO ]  开启数据库连接池
+2018-09-19 10:09:07  [ main:6265 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 10:09:11  [ main:10565 ] - [ INFO ]  程序结束
+2018-09-19 10:11:03  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 10:11:03  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 10:11:03  [ main:40 ] - [ INFO ]  开启数据库连接池
+2018-09-19 10:11:08  [ main:5410 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 10:11:12  [ main:9680 ] - [ INFO ]  程序结束
+2018-09-19 10:18:54  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 10:18:54  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 10:18:54  [ main:40 ] - [ INFO ]  开启数据库连接池
+2018-09-19 10:18:57  [ main:2705 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 10:19:00  [ main:5395 ] - [ INFO ]  程序结束
+2018-09-19 11:09:19  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:09:19  [ main:27 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:09:19  [ main:38 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:09:22  [ main:2522 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:09:25  [ main:5532 ] - [ INFO ]  程序结束
+2018-09-19 11:11:01  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:11:01  [ main:29 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:11:01  [ main:39 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:11:04  [ main:2706 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:11:07  [ main:5917 ] - [ INFO ]  程序结束
+2018-09-19 11:18:46  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:18:46  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:18:46  [ main:42 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:18:49  [ main:3075 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:18:52  [ main:5957 ] - [ INFO ]  程序结束
+2018-09-19 11:19:16  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:19:16  [ main:26 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:19:16  [ main:35 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:19:19  [ main:2512 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:19:20  [ main:4228 ] - [ INFO ]  程序结束
+2018-09-19 11:43:29  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:43:29  [ main:31 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:43:29  [ main:41 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:43:31  [ main:2778 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:43:34  [ main:5873 ] - [ INFO ]  程序结束
+2018-09-19 11:46:29  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:46:29  [ main:30 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:46:29  [ main:42 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:46:32  [ main:2816 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:46:35  [ main:5934 ] - [ INFO ]  程序结束
+2018-09-19 11:49:14  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:49:14  [ main:25 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:49:14  [ main:36 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:49:16  [ main:2612 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:49:19  [ main:5276 ] - [ INFO ]  程序结束
+2018-09-19 11:52:12  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:52:13  [ main:25 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:52:13  [ main:36 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:52:15  [ main:2581 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:52:18  [ main:5104 ] - [ INFO ]  程序结束
+2018-09-19 11:55:46  [ main:1 ] - [ INFO ]  程序开始
+2018-09-19 11:55:46  [ main:27 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:55:46  [ main:37 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:55:48  [ main:2542 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:55:51  [ main:5152 ] - [ INFO ]  程序结束
+2018-09-19 11:58:44  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 11:58:44  [ main:27 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 11:58:44  [ main:41 ] - [ INFO ]  开启数据库连接池
+2018-09-19 11:58:49  [ main:4748 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 11:58:53  [ main:9302 ] - [ INFO ]  程序结束
+2018-09-19 14:29:36  [ main:0 ] - [ ERROR ]  错误:java.lang.ArithmeticException: / by zero
+2018-09-19 14:29:58  [ main:0 ] - [ ERROR ]  错误:java.lang.ArithmeticException: / by zero
+2018-09-19 14:30:11  [ main:0 ] - [ ERROR ]  错误:java.lang.ArithmeticException: / by zero
+2018-09-19 14:30:24  [ main:0 ] - [ ERROR ]  错误:java.lang.ArithmeticException: / by zero
+2018-09-19 14:46:48  [ main:0 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero
+2018-09-19 14:47:56  [ main:0 ] - [ ERROR ]  java.lang.NullPointerException
+2018-09-19 14:53:15  [ main:0 ] - [ ERROR ]  
+java.lang.NullPointerException
+	at com.unicom.service.test.ServeTest.main(ServeTest.java:30)
+2018-09-19 14:56:05  [ main:1 ] - [ ERROR ]  
+java.lang.ArithmeticException: / by zero
+	at com.unicom.service.test.ServeTest.a(ServeTest.java:38)
+	at com.unicom.service.test.ServeTest.main(ServeTest.java:29)
+2018-09-19 15:12:21  [ main:1 ] - [ ERROR ]  错误
+java.lang.ArithmeticException: / by zero
+	at com.unicom.service.test.ServeTest.a(ServeTest.java:38)
+	at com.unicom.service.test.ServeTest.main(ServeTest.java:29)
+2018-09-19 15:12:46  [ main:0 ] - [ ERROR ]  错误
+java.lang.ArithmeticException: / by zero
+	at com.unicom.service.test.ServeTest.a(ServeTest.java:38)
+	at com.unicom.service.test.ServeTest.main(ServeTest.java:29)
+2018-09-19 15:15:28  [ main:1 ] - [ ERROR ]  错误
+java.lang.ArithmeticException: / by zero
+	at com.unicom.service.test.ServeTest.a(ServeTest.java:38)
+	at com.unicom.service.test.ServeTest.main(ServeTest.java:29)
+2018-09-19 17:16:03  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 17:16:03  [ main:23 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 17:16:03  [ main:35 ] - [ INFO ]  开启数据库连接池
+2018-09-19 17:16:05  [ main:2820 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 17:16:09  [ main:6324 ] - [ INFO ]  程序结束
+2018-09-19 17:17:41  [ main:0 ] - [ INFO ]  程序开始
+2018-09-19 17:17:41  [ main:27 ] - [ INFO ]  加载MYSQL驱动程序
+2018-09-19 17:17:41  [ main:37 ] - [ INFO ]  开启数据库连接池
+2018-09-19 17:17:44  [ main:3288 ] - [ INFO ]  正生成表的说明文档
+2018-09-19 17:17:48  [ main:7066 ] - [ INFO ]  程序结束
