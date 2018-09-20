@@ -1,21 +1,21 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç11:38:50 <br/>
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ11:38:50 <br/>
  * <p>
- * ¶ÔÊıÆ÷£ºÍ¨¹ı´óÁ¿Êı¾İÀ´ÑéÖ¤Ò»¸öËã·¨ÊÇ·ñÕıÈ· <br/>
+ * å¯¹æ•°å™¨ï¼šé€šè¿‡å¤§é‡æ•°æ®æ¥éªŒè¯ä¸€ä¸ªç®—æ³•æ˜¯å¦æ­£ç¡® <br/>
  * </p>
  * 
  * <pre>
- * Ê¹ÓÃÇ°ÆÚ×¼±¸£º 
- * 	(1)×¼±¸Ëæ»úÊı·¢ÉúÆ÷
- * 	(2)Ò»¸ö¾­¹ıÑéÖ¤µÄ¿Ï¶¨ÕıÈ·µÄËã·¨£¬Ê±¼ä¸´ÔÓ¶È¿ÉÒÔºÜ²îµ«ÊÇ¿Ï¶¨ÕıÈ·
- * Ê¹ÓÃ²½Öè£º
- * 	(1)Í¨¹ıËæ»úÊı·¢ÉúÆ÷À´Éú³É¹©²âÊÔÊ¹ÓÃµÄÊı¾İ
- * 	(2)½«Éú³ÉµÄÊı¾İ×é½øĞĞcopyArr
- * 	(3)Ê¹ÓÃ×Ô¼º¶¨ÒåµÄËã·¨¶ÔÊı¾İ½øĞĞ²Ù×÷
- * 	(4)Ê¹ÓÃ¾ø¶ÔÕıÈ·µÄËã·¨¶ÔcopyµÄÊı¾İ½øĞĞ²Ù×÷
- * 	(5)¶ÔÁ½×é²Ù×÷Íê³ÉµÄÊı¾İ½øĞĞ±È¶Ô£¬ÔÚ¼¸°ÙÍò¼¸Ç§ÍòµÄ±È¶ÔÖĞ¶¼ÍêÈ«ÏàÍ¬¾ÍËµÃ÷Ëã·¨Ã»ÓĞÎÊÌâ
+ * ä½¿ç”¨å‰æœŸå‡†å¤‡ï¼š 
+ * 	(1)å‡†å¤‡éšæœºæ•°å‘ç”Ÿå™¨
+ * 	(2)ä¸€ä¸ªç»è¿‡éªŒè¯çš„è‚¯å®šæ­£ç¡®çš„ç®—æ³•ï¼Œæ—¶é—´å¤æ‚åº¦å¯ä»¥å¾ˆå·®ä½†æ˜¯è‚¯å®šæ­£ç¡®
+ * ä½¿ç”¨æ­¥éª¤ï¼š
+ * 	(1)é€šè¿‡éšæœºæ•°å‘ç”Ÿå™¨æ¥ç”Ÿæˆä¾›æµ‹è¯•ä½¿ç”¨çš„æ•°æ®
+ * 	(2)å°†ç”Ÿæˆçš„æ•°æ®ç»„è¿›è¡ŒcopyArr
+ * 	(3)ä½¿ç”¨è‡ªå·±å®šä¹‰çš„ç®—æ³•å¯¹æ•°æ®è¿›è¡Œæ“ä½œ
+ * 	(4)ä½¿ç”¨ç»å¯¹æ­£ç¡®çš„ç®—æ³•å¯¹copyçš„æ•°æ®è¿›è¡Œæ“ä½œ
+ * 	(5)å¯¹ä¸¤ç»„æ“ä½œå®Œæˆçš„æ•°æ®è¿›è¡Œæ¯”å¯¹ï¼Œåœ¨å‡ ç™¾ä¸‡å‡ åƒä¸‡çš„æ¯”å¯¹ä¸­éƒ½å®Œå…¨ç›¸åŒå°±è¯´æ˜ç®—æ³•æ²¡æœ‰é—®é¢˜
  * </pre>
  * 
  */
@@ -38,10 +38,10 @@ public class Calibrator {
 				System.out.println(throughTheArray(arr3));
 		}
 
-		System.out.println("¼ì²éÍê±Ï");
+		System.out.println("æ£€æŸ¥å®Œæ¯•");
 	}
 
-	// ************ÅĞ¶ÏÁ½¸öÊı×éÊÇ·ñÏàµÈ ***********
+	// ************åˆ¤æ–­ä¸¤ä¸ªæ•°ç»„æ˜¯å¦ç›¸ç­‰ ***********
 	private static boolean equal(Integer[] arr1, Integer[] arr2) {
 		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
 			return false;
@@ -60,7 +60,7 @@ public class Calibrator {
 		return true;
 	}
 
-	// Ëæ»úÊı×é·¢ÉúÆ÷
+	// éšæœºæ•°ç»„å‘ç”Ÿå™¨
 	public static Integer[] generateRandomArray(int maxSize, int maxValue) {
 		Integer[] arr = new Integer[(int) ((maxSize * Math.random()) + 1)];
 		for (int i = 0; i < arr.length; i++) {
@@ -69,7 +69,7 @@ public class Calibrator {
 		return arr;
 	}
 
-	// copyÊı×é
+	// copyæ•°ç»„
 	public static Integer[] copyArr(Integer[] arr) {
 		if (arr == null || arr.length < 1) {
 			return new Integer[0];
@@ -81,7 +81,7 @@ public class Calibrator {
 		return obj;
 	}
 
-	// ±éÀúÊı×éÊä³ö
+	// éå†æ•°ç»„è¾“å‡º
 	public static String throughTheArray(Integer[] arr) {
 		StringBuilder sb = new StringBuilder();
 		if (arr == null || arr.length <= 0) {

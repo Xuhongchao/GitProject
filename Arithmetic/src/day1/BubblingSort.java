@@ -1,8 +1,8 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç10:40:02 </br>
- * Ã°ÅİÅÅĞò </br>
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ10:40:02 </br>
+ * å†’æ³¡æ’åº </br>
  */
 public class BubblingSort {
 
@@ -23,11 +23,11 @@ public class BubblingSort {
 			return arr;
 		}
 
-		// Ã°ÅİÅÅĞò
+		// å†’æ³¡æ’åº
 		for (int i = arr.length - 1; i > 0; i--) {
 			for (int j = 0; j < i; j++) {
 				if (arr[j] > arr[j + 1]) {
-					arr = swap(arr, j, j + 1); // ½»»»Öµ
+					arr = swap(arr, j, j + 1); // äº¤æ¢å€¼
 				}
 			}
 		}

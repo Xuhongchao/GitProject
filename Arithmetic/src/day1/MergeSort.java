@@ -1,9 +1,9 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç10:56:44 <br/>
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ10:56:44 <br/>
  * 
- * ¹é²¢ÅÅĞò£¬Ê±¼ä¸´ÔÓ¶ÈO(NlogN)
+ * å½’å¹¶æ’åºï¼Œæ—¶é—´å¤æ‚åº¦O(NlogN)
  */
 public class MergeSort {
 
@@ -13,29 +13,29 @@ public class MergeSort {
 		System.out.println(Calibrator.throughTheArray(arr));
 	}
 
-	// ¹é²¢ÅÅĞò
+	// å½’å¹¶æ’åº
 	public static void mergeSort(Integer[] arr) {
 		if (arr == null || arr.length < 2)
 			return;
-		mergeSort(arr, 0, arr.length - 1); // Ö´ĞĞÕıÕæµÄ¹é²¢ÅÅĞò²Ù×÷
+		mergeSort(arr, 0, arr.length - 1); // æ‰§è¡Œæ­£çœŸçš„å½’å¹¶æ’åºæ“ä½œ
 	}
 
 	/**
 	 * 
-	 * ¾ßÌåµÄ¹é²¢ÅÅĞò²Ù×÷<br/>
+	 * å…·ä½“çš„å½’å¹¶æ’åºæ“ä½œ<br/>
 	 * 
 	 * <pre>
-	 * Ò»¡¢½«Êı×é·Ö³É×óÓÒÁ½¸ö²¿·Ö£¬·Ö±ğ½øĞĞÅÅĞò<br/>
-	 * ¶ş¡¢Ã¿¸ö²¿·Ö×öµİ¹éÅÅĞò²Ù×÷<br/>
-	 * Èı¡¢½«Á½¸öÅÅºÃĞòµÄ²¿·Ö½øĞĞºÏ²¢<br/>
+	 * ä¸€ã€å°†æ•°ç»„åˆ†æˆå·¦å³ä¸¤ä¸ªéƒ¨åˆ†ï¼Œåˆ†åˆ«è¿›è¡Œæ’åº<br/>
+	 * äºŒã€æ¯ä¸ªéƒ¨åˆ†åšé€’å½’æ’åºæ“ä½œ<br/>
+	 * ä¸‰ã€å°†ä¸¤ä¸ªæ’å¥½åºçš„éƒ¨åˆ†è¿›è¡Œåˆå¹¶<br/>
 	 * </pre>
 	 * 
 	 * @param arr
-	 *            Êı×é
+	 *            æ•°ç»„
 	 * @param leftMargin
-	 *            ×óÅÅĞò±ß½ç
+	 *            å·¦æ’åºè¾¹ç•Œ
 	 * @param rightMargin
-	 *            ÓÒÅÅĞò±ß½ç
+	 *            å³æ’åºè¾¹ç•Œ
 	 */
 	private static void mergeSort(Integer[] arr, int leftMargin, int rightMargin) {
 		if (leftMargin == rightMargin)
@@ -47,14 +47,14 @@ public class MergeSort {
 	}
 
 	/**
-	 * ºÏ²¢²Ù×÷
+	 * åˆå¹¶æ“ä½œ
 	 * 
 	 * @param arr
-	 *            Êı×é
+	 *            æ•°ç»„
 	 * @param left
-	 *            ×óÅÅĞò±ß½ç
+	 *            å·¦æ’åºè¾¹ç•Œ
 	 * @param right
-	 *            ÓÒÅÅĞò±ß½ç
+	 *            å³æ’åºè¾¹ç•Œ
 	 * @param mid
 	 */
 	private static void merge(Integer[] arr, int left, int mid, int right) {

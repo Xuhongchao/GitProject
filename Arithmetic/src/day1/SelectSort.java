@@ -1,8 +1,8 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç11:40:22 </br>
- * Ñ¡ÔñÅÅĞò </br>
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ11:40:22 </br>
+ * é€‰æ‹©æ’åº </br>
  */
 public class SelectSort {
 
@@ -23,13 +23,13 @@ public class SelectSort {
 			return arr;
 		}
 
-		// Ñ¡ÔñÅÅĞò
+		// é€‰æ‹©æ’åº
 		for (int i = 0; i < arr.length - 1; i++) {
 			int minIndex = i;
 			for (int j = i + 1; j < arr.length; j++) {
-				minIndex = arr[j] < arr[minIndex] ? j : minIndex; // ½»»»ÏÂ±ê
+				minIndex = arr[j] < arr[minIndex] ? j : minIndex; // äº¤æ¢ä¸‹æ ‡
 			}
-			arr = swap(arr, i, minIndex); // ½»»»Öµ
+			arr = swap(arr, i, minIndex); // äº¤æ¢å€¼
 		}
 		return arr;
 	}

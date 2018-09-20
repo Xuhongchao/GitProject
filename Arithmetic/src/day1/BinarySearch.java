@@ -1,7 +1,7 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç10:39:16 ¶þ·Ö²éÕÒ
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ10:39:16 äºŒåˆ†æŸ¥æ‰¾
  */
 public class BinarySearch {
 
@@ -11,7 +11,7 @@ public class BinarySearch {
 	}
 
 	/*
-	 * ¶þ·Ö²éÕÒ
+	 * äºŒåˆ†æŸ¥æ‰¾
 	 */
 	private static Integer binarySearch(int[] arr, int key, int startIndex, int endIndex) {
 		if (startIndex > endIndex || arr.length <= 0) {

@@ -3,25 +3,25 @@ package day2;
 import day1.Calibrator;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç11:46:46
+ * Created by @author xu on @date 2018ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:46:46
  * 
- * ºÉÀ¼¹úÆìÎÊÌâ
+ * è·å…°å›½æ——é—®é¢˜
  */
 public class FlagOfTheNetherlandsMethod {
 
 	public static void main(String[] args) {
 		Integer[] arr = new Integer[] { 2, 4, 34, 56, -13, 34, -5, -45, 0 };
-		arr = partition(arr, 118);
+		arr = partition(arr, 18);
 		System.out.println(Calibrator.throughTheArray(arr));
 	}
 
 	/**
-	 * ·Ö×é
+	 * ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param arr
-	 *            Êı×é
+	 *            ï¿½ï¿½ï¿½ï¿½
 	 * @param num
-	 *            ÖĞ¼äÖµ
+	 *            ï¿½Ğ¼ï¿½Öµ
 	 * @return
 	 */
 	public static Integer[] partition(Integer[] arr, int num) {
@@ -42,10 +42,10 @@ public class FlagOfTheNetherlandsMethod {
 	}
 
 	/**
-	 * Êı×éÖĞÖµ½»»»
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param arr
-	 *            Êı×é
+	 *            ï¿½ï¿½ï¿½ï¿½
 	 * @param i
 	 * @param j
 	 */

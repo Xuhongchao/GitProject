@@ -1,8 +1,8 @@
 package day1;
 
 /**
- * Created by @author xu on @date 2018Äê ÔÂ ÈÕ ÏÂÎç11:01:28 </br>
- * ²åÈëÅÅĞò
+ * Created by @author xu on @date 2018å¹´ æœˆ æ—¥ ä¸‹åˆ11:01:28 </br>
+ * æ’å…¥æ’åº
  */
 public class InsertSort {
 
@@ -15,7 +15,7 @@ public class InsertSort {
 		}
 	}
 
-	// ²åÈëÅÅĞò
+	// æ’å…¥æ’åº
 	public static Integer[] insertSort(Integer[] arr) {
 		if (arr == null || arr.length < 1) {
 			return null;
@@ -24,7 +24,7 @@ public class InsertSort {
 			return arr;
 		}
 
-		// ÅÅĞò
+		// æ’åº
 		for (int i = 1; i <= arr.length - 1; i++) {
 			for (int j = i - 1; j >= 0 && arr[j + 1] < arr[j]; j--) {
 				arr = swap(arr, j, j + 1);
@@ -33,7 +33,7 @@ public class InsertSort {
 		return arr;
 	}
 
-	// ½»»»
+	// äº¤æ¢
 	public static Integer[] swap(Integer[] arr, int a, int b) {
 		int temp = arr[a];
 		arr[a] = arr[b];
